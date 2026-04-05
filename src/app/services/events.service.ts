@@ -11,6 +11,8 @@ export class EventsService {
   private events: any[] = eventsData.events;
   private testimonials: Testimonial[] = eventsData.testimonials as Testimonial[];
   private partners: any[] = (eventsData as any).partners || [];
+  private trendingTopics: any[] = (eventsData as any).trendingTopics || [];
+  private marketInsights: any = (eventsData as any).marketInsights || {};
 
   getEvents(): Observable<any[]> {
     return of(this.events);
@@ -30,5 +32,13 @@ export class EventsService {
 
   getPartners(): Observable<any[]> {
     return of(this.partners);
+  }
+
+  getTrendingTopics(): Observable<any[]> {
+    return of(this.trendingTopics);
+  }
+
+  getMarketInsights(): Observable<any> {
+    return of(this.marketInsights);
   }
 }

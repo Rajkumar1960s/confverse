@@ -10,15 +10,15 @@ import { RouterModule } from '@angular/router';
     <nav class="navbar" [class.scrolled]="isScrolled">
       <div class="nav-container">
         <a routerLink="/" class="nav-logo">
-          <span class="logo-icon">⚡</span>
-          <span class="logo-text">Conf<span class="gradient-text">Verse</span></span>
+          <span class="logo-mark">◆</span>
+          <span class="logo-text">Conf<span class="accent-text">Verse</span></span>
         </a>
 
         <div class="nav-links" [class.active]="menuOpen">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
           <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
           <a routerLink="/events" routerLinkActive="active" (click)="closeMenu()">Conferences</a>
-          <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
+          <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
         </div>
 
         <div class="nav-actions">
@@ -40,23 +40,23 @@ import { RouterModule } from '@angular/router';
       left: 0;
       right: 0;
       z-index: 1000;
-      padding: 16px 0;
-      transition: all 0.3s ease;
+      padding: 18px 0;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       background: transparent;
     }
 
     .navbar.scrolled {
-      background: rgba(10, 14, 39, 0.9);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 10px 0;
+      background: rgba(12, 12, 14, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 12px 0;
     }
 
     .nav-container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -65,26 +65,32 @@ import { RouterModule } from '@angular/router';
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
       color: white;
       z-index: 1001;
+      letter-spacing: -0.02em;
     }
 
-    .logo-icon {
-      font-size: 1.5rem;
+    .logo-mark {
+      color: var(--accent-emerald);
+      font-size: 1.2rem;
+    }
+
+    .accent-text {
+      color: var(--accent-emerald);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 40px;
     }
 
     .nav-links a {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       color: var(--text-secondary);
       position: relative;
@@ -94,12 +100,12 @@ import { RouterModule } from '@angular/router';
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: -3px;
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--gradient-primary);
-      transition: width 0.3s ease;
+      background: var(--accent-emerald);
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .nav-links a:hover,
@@ -115,12 +121,11 @@ import { RouterModule } from '@angular/router';
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
     }
 
     .btn-nav {
       padding: 10px 24px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
 
     .hamburger {
@@ -135,57 +140,35 @@ import { RouterModule } from '@angular/router';
     }
 
     .hamburger span {
-      width: 24px;
+      width: 22px;
       height: 2px;
       background: white;
       transition: all 0.3s ease;
       display: block;
     }
 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
     @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
+      .hamburger { display: flex; }
       .nav-links {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 14, 39, 0.98);
-        backdrop-filter: blur(20px);
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(12, 12, 14, 0.98);
+        backdrop-filter: blur(24px);
         flex-direction: column;
         justify-content: center;
-        gap: 32px;
+        gap: 36px;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
         z-index: 1000;
       }
-
-      .nav-links.active {
-        opacity: 1;
-        pointer-events: all;
-      }
-
-      .nav-links a {
-        font-size: 1.25rem;
-      }
-
-      .nav-actions {
-        display: none;
-      }
+      .nav-links.active { opacity: 1; pointer-events: all; }
+      .nav-links a { font-size: 1.3rem; }
+      .nav-actions { display: none; }
     }
   `]
 })

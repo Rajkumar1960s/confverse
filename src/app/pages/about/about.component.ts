@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
       <div class="container page-hero-content">
         <span class="section-label">About Us</span>
         <h1>Empowering <span class="gradient-text">Innovation</span> Through Connection</h1>
-        <p>Learn about our mission to build a global hub for tech innovation.</p>
+        <p>The AI industry's premier conference discovery platform — where knowledge meets opportunity.</p>
       </div>
     </section>
 
@@ -21,12 +21,12 @@ import { RouterModule } from '@angular/router';
         <div class="about-intro">
           <div class="intro-text">
             <h2>Our <span class="gradient-text">Mission</span></h2>
-            <p>ConfVerse was founded with a singular vision: to democratize access to world-class technology knowledge. We believe that breakthrough ideas happen when brilliant minds connect, regardless of geography, background, or organization size.</p>
-            <p>Through our carefully curated virtual conferences, we bring together the sharpest minds in AI, machine learning, Web3, healthcare technology, and emerging fields. Every event is designed to deliver actionable insights — not just theory, but battle-tested strategies from practitioners who are building the future.</p>
+            <p>ConfVerse was founded with a singular vision: to democratize access to world-class artificial intelligence and technology knowledge. We believe that breakthrough ideas happen when brilliant minds connect, regardless of geography, background, or organization size.</p>
+            <p>Through our carefully curated virtual conferences and real-time market intelligence, we bring together the sharpest minds in AI, machine learning, Web3, healthcare technology, and emerging fields. Every event delivers actionable insights — not just theory, but battle-tested strategies from practitioners building the future.</p>
           </div>
           <div class="intro-visual glass-card">
             <div class="visual-stat" *ngFor="let s of stats">
-              <span class="vs-value gradient-text">{{ s.value }}</span>
+              <span class="vs-value">{{ s.value }}</span>
               <span class="vs-label">{{ s.label }}</span>
             </div>
           </div>
@@ -34,7 +34,7 @@ import { RouterModule } from '@angular/router';
       </div>
     </section>
 
-    <section class="section" style="background: var(--primary-deeper);">
+    <section class="section" style="background: var(--bg-elevated);">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Our Values</span>
@@ -73,9 +73,9 @@ import { RouterModule } from '@angular/router';
     .page-hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(0, 212, 255, 0.08), transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(124, 58, 237, 0.06), transparent 60%),
-                  var(--primary-dark);
+      background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.06), transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(76, 201, 240, 0.04), transparent 60%),
+                  var(--bg-primary);
     }
     .page-hero-content {
       position: relative;
@@ -84,11 +84,12 @@ import { RouterModule } from '@angular/router';
     }
     .page-hero-content h1 {
       font-size: 3.5rem;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 16px;
+      letter-spacing: -0.03em;
     }
     .page-hero-content > p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-secondary);
       max-width: 560px;
       margin: 0 auto;
@@ -102,9 +103,10 @@ import { RouterModule } from '@angular/router';
     .intro-text h2 {
       font-size: 2.5rem;
       margin-bottom: 24px;
+      letter-spacing: -0.02em;
     }
     .intro-text p {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: var(--text-secondary);
       line-height: 1.8;
       margin-bottom: 16px;
@@ -115,18 +117,17 @@ import { RouterModule } from '@angular/router';
       grid-template-columns: 1fr 1fr;
       gap: 32px;
     }
-    .visual-stat {
-      text-align: center;
-    }
+    .visual-stat { text-align: center; }
     .vs-value {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 2.5rem;
-      font-weight: 900;
+      font-weight: 700;
       display: block;
       margin-bottom: 8px;
+      color: var(--accent-emerald);
     }
     .vs-label {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-tertiary);
     }
     .values-grid {
@@ -138,20 +139,9 @@ import { RouterModule } from '@angular/router';
       padding: 36px 28px;
       text-align: center;
     }
-    .value-icon {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 16px;
-    }
-    .value-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    .value-card p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
+    .value-icon { font-size: 2.5rem; display: block; margin-bottom: 16px; }
+    .value-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .value-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
     @media (max-width: 768px) {
       .about-intro { grid-template-columns: 1fr; }
@@ -162,18 +152,18 @@ import { RouterModule } from '@angular/router';
 })
 export class AboutComponent {
   stats = [
-    { value: '5+', label: 'Conferences Planned' },
-    { value: '15+', label: 'Expert Speakers' },
+    { value: '6+', label: 'Conferences Planned' },
+    { value: '50+', label: 'Expert Speakers' },
     { value: '5,000+', label: 'Expected Attendees' },
     { value: '80+', label: 'Countries' }
   ];
 
   values = [
-    { icon: '🌍', title: 'Accessibility', description: 'Making world-class tech knowledge accessible to everyone, everywhere through virtual-first experiences.' },
-    { icon: '💡', title: 'Actionable Insights', description: 'Every session is designed to deliver practical takeaways that you can implement in your work immediately.' },
-    { icon: '🤝', title: 'Community First', description: 'Building lasting connections between researchers, builders, and visionaries across the global tech ecosystem.' },
-    { icon: '🔬', title: 'Research-Driven', description: 'Bringing cutting-edge research from labs to practitioners through accessible, engaging presentations.' },
-    { icon: '🛡️', title: 'Responsible Innovation', description: 'Championing ethical AI development, responsible technology, and inclusive design principles.' },
-    { icon: '🚀', title: 'Future-Forward', description: 'Staying ahead of the curve by exploring emerging technologies before they hit the mainstream.' }
+    { icon: '🌍', title: 'Global Accessibility', description: 'Making world-class AI knowledge accessible to everyone, everywhere through virtual-first experiences.' },
+    { icon: '📊', title: 'Market Intelligence', description: 'Going beyond conferences — providing real-time AI market insights, trends, and sector analysis.' },
+    { icon: '🤝', title: 'Community First', description: 'Building lasting connections between researchers, builders, and visionaries across the global AI ecosystem.' },
+    { icon: '🔬', title: 'Research-Driven', description: 'Bringing cutting-edge AI research from labs to practitioners through accessible, engaging presentations.' },
+    { icon: '🛡️', title: 'Responsible AI', description: 'Championing ethical AI development, AI safety research, and responsible technology governance.' },
+    { icon: '🚀', title: 'Future-Forward', description: 'Exploring agentic systems, multimodal AI, and next-gen technologies before they hit the mainstream.' }
   ];
 }

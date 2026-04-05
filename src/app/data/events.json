@@ -11,11 +11,12 @@
       "format": "Virtual",
       "status": "active",
       "externalUrl": "https://aixplore-eta.vercel.app",
-      "description": "Explore the frontiers of Generative AI, LLMs, and AI ethics with leading researchers and practitioners in an immersive two-day virtual experience.",
+      "description": "Explore the frontiers of Generative AI, LLMs, and AI ethics with leading researchers and practitioners. Two days of immersive sessions on agentic systems, prompt engineering, and responsible AI.",
       "icon": "🧠",
       "speakerCount": 6,
       "sessionCount": 12,
-      "tags": ["Artificial Intelligence", "Machine Learning", "LLMs", "Generative AI"]
+      "attendeeCount": "2,500+",
+      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"]
     },
     {
       "id": 2,
@@ -27,11 +28,12 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at top tech companies. Real-world case studies and battle-tested strategies.",
+      "description": "Learn how to scale, deploy, and monitor ML models from engineers at top tech companies. MLOps deep-dives, cost optimization strategies, and production-grade architectures.",
       "icon": "⚙️",
       "speakerCount": 8,
       "sessionCount": 15,
-      "tags": ["MLOps", "Production ML", "Model Deployment", "Infrastructure"]
+      "attendeeCount": "3,000+",
+      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"]
     },
     {
       "id": 3,
@@ -43,26 +45,28 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Unpack the future of blockchain, DeFi, and decentralized applications with pioneers shaping the decentralized web and AI-powered smart contracts.",
+      "description": "Unpack blockchain convergence with AI — decentralized AI, on-chain ML models, smart contract auditing, and the future of decentralized autonomous organizations.",
       "icon": "🔗",
       "speakerCount": 10,
       "sessionCount": 18,
+      "attendeeCount": "2,000+",
       "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"]
     },
     {
       "id": 4,
       "slug": "ai-healthcare-summit-2027",
-      "title": "AI in Healthcare Innovation Summit",
+      "title": "AI in Healthcare Innovation",
       "subtitle": "Transforming Patient Care with Intelligence",
       "date": "2027-02-20",
       "endDate": "2027-02-21",
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Discover how artificial intelligence is revolutionizing diagnostics, drug discovery, patient care, and healthcare operations across the globe.",
+      "description": "How AI is revolutionizing diagnostics, drug discovery, and clinical workflows. Featuring Mayo Clinic and Johns Hopkins researchers on real-world medical AI deployments.",
       "icon": "🏥",
       "speakerCount": 12,
       "sessionCount": 20,
+      "attendeeCount": "4,000+",
       "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery"]
     },
     {
@@ -75,34 +79,131 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "A hands-on conference for developers building autonomous AI agents — from multi-agent architectures to tool use, planning systems, and safety guardrails.",
+      "description": "The premier gathering for autonomous AI agent builders — multi-agent architectures, tool use patterns, planning systems, memory frameworks, and safety guardrails.",
       "icon": "🤖",
       "speakerCount": 10,
       "sessionCount": 16,
-      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"]
+      "attendeeCount": "3,500+",
+      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent"]
     },
     {
       "id": 6,
       "slug": "deep-learning-frontiers-2027",
       "title": "Deep Learning Frontiers 2027",
-      "subtitle": "Pushing the Boundaries of Neural Networks",
+      "subtitle": "Neural Networks Redefined",
       "date": "2027-06-15",
       "endDate": "2027-06-16",
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "The latest breakthroughs in neural architectures, training methodologies, and real-world deployment from researchers at leading AI labs worldwide.",
+      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models, diffusion networks to neuro-symbolic AI.",
       "icon": "🔬",
       "speakerCount": 15,
       "sessionCount": 22,
-      "tags": ["Deep Learning", "Neural Networks", "Research", "Computer Vision"]
+      "attendeeCount": "5,000+",
+      "tags": ["Deep Learning", "Neural Networks", "Computer Vision"]
     }
   ],
+  "trendingTopics": [
+    {
+      "id": 1,
+      "title": "GPT-5 & Next-Gen Foundation Models",
+      "category": "Generative AI",
+      "momentum": "Surging",
+      "growth": "+340%",
+      "description": "The race for AGI accelerates as labs push reasoning, multimodal capability, and context windows beyond 1M tokens.",
+      "impact": "Critical",
+      "icon": "🚀"
+    },
+    {
+      "id": 2,
+      "title": "Agentic AI & Autonomous Systems",
+      "category": "AI Engineering",
+      "momentum": "Exploding",
+      "growth": "+520%",
+      "description": "AI agents that plan, execute, and self-correct are reshaping software development, customer service, and research workflows.",
+      "impact": "High",
+      "icon": "🤖"
+    },
+    {
+      "id": 3,
+      "title": "AI in Drug Discovery & Healthcare",
+      "category": "Healthcare AI",
+      "momentum": "Rising",
+      "growth": "+180%",
+      "description": "AlphaFold 3 and generative molecular design are slashing drug development timelines from decades to months.",
+      "impact": "High",
+      "icon": "💊"
+    },
+    {
+      "id": 4,
+      "title": "Edge AI & On-Device Intelligence",
+      "category": "AI Infrastructure",
+      "momentum": "Accelerating",
+      "growth": "+290%",
+      "description": "Qualcomm, Apple, and NVIDIA push AI inference to smartphones, IoT devices, and autonomous vehicles.",
+      "impact": "High",
+      "icon": "📱"
+    },
+    {
+      "id": 5,
+      "title": "AI Regulation & EU AI Act",
+      "category": "AI Governance",
+      "momentum": "Critical",
+      "growth": "+150%",
+      "description": "Global regulatory frameworks are reshaping how companies build, deploy, and audit AI systems.",
+      "impact": "Critical",
+      "icon": "⚖️"
+    },
+    {
+      "id": 6,
+      "title": "Multimodal AI & Video Generation",
+      "category": "Creative AI",
+      "momentum": "Surging",
+      "growth": "+410%",
+      "description": "Sora, Runway Gen-3, and Kling are making text-to-video generation production-ready for film and advertising.",
+      "impact": "High",
+      "icon": "🎬"
+    }
+  ],
+  "marketInsights": {
+    "globalAiMarket": {
+      "value": "$243B",
+      "year": "2026",
+      "growth": "38.1%",
+      "label": "Global AI Market Size"
+    },
+    "enterpriseAdoption": {
+      "value": "72%",
+      "year": "2026",
+      "growth": "+15%",
+      "label": "Enterprise AI Adoption"
+    },
+    "aiJobs": {
+      "value": "4.7M",
+      "year": "2026",
+      "growth": "+52%",
+      "label": "AI Jobs Created"
+    },
+    "aiInvestment": {
+      "value": "$92B",
+      "year": "2026",
+      "growth": "+41%",
+      "label": "VC Funding in AI"
+    },
+    "sectors": [
+      { "name": "Healthcare & Life Sciences", "adoption": 84, "color": "#00E5A0" },
+      { "name": "Financial Services & FinTech", "adoption": 79, "color": "#4CC9F0" },
+      { "name": "Manufacturing & Supply Chain", "adoption": 71, "color": "#B8A9FA" },
+      { "name": "Retail & E-Commerce", "adoption": 67, "color": "#FFBE0B" },
+      { "name": "Education & EdTech", "adoption": 58, "color": "#FF6B6B" }
+    ]
+  },
   "testimonials": [
-    { "id": 1, "name": "Sarah Mitchell", "role": "Senior ML Engineer", "company": "DataFlow Inc.", "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I've implemented three strategies from last year's sessions.", "avatar": "" },
-    { "id": 2, "name": "David Chen", "role": "AI Startup Founder", "company": "NeuralWave", "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who understood our vision.", "avatar": "" },
-    { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "As an academic, I appreciate how ConfVerse bridges the gap between cutting-edge research and practical industry applications. Essential for anyone in AI.", "avatar": "" },
-    { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team has adopted multiple frameworks and tools discovered at ConfVerse events.", "avatar": "" }
+    { "id": 1, "name": "Sarah Mitchell", "role": "Senior ML Engineer", "company": "DataFlow Inc.", "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I've implemented three production strategies from last year's sessions." },
+    { "id": 2, "name": "David Chen", "role": "AI Startup Founder", "company": "NeuralWave", "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who understood our vision for autonomous agents." },
+    { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back." },
+    { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team adopted three frameworks and two MLOps tools discovered at ConfVerse events." }
   ],
   "partners": [
     { "name": "NeuralPath Labs", "icon": "🧪" },
