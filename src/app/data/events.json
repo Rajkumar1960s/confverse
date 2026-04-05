@@ -2,74 +2,25 @@
   "events": [
     {
       "id": 1,
-      "slug": "ai-connect-2026",
-      "title": "AI Connect Virtual Conference 2026",
+      "slug": "aixplore-2026",
+      "title": "AIxplore 2026",
       "subtitle": "The Future of Intelligence",
       "date": "2026-07-27",
       "endDate": "2026-07-28",
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "active",
-      "subdomain": "aiconnect",
-      "externalUrl": "http://localhost:4300",
+      "externalUrl": "https://aixplore-eta.vercel.app",
       "description": "Explore the frontiers of Generative AI, LLMs, and AI ethics with leading researchers and practitioners in an immersive two-day virtual experience.",
-      "longDescription": "AI Connect 2026 is a next-generation virtual conference experience designed for AI, Machine Learning, and future tech enthusiasts. Learn from industry leaders, AI researchers, connect with innovators, and explore real-world applications — all in one interactive platform. This conference covers Generative AI, Large Language Models, Ethics in AI, Agentic Systems, and practical deployment strategies.",
-      "heroImage": "images/hero-bg.png",
-      "cardImage": "",
-      "highlights": [
-        { "icon": "🎯", "title": "50+ Expert Sessions", "description": "Deep-dive into cutting-edge AI topics with world-class researchers and practitioners." },
-        { "icon": "🌐", "title": "Global Community", "description": "Connect with 5,000+ attendees from 80+ countries across industries." },
-        { "icon": "🔬", "title": "Live Research Showcases", "description": "See breakthrough AI research presented by the teams behind the innovations." },
-        { "icon": "🤝", "title": "Networking Lounges", "description": "Virtual breakout rooms for 1:1 conversations and small group discussions." },
-        { "icon": "📜", "title": "Certificates & Recordings", "description": "Earn certificates of participation and access all session recordings post-event." },
-        { "icon": "💡", "title": "Hands-On Workshops", "description": "Interactive workshops on prompt engineering, model fine-tuning, and AI agents." }
-      ],
-      "speakers": [
-        { "id": 1, "name": "Dr. Arjun Mehta", "title": "Chief AI Scientist", "company": "NeuralPath Labs", "bio": "Leading researcher in large language models with 15+ years experience in NLP and cognitive computing.", "image": "", "linkedin": "#" },
-        { "id": 2, "name": "Dr. Lin Zhang", "title": "Director of AI Research", "company": "Quantum Minds Inc.", "bio": "Pioneer in multimodal AI systems and responsible AI development.", "image": "", "linkedin": "#" },
-        { "id": 3, "name": "Marcus Thompson", "title": "VP of Engineering", "company": "DataForge AI", "bio": "Expert in scalable ML infrastructure and production AI systems.", "image": "", "linkedin": "#" },
-        { "id": 4, "name": "Dr. Amara Osei", "title": "Head of AI Ethics", "company": "TrustAI Global", "bio": "Renowned advocate for ethical AI frameworks and inclusive technology design.", "image": "", "linkedin": "#" },
-        { "id": 5, "name": "Raj Patel", "title": "CTO & Co-Founder", "company": "AgentStack", "bio": "Building the next generation of autonomous AI agent frameworks.", "image": "", "linkedin": "#" },
-        { "id": 6, "name": "Dr. Sofia Ivanova", "title": "Principal Research Scientist", "company": "DeepVision AI", "bio": "Specializing in computer vision and generative adversarial networks.", "image": "", "linkedin": "#" }
-      ],
-      "agenda": [
-        {
-          "day": "Day 1",
-          "date": "July 27, 2026",
-          "items": [
-            { "time": "09:00 AM", "title": "Opening Keynote: The State of AI in 2026", "speaker": "Dr. Arjun Mehta", "description": "A comprehensive overview of where AI stands today and what breakthroughs are on the horizon." },
-            { "time": "10:00 AM", "title": "Building Responsible AI Systems at Scale", "speaker": "Dr. Amara Osei", "description": "Frameworks and strategies for embedding ethics into production AI pipelines." },
-            { "time": "11:30 AM", "title": "Workshop: Mastering Prompt Engineering", "description": "Hands-on session covering advanced prompting techniques for LLMs.", "track": "Workshop" },
-            { "time": "01:00 PM", "title": "Panel: The Agentic AI Revolution", "speaker": "Raj Patel & Panel", "description": "Industry leaders discuss the rise of autonomous AI agents and their real-world impact." },
-            { "time": "02:30 PM", "title": "Multimodal AI: Beyond Text and Images", "speaker": "Dr. Lin Zhang", "description": "Exploring cutting-edge research in audio, video, and cross-modal understanding." },
-            { "time": "04:00 PM", "title": "Networking Session & Virtual Lounge", "description": "Connect with speakers and attendees in themed breakout rooms." }
-          ]
-        },
-        {
-          "day": "Day 2",
-          "date": "July 28, 2026",
-          "items": [
-            { "time": "09:00 AM", "title": "Keynote: Scaling ML Infrastructure", "speaker": "Marcus Thompson", "description": "Lessons from deploying AI at petabyte scale across global infrastructure." },
-            { "time": "10:30 AM", "title": "Computer Vision Frontiers", "speaker": "Dr. Sofia Ivanova", "description": "Next-generation vision models and their applications in healthcare and robotics." },
-            { "time": "12:00 PM", "title": "Workshop: Building Your First AI Agent", "description": "Step-by-step guide to creating autonomous agents with modern frameworks.", "track": "Workshop" },
-            { "time": "02:00 PM", "title": "Fireside Chat: AI and the Future of Work", "description": "An intimate conversation about how AI is transforming industries and careers." },
-            { "time": "03:30 PM", "title": "Research Showcase: Top 10 AI Papers of 2026", "description": "Rapid-fire presentations of the most impactful AI research papers." },
-            { "time": "05:00 PM", "title": "Closing Keynote & Awards", "speaker": "Dr. Arjun Mehta", "description": "Reflections on the conference, community awards, and what's next." }
-          ]
-        }
-      ],
-      "pricing": [
-        { "name": "Student Pass", "price": 59, "currency": "USD", "description": "Perfect for learners and future innovators", "features": ["Full access to all live sessions", "Access to panel discussions", "Certificate of participation", "Community access"] },
-        { "name": "Academic Pass", "price": 69, "currency": "USD", "description": "Designed for educators, researchers, and scholars", "features": ["Full access to all live sessions", "Priority access to Q&A with speakers", "Certificate of participation", "Community access", "Networking with global academics", "Access to session recordings"], "recommended": true },
-        { "name": "Industry Pass", "price": 79, "currency": "USD", "description": "Built for professionals, founders, and decision-makers", "features": ["Full access to all live sessions", "Priority networking access", "Exclusive industry-focused sessions", "Access to recordings", "Direct interaction with speakers", "Premium networking opportunities"] }
-      ],
-      "whoShouldAttend": ["AI/ML Engineers & Data Scientists", "CTOs & Technical Leaders", "Researchers & Academics", "Product Managers", "Startup Founders", "Students & Career Changers"],
-      "tags": ["Artificial Intelligence", "Machine Learning", "LLMs", "Generative AI", "Ethics"]
+      "icon": "🧠",
+      "speakerCount": 6,
+      "sessionCount": 12,
+      "tags": ["Artificial Intelligence", "Machine Learning", "LLMs", "Generative AI"]
     },
     {
       "id": 2,
       "slug": "ml-production-summit-2026",
-      "title": "ML in Production Summit 2026",
+      "title": "ML in Production Summit",
       "subtitle": "From Research to Reality",
       "date": "2026-10-15",
       "endDate": "2026-10-16",
@@ -77,21 +28,9 @@
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at top tech companies. Real-world case studies and battle-tested strategies.",
-      "longDescription": "The ML in Production Summit brings together ML engineers, DevOps specialists, and platform teams to share proven strategies for deploying and maintaining AI systems at scale. From model serving and monitoring to MLOps pipelines and cost optimization.",
-      "heroImage": "",
-      "cardImage": "",
-      "highlights": [
-        { "icon": "⚙️", "title": "MLOps Deep Dives", "description": "End-to-end production ML pipeline architectures from industry leaders." },
-        { "icon": "📊", "title": "Model Monitoring Masterclass", "description": "Learn to detect drift, debug failures, and maintain model quality." },
-        { "icon": "🚀", "title": "Deployment Strategies", "description": "Blue-green, canary, and shadow deployment patterns for ML models." },
-        { "icon": "💰", "title": "Cost Optimization", "description": "Reduce inference costs by 10x with smart architecture decisions." }
-      ],
-      "speakers": [
-        { "id": 7, "name": "Elena Rodriguez", "title": "Staff ML Engineer", "company": "CloudScale AI", "bio": "Expert in distributed ML systems and model serving infrastructure.", "image": "" },
-        { "id": 8, "name": "James Park", "title": "Head of MLOps", "company": "StreamlineML", "bio": "Building next-gen MLOps tools for enterprise deployments.", "image": "" }
-      ],
-      "agenda": [],
-      "whoShouldAttend": ["ML Engineers", "DevOps Engineers", "Platform Teams", "Data Engineers", "Engineering Managers"],
+      "icon": "⚙️",
+      "speakerCount": 8,
+      "sessionCount": 15,
       "tags": ["MLOps", "Production ML", "Model Deployment", "Infrastructure"]
     },
     {
@@ -105,22 +44,10 @@
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Unpack the future of blockchain, DeFi, and decentralized applications with pioneers shaping the decentralized web and AI-powered smart contracts.",
-      "longDescription": "Explore the intersection of AI and Web3 in this forward-looking conference. Topics include decentralized AI, on-chain ML models, AI-powered smart contract auditing, and the future of decentralized autonomous organizations.",
-      "heroImage": "",
-      "cardImage": "",
-      "highlights": [
-        { "icon": "🔗", "title": "Decentralized AI", "description": "How blockchain and AI converge to create trustless intelligence." },
-        { "icon": "🏗️", "title": "Smart Contract Security", "description": "AI-powered auditing and formal verification techniques." },
-        { "icon": "💎", "title": "DeFi Innovation", "description": "Next-generation financial protocols powered by machine learning." },
-        { "icon": "🌍", "title": "DAO Governance", "description": "How AI is transforming decentralized decision-making." }
-      ],
-      "speakers": [
-        { "id": 9, "name": "Alex Rivera", "title": "Blockchain Architect", "company": "ChainMind Labs", "bio": "Pioneer in decentralized AI computation on blockchain platforms.", "image": "" },
-        { "id": 10, "name": "Dr. Priya Sharma", "title": "DeFi Research Lead", "company": "Web3 Foundation", "bio": "Researching the intersection of machine learning and decentralized finance.", "image": "" }
-      ],
-      "agenda": [],
-      "whoShouldAttend": ["Blockchain Developers", "Smart Contract Auditors", "DeFi Builders", "AI Researchers", "Crypto Enthusiasts"],
-      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI", "Smart Contracts"]
+      "icon": "🔗",
+      "speakerCount": 10,
+      "sessionCount": 18,
+      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"]
     },
     {
       "id": 4,
@@ -133,19 +60,10 @@
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Discover how artificial intelligence is revolutionizing diagnostics, drug discovery, patient care, and healthcare operations across the globe.",
-      "longDescription": "Join healthcare professionals, AI researchers, and medtech innovators as we explore the latest breakthroughs in AI-powered healthcare. From diagnostic imaging to personalized treatment plans and drug discovery pipelines.",
-      "heroImage": "",
-      "cardImage": "",
-      "highlights": [
-        { "icon": "🏥", "title": "Clinical AI Applications", "description": "Real-world case studies of AI in hospital settings and clinics." },
-        { "icon": "💊", "title": "AI-Driven Drug Discovery", "description": "How ML is accelerating the pharmaceutical pipeline." },
-        { "icon": "🔬", "title": "Medical Imaging AI", "description": "State-of-the-art computer vision for radiology and pathology." },
-        { "icon": "🩺", "title": "Patient Care Optimization", "description": "Predictive analytics and personalized treatment plans." }
-      ],
-      "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["Healthcare CIOs", "Medical AI Researchers", "Health Tech Startups", "Clinical Data Scientists", "Hospital Administrators"],
-      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery", "Health Tech"]
+      "icon": "🏥",
+      "speakerCount": 12,
+      "sessionCount": 20,
+      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery"]
     },
     {
       "id": 5,
@@ -158,19 +76,26 @@
       "format": "Virtual",
       "status": "coming_soon",
       "description": "A hands-on conference for developers building autonomous AI agents — from multi-agent architectures to tool use, planning systems, and safety guardrails.",
-      "longDescription": "The premier gathering for engineers and researchers pushing the boundaries of agentic AI. Deep technical content on agent architectures, multi-agent systems, reasoning and planning, tool integration, memory systems, and production safety patterns.",
-      "heroImage": "",
-      "cardImage": "",
-      "highlights": [
-        { "icon": "🤖", "title": "Agent Architecture Patterns", "description": "Design patterns for building reliable autonomous AI systems." },
-        { "icon": "🧠", "title": "Reasoning & Planning", "description": "Advanced techniques for agent decision-making and task decomposition." },
-        { "icon": "🛡️", "title": "Safety & Guardrails", "description": "Building trust boundaries and fail-safes for autonomous agents." },
-        { "icon": "🔧", "title": "Tool Integration", "description": "Connecting agents to APIs, databases, and real-world systems." }
-      ],
-      "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["AI Engineers", "Full-Stack Developers", "Platform Engineers", "AI Researchers", "Technical Product Managers"],
+      "icon": "🤖",
+      "speakerCount": 10,
+      "sessionCount": 16,
       "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"]
+    },
+    {
+      "id": 6,
+      "slug": "deep-learning-frontiers-2027",
+      "title": "Deep Learning Frontiers 2027",
+      "subtitle": "Pushing the Boundaries of Neural Networks",
+      "date": "2027-06-15",
+      "endDate": "2027-06-16",
+      "location": "Virtual — Global Access",
+      "format": "Virtual",
+      "status": "coming_soon",
+      "description": "The latest breakthroughs in neural architectures, training methodologies, and real-world deployment from researchers at leading AI labs worldwide.",
+      "icon": "🔬",
+      "speakerCount": 15,
+      "sessionCount": 22,
+      "tags": ["Deep Learning", "Neural Networks", "Research", "Computer Vision"]
     }
   ],
   "testimonials": [
@@ -179,14 +104,14 @@
     { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "As an academic, I appreciate how ConfVerse bridges the gap between cutting-edge research and practical industry applications. Essential for anyone in AI.", "avatar": "" },
     { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team has adopted multiple frameworks and tools discovered at ConfVerse events.", "avatar": "" }
   ],
-  "featuredSpeakers": [
-    { "id": 1, "name": "Dr. Arjun Mehta", "title": "Chief AI Scientist", "company": "NeuralPath Labs", "bio": "Leading researcher in large language models.", "image": "" },
-    { "id": 2, "name": "Dr. Lin Zhang", "title": "Director of AI Research", "company": "Quantum Minds Inc.", "bio": "Pioneer in multimodal AI systems.", "image": "" },
-    { "id": 3, "name": "Marcus Thompson", "title": "VP of Engineering", "company": "DataForge AI", "bio": "Expert in scalable ML infrastructure.", "image": "" },
-    { "id": 4, "name": "Dr. Amara Osei", "title": "Head of AI Ethics", "company": "TrustAI Global", "bio": "Advocate for ethical AI frameworks.", "image": "" },
-    { "id": 5, "name": "Raj Patel", "title": "CTO & Co-Founder", "company": "AgentStack", "bio": "Building next-gen AI agent frameworks.", "image": "" },
-    { "id": 6, "name": "Dr. Sofia Ivanova", "title": "Principal Research Scientist", "company": "DeepVision AI", "bio": "Computer vision specialist.", "image": "" },
-    { "id": 7, "name": "Elena Rodriguez", "title": "Staff ML Engineer", "company": "CloudScale AI", "bio": "Expert in distributed ML systems.", "image": "" },
-    { "id": 8, "name": "James Park", "title": "Head of MLOps", "company": "StreamlineML", "bio": "Building next-gen MLOps tools.", "image": "" }
+  "partners": [
+    { "name": "NeuralPath Labs", "icon": "🧪" },
+    { "name": "Quantum Minds Inc.", "icon": "⚛️" },
+    { "name": "DataForge AI", "icon": "🔥" },
+    { "name": "TrustAI Global", "icon": "🛡️" },
+    { "name": "AgentStack", "icon": "🤖" },
+    { "name": "DeepVision AI", "icon": "👁️" },
+    { "name": "CloudScale AI", "icon": "☁️" },
+    { "name": "StreamlineML", "icon": "🚀" }
   ]
 }

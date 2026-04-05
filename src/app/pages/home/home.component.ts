@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EventsService } from '../../services/events.service';
-import { ConferenceEvent, Speaker, Testimonial } from '../../models/event.model';
+import { Testimonial } from '../../models/event.model';
 
 @Component({
   selector: 'app-home',
@@ -12,53 +12,51 @@ import { ConferenceEvent, Speaker, Testimonial } from '../../models/event.model'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  events: ConferenceEvent[] = [];
-  speakers: Speaker[] = [];
+  events: any[] = [];
   testimonials: Testimonial[] = [];
+  partners: any[] = [];
   currentTestimonial = 0;
 
   stats = [
-    { value: '15+', label: 'Expert Speakers' },
+    { value: '6+', label: 'Conferences' },
+    { value: '50+', label: 'Expert Speakers' },
     { value: '5,000+', label: 'Global Attendees' },
-    { value: '50+', label: 'Sessions & Workshops' },
-    { value: '80+', label: 'Countries Represented' }
+    { value: '80+', label: 'Countries' }
   ];
 
-  whyAttend = [
-    { icon: '🎓', title: 'World-Class Knowledge', description: 'Learn from pioneers shaping the future of AI, ML, and emerging technologies.' },
-    { icon: '🌐', title: 'Global Networking', description: 'Connect with researchers, founders, and engineers from across the globe.' },
-    { icon: '🚀', title: 'Innovation Exposure', description: 'Discover cutting-edge tools, frameworks, and research before they go mainstream.' },
-    { icon: '📈', title: 'Career Acceleration', description: 'Gain insights and connections that propel your career to the next level.' },
-    { icon: '🏆', title: 'Industry Recognition', description: 'Earn certificates and build credibility in the tech community.' },
-    { icon: '💡', title: 'Actionable Insights', description: 'Walk away with strategies you can implement immediately in your work.' }
+  steps = [
+    { icon: '🔍', title: 'Browse', desc: 'Explore our curated lineup of virtual conferences across AI, ML, Web3, and more.' },
+    { icon: '🎟️', title: 'Register', desc: 'Pick your pass and secure your spot — each conference has its own registration on the event site.' },
+    { icon: '🚀', title: 'Attend & Connect', desc: 'Join live sessions, workshops, and networking lounges from anywhere in the world.' }
+  ];
+
+  cardGradients = [
+    'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #065f46 100%)',
+    'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #3b1f2b 50%, #5b2c6f 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #1b4332 50%, #2d6a4f 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #2c1810 50%, #4a3728 100%)'
   ];
 
   speakerColors = [
     'linear-gradient(135deg, #00d4ff, #2196f3)',
     'linear-gradient(135deg, #7c3aed, #a855f7)',
     'linear-gradient(135deg, #ec4899, #f43f5e)',
-    'linear-gradient(135deg, #10b981, #06b6d4)',
-    'linear-gradient(135deg, #f59e0b, #ef4444)',
-    'linear-gradient(135deg, #6366f1, #8b5cf6)',
-    'linear-gradient(135deg, #14b8a6, #22d3ee)',
-    'linear-gradient(135deg, #f97316, #fbbf24)'
+    'linear-gradient(135deg, #10b981, #06b6d4)'
   ];
 
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
-    this.eventsService.getUpcomingEvents().subscribe(events => this.events = events);
-    this.eventsService.getFeaturedSpeakers().subscribe(speakers => this.speakers = speakers);
+    this.eventsService.getEvents().subscribe(events => this.events = events);
     this.eventsService.getTestimonials().subscribe(testimonials => this.testimonials = testimonials);
+    this.eventsService.getPartners().subscribe(partners => this.partners = partners);
   }
 
-  getEventLink(event: ConferenceEvent): string {
-    if (event.externalUrl) return event.externalUrl;
-    return '/events/' + event.slug;
-  }
-
-  isExternal(event: ConferenceEvent): boolean {
-    return !!event.externalUrl;
+  scrollToSection(id: string): void {
+    const el = document.getElementById(id);
+    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   }
 
   nextTestimonial(): void {

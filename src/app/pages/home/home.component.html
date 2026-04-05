@@ -11,18 +11,18 @@
       Virtual Conferences — Global Access
     </div>
     <h1 class="animate-fade-in-up">
-      Where Tech Minds<br/>
-      Meet the <span class="gradient-text">Future</span>
+      Discover <span class="gradient-text">World-Class</span><br/>
+      Tech Conferences
     </h1>
     <p class="hero-subtitle animate-fade-in-up">
-      ConfVerse brings together researchers, academicians, innovators, founders, developers, and industry leaders through high-impact conferences on AI, ML, and emerging technologies.
+      Your gateway to the best virtual conferences on AI, Machine Learning, Web3, and emerging technologies. Browse, register, and attend — all in one place.
     </p>
     <div class="hero-buttons animate-fade-in-up">
-      <a routerLink="/events" class="btn btn-primary">
-        <span>Explore Events</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <a (click)="scrollToSection('conferences')" class="btn btn-primary">
+        <span>Browse Conferences</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </a>
-      <a routerLink="/contact" class="btn btn-secondary">Partner With Us</a>
+      <a routerLink="/contact" class="btn btn-secondary">Host Your Conference</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item" *ngFor="let stat of stats">
@@ -38,129 +38,105 @@
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<section class="section about-section" id="about">
+<!-- HOW IT WORKS SECTION -->
+<section class="section how-section" id="how-it-works">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">About ConfVerse</span>
-      <h2>Curated <span class="gradient-text">Tech Conferences</span> for the Modern Era</h2>
-      <p>We create immersive virtual experiences that connect brilliant minds, spark innovation, and accelerate the future of technology.</p>
+      <span class="section-label">How It Works</span>
+      <h2>Three Steps to <span class="gradient-text">Brilliance</span></h2>
+      <p>Getting started with ConfVerse is simple — discover, register, and experience.</p>
     </div>
-    <div class="about-features">
-      <div class="feature-card glass-card" *ngFor="let item of [
-        { icon: '🎯', title: 'Curated Conferences', desc: 'Carefully crafted events focused on the most impactful tech topics of our time.' },
-        { icon: '🌍', title: 'Global Speakers & Experts', desc: 'Industry leaders, researchers, and innovators from world-class organizations.' },
-        { icon: '🤝', title: 'Networking That Matters', desc: 'Meaningful connections through virtual lounges, breakout rooms, and 1:1 sessions.' },
-        { icon: '💎', title: 'Real Insights, Not Theory', desc: 'Battle-tested strategies and real-world case studies you can apply immediately.' }
-      ]">
-        <div class="feature-icon">{{ item.icon }}</div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.desc }}</p>
+    <div class="steps-grid">
+      <div class="step-card" *ngFor="let step of steps; let i = index">
+        <div class="step-number">{{ i + 1 }}</div>
+        <div class="step-icon">{{ step.icon }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.desc }}</p>
       </div>
+      <div class="step-connector"></div>
     </div>
   </div>
 </section>
 
-<!-- UPCOMING EVENTS SECTION -->
-<section class="section events-section" id="events">
+<!-- CONFERENCES SECTION -->
+<section class="section conferences-section" id="conferences">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Upcoming Conferences</span>
-      <h2>Explore Our <span class="gradient-text">Conference Lineup</span></h2>
-      <p>From AI and machine learning to Web3 and healthcare — discover the events shaping the tech landscape.</p>
+      <span class="section-label">Our Conferences</span>
+      <h2>Upcoming <span class="gradient-text">Events</span></h2>
+      <p>Curated virtual conferences across AI, ML, Web3, Healthcare, and more. Click any event to explore details and register.</p>
     </div>
-    <div class="events-grid">
-      <div class="event-card glass-card" *ngFor="let event of events; let i = index">
-        <div class="event-card-image" [style.background]="'linear-gradient(135deg, hsl(' + (i * 60 + 180) + ', 70%, 20%), hsl(' + (i * 60 + 220) + ', 70%, 15%))'">
-          <div class="event-card-overlay">
-            <div class="event-date-badge">
+    <div class="conf-grid">
+      <div class="conf-card glass-card" *ngFor="let event of events; let i = index"
+        [class.conf-card-active]="event.status === 'active'"
+        [class.conf-card-soon]="event.status === 'coming_soon'">
+        <!-- Status ribbon -->
+        <div class="conf-status" *ngIf="event.status === 'active'">
+          <span class="status-live"><span class="live-dot"></span> Registration Open</span>
+        </div>
+        <div class="conf-status" *ngIf="event.status === 'coming_soon'">
+          <span class="status-soon">Coming Soon</span>
+        </div>
+        <!-- Card header with icon -->
+        <div class="conf-header" [style.background]="cardGradients[i % cardGradients.length]">
+          <div class="conf-icon">{{ event.icon }}</div>
+          <div class="conf-format">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            {{ event.format }}
+          </div>
+        </div>
+        <!-- Card body -->
+        <div class="conf-body">
+          <div class="conf-tags">
+            <span class="conf-tag" *ngFor="let tag of event.tags.slice(0, 2)">{{ tag }}</span>
+          </div>
+          <h3>{{ event.title }}</h3>
+          <p class="conf-subtitle">{{ event.subtitle }}</p>
+          <p class="conf-desc">{{ event.description }}</p>
+          <div class="conf-meta">
+            <div class="meta-item">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               {{ event.date | date:'MMM dd, yyyy' }}
             </div>
-            <span class="badge" [ngClass]="{'badge-active': event.status === 'active', 'badge-coming-soon': event.status === 'coming_soon'}">
-              {{ event.status === 'active' ? '● Live' : '◷ Coming Soon' }}
-            </span>
+            <div class="meta-item" *ngIf="event.speakerCount">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              {{ event.speakerCount }}+ Speakers
+            </div>
+            <div class="meta-item" *ngIf="event.sessionCount">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {{ event.sessionCount }} Sessions
+            </div>
           </div>
-          <div class="event-card-pattern">
-            <div class="pattern-circle" *ngFor="let c of [1,2,3,4,5]"
-              [style.width.px]="30 + c * 20"
-              [style.height.px]="30 + c * 20"
-              [style.opacity]="0.08 - c * 0.01"></div>
-          </div>
-        </div>
-        <div class="event-card-body">
-          <div class="event-tags">
-            <span class="event-tag" *ngFor="let tag of event.tags.slice(0, 3)">{{ tag }}</span>
-          </div>
-          <h3>{{ event.title }}</h3>
-          <p>{{ event.description }}</p>
-          <div class="event-meta">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              {{ event.location }}
-            </span>
-            <span class="badge badge-virtual">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              {{ event.format }}
-            </span>
-          </div>
-          <a *ngIf="event.status === 'active' && !isExternal(event)" [routerLink]="'/events/' + event.slug" class="btn btn-glow event-btn">
-            View Details
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <!-- Action button -->
+          <a *ngIf="event.status === 'active' && event.externalUrl" [href]="event.externalUrl" target="_blank" class="btn btn-primary conf-btn">
+            View Details & Register
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
-          <a *ngIf="event.status === 'active' && isExternal(event)" [href]="getEventLink(event)" class="btn btn-glow event-btn">
-            View Details
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span *ngIf="event.status === 'coming_soon'" class="btn btn-secondary event-btn disabled">
-            Launching Soon
+          <span *ngIf="event.status === 'coming_soon'" class="btn btn-secondary conf-btn conf-btn-disabled">
+            🔔 Notify Me When Live
           </span>
         </div>
       </div>
     </div>
-    <div class="events-cta">
-      <a routerLink="/events" class="btn btn-secondary">View All Conferences →</a>
-    </div>
   </div>
 </section>
 
-<!-- WHY ATTEND SECTION -->
-<section class="section why-section" id="why-attend">
+<!-- PARTNERS / TRUSTED BY SECTION -->
+<section class="section partners-section" id="partners">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Why Attend</span>
-      <h2>Accelerate Your <span class="gradient-text">Growth</span></h2>
-      <p>Every ConfVerse conference is designed to deliver tangible value that transforms your career and organization.</p>
+      <span class="section-label">Trusted By</span>
+      <h2>Our <span class="gradient-text">Partners</span></h2>
     </div>
-    <div class="why-grid">
-      <div class="why-card glass-card" *ngFor="let item of whyAttend; let i = index">
-        <div class="why-icon" [style.background]="'linear-gradient(135deg, hsl(' + (i * 50 + 180) + ', 80%, 50%), hsl(' + (i * 50 + 210) + ', 80%, 40%))'">
-          {{ item.icon }}
+    <div class="partners-marquee">
+      <div class="partners-track">
+        <div class="partner-item" *ngFor="let partner of partners">
+          <span class="partner-icon">{{ partner.icon }}</span>
+          <span class="partner-name">{{ partner.name }}</span>
         </div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPEAKERS SECTION -->
-<section class="section speakers-section" id="speakers">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Featured Speakers</span>
-      <h2>Learn From <span class="gradient-text">the Best</span></h2>
-      <p>World-renowned researchers, engineers, and leaders sharing their expertise and vision.</p>
-    </div>
-    <div class="speakers-grid">
-      <div class="speaker-card glass-card" *ngFor="let speaker of speakers; let i = index">
-        <div class="speaker-avatar" [style.background]="speakerColors[i % speakerColors.length]">
-          <span class="avatar-initials">{{ getInitials(speaker.name) }}</span>
-        </div>
-        <div class="speaker-info">
-          <h4>{{ speaker.name }}</h4>
-          <p class="speaker-title">{{ speaker.title }}</p>
-          <p class="speaker-company">{{ speaker.company }}</p>
+        <div class="partner-item" *ngFor="let partner of partners">
+          <span class="partner-icon">{{ partner.icon }}</span>
+          <span class="partner-name">{{ partner.name }}</span>
         </div>
       </div>
     </div>
@@ -171,8 +147,8 @@
 <section class="section testimonials-section" id="testimonials">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Testimonials</span>
-      <h2>What Attendees <span class="gradient-text">Say</span></h2>
+      <span class="section-label">What People Say</span>
+      <h2>Voices from the <span class="gradient-text">Community</span></h2>
     </div>
     <div class="testimonial-carousel" *ngIf="testimonials.length > 0">
       <button class="carousel-btn prev" (click)="prevTestimonial()" aria-label="Previous testimonial">
@@ -208,28 +184,20 @@
 <!-- CTA SECTION -->
 <section class="section cta-section" id="cta">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Join the Next Wave</span>
-      <h2>Be Part of the <span class="gradient-text">Innovation</span></h2>
-    </div>
-    <div class="cta-grid">
-      <div class="cta-card glass-card">
-        <div class="cta-icon" style="background: linear-gradient(135deg, #00d4ff, #2196f3);">🎤</div>
-        <h3>Attend an Event</h3>
-        <p>Gain insights, connect with experts, and accelerate your learning journey in AI and emerging technologies.</p>
-        <a routerLink="/events" class="btn btn-glow">View Events →</a>
+    <div class="cta-banner glass-card">
+      <div class="cta-content">
+        <span class="section-label">For Organizers</span>
+        <h2>Want to <span class="gradient-text">Host</span> Your Conference on ConfVerse?</h2>
+        <p>Reach a global audience of tech professionals, researchers, and innovators. We handle the platform, you focus on the content.</p>
+        <div class="cta-buttons">
+          <a routerLink="/contact" class="btn btn-primary">Get In Touch →</a>
+          <a routerLink="/about" class="btn btn-secondary">Learn More</a>
+        </div>
       </div>
-      <div class="cta-card glass-card featured">
-        <div class="cta-icon" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">🎙️</div>
-        <h3>Become a Speaker</h3>
-        <p>Share your expertise with a global audience of tech professionals, researchers, and innovators.</p>
-        <a routerLink="/contact" class="btn btn-primary">Apply to Speak →</a>
-      </div>
-      <div class="cta-card glass-card">
-        <div class="cta-icon" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">🏢</div>
-        <h3>Sponsor a Conference</h3>
-        <p>Connect your brand with a highly engaged tech audience and showcase your products to decision-makers.</p>
-        <a routerLink="/contact" class="btn btn-glow">Sponsor Us →</a>
+      <div class="cta-visual">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+        <div class="cta-orb cta-orb-3"></div>
       </div>
     </div>
   </div>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EventsService } from '../../services/events.service';
-import { ConferenceEvent } from '../../models/event.model';
 
 @Component({
   selector: 'app-events',
@@ -15,7 +14,7 @@ import { ConferenceEvent } from '../../models/event.model';
         <div class="page-hero-content">
           <span class="section-label">Browse Conferences</span>
           <h1>Our <span class="gradient-text">Conference</span> Lineup</h1>
-          <p>Discover our carefully curated tech conferences covering AI, ML, Web3, Healthcare, and more.</p>
+          <p>Discover curated tech conferences on AI, ML, Web3, Healthcare, and more. Each conference has its own site with full details and registration.</p>
         </div>
       </div>
     </section>
@@ -24,16 +23,17 @@ import { ConferenceEvent } from '../../models/event.model';
       <div class="container">
         <div class="filter-bar">
           <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">All Events</button>
-          <button class="filter-btn" [class.active]="activeFilter === 'active'" (click)="setFilter('active')">Active</button>
+          <button class="filter-btn" [class.active]="activeFilter === 'active'" (click)="setFilter('active')">Registration Open</button>
           <button class="filter-btn" [class.active]="activeFilter === 'coming_soon'" (click)="setFilter('coming_soon')">Coming Soon</button>
         </div>
 
         <div class="events-list">
           <div class="event-list-card glass-card" *ngFor="let event of filteredEvents; let i = index">
-            <div class="event-visual" [style.background]="'linear-gradient(135deg, hsl(' + (i * 50 + 180) + ', 60%, 18%), hsl(' + (i * 50 + 220) + ', 60%, 12%))'">
+            <div class="event-visual" [style.background]="gradients[i % gradients.length]">
               <span class="badge" [ngClass]="{'badge-active': event.status === 'active', 'badge-coming-soon': event.status === 'coming_soon'}">
-                {{ event.status === 'active' ? '● Live' : '◷ Coming Soon' }}
+                {{ event.status === 'active' ? '● Registration Open' : '◷ Coming Soon' }}
               </span>
+              <div class="event-icon-big">{{ event.icon }}</div>
               <div class="visual-pattern">
                 <div class="vp-ring" *ngFor="let r of [1,2,3]"></div>
               </div>
@@ -54,19 +54,17 @@ import { ConferenceEvent } from '../../models/event.model';
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                   {{ event.format }}
                 </div>
-                <div class="info-chip" *ngIf="event.speakers.length > 0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  {{ event.speakers.length }} Speakers
+                <div class="info-chip" *ngIf="event.speakerCount">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  {{ event.speakerCount }}+ Speakers
                 </div>
               </div>
               <div class="event-actions">
-                <a *ngIf="event.status === 'active' && event.externalUrl" [href]="event.externalUrl" class="btn btn-primary">
-                  View Full Details →
+                <a *ngIf="event.status === 'active' && event.externalUrl" [href]="event.externalUrl" target="_blank" class="btn btn-primary">
+                  View Details & Register
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 </a>
-                <a *ngIf="event.status === 'active' && !event.externalUrl" [routerLink]="'/events/' + event.slug" class="btn btn-primary">
-                  View Full Details →
-                </a>
-                <span *ngIf="event.status === 'coming_soon'" class="btn btn-secondary disabled">Announcing Soon</span>
+                <span *ngIf="event.status === 'coming_soon'" class="btn btn-secondary disabled">🔔 Notify When Live</span>
               </div>
             </div>
           </div>
@@ -100,7 +98,7 @@ import { ConferenceEvent } from '../../models/event.model';
     .page-hero-content p {
       font-size: 1.15rem;
       color: var(--text-secondary);
-      max-width: 560px;
+      max-width: 600px;
       margin: 0 auto;
     }
     .filter-bar {
@@ -118,6 +116,8 @@ import { ConferenceEvent } from '../../models/event.model';
       color: var(--text-secondary);
       font-size: 0.88rem;
       font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
     .filter-btn.active {
       background: rgba(0, 212, 255, 0.1);
@@ -134,6 +134,11 @@ import { ConferenceEvent } from '../../models/event.model';
     .event-list-card {
       display: flex;
       overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .event-list-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 212, 255, 0.3);
     }
     .event-visual {
       width: 300px;
@@ -142,8 +147,17 @@ import { ConferenceEvent } from '../../models/event.model';
       position: relative;
       display: flex;
       align-items: flex-start;
+      justify-content: center;
       padding: 20px;
       overflow: hidden;
+    }
+    .event-icon-big {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      opacity: 0.3;
     }
     .visual-pattern {
       position: absolute;
@@ -212,6 +226,7 @@ import { ConferenceEvent } from '../../models/event.model';
       color: var(--text-tertiary);
     }
     .event-actions { display: flex; gap: 12px; }
+    .event-actions .btn { display: inline-flex; align-items: center; gap: 8px; }
     .disabled { opacity: 0.5; pointer-events: none; }
 
     @media (max-width: 768px) {
@@ -222,9 +237,18 @@ import { ConferenceEvent } from '../../models/event.model';
   `]
 })
 export class EventsComponent implements OnInit {
-  events: ConferenceEvent[] = [];
-  filteredEvents: ConferenceEvent[] = [];
+  events: any[] = [];
+  filteredEvents: any[] = [];
   activeFilter = 'all';
+
+  gradients = [
+    'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #065f46 100%)',
+    'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #3b1f2b 50%, #5b2c6f 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #1b4332 50%, #2d6a4f 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #2c1810 50%, #4a3728 100%)'
+  ];
 
   constructor(private eventsService: EventsService) {}
 
