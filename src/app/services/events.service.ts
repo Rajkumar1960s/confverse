@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Testimonial } from '../models/event.model';
 import eventsData from '../data/events.json';
 
@@ -16,6 +17,11 @@ export class EventsService {
 
   getEvents(): Observable<any[]> {
     return of(this.events);
+  }
+
+  getEventBySlug(slug: string): Observable<any | undefined> {
+    const event = this.events.find(e => e.slug === slug);
+    return of(event);
   }
 
   getActiveEvents(): Observable<any[]> {

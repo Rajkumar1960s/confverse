@@ -19,27 +19,27 @@ export class HomeComponent implements OnInit {
   currentTestimonial = 0;
 
   metrics = [
-    { value: '6+', label: 'Conferences' },
-    { value: '50+', label: 'Speakers' },
-    { value: '5,000+', label: 'Attendees' },
-    { value: '80+', label: 'Countries' }
+    { value: '8+', label: 'Conferences' },
+    { value: '80+', label: 'Speakers' },
+    { value: '25,000+', label: 'Attendees' },
+    { value: '90+', label: 'Countries' }
   ];
 
   steps = [
-    { icon: '🔍', title: 'Discover', desc: 'Browse trending AI conferences, market insights, and expert-led events across dozens of tech domains.' },
-    { icon: '🎟️', title: 'Register', desc: 'Each conference has its own dedicated site with full details, speakers, agenda, and secure registration.' },
-    { icon: '🚀', title: 'Attend & Connect', desc: 'Join live sessions, interactive workshops, and networking lounges from anywhere in the world.' }
+    { icon: '🔍', title: 'Discover', desc: 'Browse trending AI conferences, market insights, and expert-led events across dozens of technology domains.' },
+    { icon: '🎟️', title: 'Register', desc: 'Each conference has its own dedicated site with comprehensive details, speaker profiles, agenda, and secure registration.' },
+    { icon: '🚀', title: 'Attend & Connect', desc: 'Join live sessions, interactive workshops, and networking lounges from anywhere in the world — no travel required.' }
   ];
 
   tickerItems = [
-    { text: 'GPT-5 rumored for Q3 2026', color: '#00E5A0' },
-    { text: 'AI market projected to reach $243B', color: '#4CC9F0' },
-    { text: 'Agentic AI adoption up 520% YoY', color: '#FFBE0B' },
-    { text: 'EU AI Act enforcement begins 2026', color: '#FF6B6B' },
-    { text: 'Edge AI chip shipments surpass 1B units', color: '#B8A9FA' },
-    { text: 'Healthcare AI saves $150B in drug R&D', color: '#00E5A0' },
-    { text: 'Multimodal models enter production', color: '#4CC9F0' },
-    { text: '72% of enterprises now use AI', color: '#FFBE0B' }
+    { text: 'GPT-5 expected in Q3 2026 with 10x reasoning gains', color: '#00E5A0' },
+    { text: 'Global AI market projected to reach $243B by year-end', color: '#4CC9F0' },
+    { text: 'Agentic AI adoption surges 520% year over year', color: '#FFBE0B' },
+    { text: 'EU AI Act enforcement begins across 27 member states', color: '#FF6B6B' },
+    { text: 'Edge AI chip shipments surpass 1 billion units globally', color: '#B8A9FA' },
+    { text: 'AI-driven drug discovery saves $150B in R&D costs', color: '#00E5A0' },
+    { text: 'Multimodal foundation models enter production workflows', color: '#4CC9F0' },
+    { text: '72% of enterprises now actively deploy AI solutions', color: '#FFBE0B' }
   ];
 
   cardGradients = [
@@ -48,7 +48,9 @@ export class HomeComponent implements OnInit {
     'linear-gradient(145deg, #0f1923 0%, #1e1b2e 60%, #2d1b4e 100%)',
     'linear-gradient(145deg, #0f1923 0%, #2a1a1a 60%, #3d1414 100%)',
     'linear-gradient(145deg, #0f1923 0%, #1a2333 60%, #0d3d5f 100%)',
-    'linear-gradient(145deg, #0f1923 0%, #28221a 60%, #3d3214 100%)'
+    'linear-gradient(145deg, #0f1923 0%, #28221a 60%, #3d3214 100%)',
+    'linear-gradient(145deg, #0f1923 0%, #1a332a 60%, #0d5f4a 100%)',
+    'linear-gradient(145deg, #0f1923 0%, #2e1a1a 60%, #5f0d0d 100%)'
   ];
 
   avatarColors = [

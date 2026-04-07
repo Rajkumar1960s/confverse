@@ -11,12 +11,61 @@
       "format": "Virtual",
       "status": "active",
       "externalUrl": "https://aixplore-eta.vercel.app",
-      "description": "Explore the frontiers of Generative AI, LLMs, and AI ethics with leading researchers and practitioners. Two days of immersive sessions on agentic systems, prompt engineering, and responsible AI.",
+      "description": "Explore the frontiers of generative AI, large language models, and AI ethics with leading researchers and practitioners. Two days of immersive sessions on agentic systems, prompt engineering, and responsible AI deployment.",
+      "longDescription": "AIxplore 2026 is a premier two-day virtual conference that brings together the brightest minds in artificial intelligence. From foundational research on next-generation language models to real-world production deployments, every session is designed to deliver actionable insights. Whether you are an AI researcher pushing the boundaries of what is possible, or an industry practitioner looking to implement cutting-edge solutions, AIxplore offers the depth, community, and hands-on learning you need to stay ahead.",
       "icon": "🧠",
       "speakerCount": 6,
       "sessionCount": 12,
       "attendeeCount": "2,500+",
-      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"]
+      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"],
+      "highlights": [
+        { "icon": "🎯", "title": "50+ Expert Sessions", "description": "Deep-dive talks and workshops led by world-class AI researchers and practitioners." },
+        { "icon": "🌐", "title": "Global Community", "description": "Connect with 2,500+ attendees from 80+ countries across diverse industries." },
+        { "icon": "🔬", "title": "Live Research Showcases", "description": "See breakthrough AI research presented by the teams behind the innovations." },
+        { "icon": "🤝", "title": "Networking Lounges", "description": "Virtual breakout rooms for one-on-one conversations and small group discussions." }
+      ],
+      "speakers": [
+        { "id": 1, "name": "Dr. Arjun Mehta", "title": "Chief AI Scientist", "company": "NeuralPath Labs", "bio": "Leading researcher in large language models with 15+ years of experience in NLP and cognitive computing.", "image": "", "linkedin": "" },
+        { "id": 2, "name": "Dr. Lin Zhang", "title": "Director of AI Research", "company": "Quantum Minds Inc.", "bio": "Pioneer in multimodal AI systems and responsible AI development methodologies.", "image": "", "linkedin": "" },
+        { "id": 3, "name": "Marcus Thompson", "title": "VP of Engineering", "company": "DataForge AI", "bio": "Expert in scalable ML infrastructure and production AI systems serving millions of users.", "image": "", "linkedin": "" },
+        { "id": 4, "name": "Dr. Amara Osei", "title": "Head of AI Ethics", "company": "TrustAI Global", "bio": "Renowned advocate for ethical AI frameworks and inclusive technology design.", "image": "", "linkedin": "" },
+        { "id": 5, "name": "Raj Patel", "title": "CTO & Co-Founder", "company": "AgentStack", "bio": "Building the next generation of autonomous AI agent frameworks for enterprise applications.", "image": "", "linkedin": "" },
+        { "id": 6, "name": "Dr. Sofia Ivanova", "title": "Principal Research Scientist", "company": "DeepVision AI", "bio": "Specializing in computer vision, generative adversarial networks, and medical imaging AI.", "image": "", "linkedin": "" }
+      ],
+      "agenda": [
+        {
+          "day": "Day 1",
+          "date": "July 27, 2026",
+          "items": [
+            { "time": "09:00 AM", "title": "Opening Keynote: The State of AI in 2026", "speaker": "Dr. Arjun Mehta", "description": "A comprehensive overview of where AI stands today and what breakthroughs are on the horizon.", "track": "Keynote" },
+            { "time": "10:00 AM", "title": "Building Responsible AI Systems at Scale", "speaker": "Dr. Amara Osei", "description": "Frameworks and strategies for embedding ethics into production AI pipelines.", "track": "Ethics" },
+            { "time": "11:30 AM", "title": "Workshop: Mastering Prompt Engineering", "speaker": "", "description": "A hands-on session covering advanced prompting techniques for large language models.", "track": "Workshop" },
+            { "time": "01:00 PM", "title": "Panel: The Agentic AI Revolution", "speaker": "Raj Patel & Panel", "description": "Industry leaders discuss the rise of autonomous AI agents and their impact on enterprise workflows.", "track": "Panel" },
+            { "time": "02:30 PM", "title": "Multimodal AI: Beyond Text and Images", "speaker": "Dr. Lin Zhang", "description": "Cutting-edge research in audio, video, and cross-modal understanding.", "track": "Research" },
+            { "time": "04:00 PM", "title": "Networking Session & Virtual Lounge", "speaker": "", "description": "Connect with speakers and attendees in themed breakout rooms.", "track": "Networking" }
+          ]
+        },
+        {
+          "day": "Day 2",
+          "date": "July 28, 2026",
+          "items": [
+            { "time": "09:00 AM", "title": "Keynote: Scaling ML Infrastructure", "speaker": "Marcus Thompson", "description": "Lessons learned from deploying AI at petabyte scale across distributed systems.", "track": "Keynote" },
+            { "time": "10:30 AM", "title": "Computer Vision Frontiers", "speaker": "Dr. Sofia Ivanova", "description": "Next-generation vision models transforming healthcare diagnostics and robotics.", "track": "Research" },
+            { "time": "12:00 PM", "title": "Workshop: Building Your First AI Agent", "speaker": "", "description": "A step-by-step guide to creating autonomous agents with tool-use capabilities.", "track": "Workshop" },
+            { "time": "02:00 PM", "title": "Fireside Chat: AI and the Future of Work", "speaker": "", "description": "An intimate discussion on how AI is transforming industries and career trajectories.", "track": "Fireside" },
+            { "time": "03:30 PM", "title": "Research Showcase: Top 10 AI Papers of 2026", "speaker": "", "description": "Rapid-fire presentations of the most impactful AI research this year.", "track": "Research" },
+            { "time": "05:00 PM", "title": "Closing Keynote & Awards", "speaker": "Dr. Arjun Mehta", "description": "Conference reflections, community awards, and a look at what lies ahead.", "track": "Keynote" }
+          ]
+        }
+      ],
+      "whoShouldAttend": [
+        "AI/ML Engineers and Data Scientists",
+        "Research Scientists and PhD Students",
+        "CTOs and Technical Decision-Makers",
+        "Product Managers building AI-powered products",
+        "AI Ethics and Governance Professionals",
+        "Startup Founders in the AI space"
+      ]
     },
     {
       "id": 2,
@@ -28,29 +77,39 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Learn how to scale, deploy, and monitor ML models from engineers at top tech companies. MLOps deep-dives, cost optimization strategies, and production-grade architectures.",
+      "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at leading technology companies. Featuring MLOps deep-dives, cost optimization strategies, and production-grade architectures.",
+      "longDescription": "The ML in Production Summit is dedicated to the craft of deploying machine learning at scale. Too many models never leave the lab — this conference changes that. Hear real stories from engineers who have shipped, monitored, and iterated on ML systems serving millions of users. Topics include CI/CD for ML, feature stores, model monitoring, cost optimization, and the latest in MLOps tooling.",
       "icon": "⚙️",
       "speakerCount": 8,
       "sessionCount": 15,
       "attendeeCount": "3,000+",
-      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"]
+      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["ML Engineers", "DevOps Engineers", "Platform Engineers", "Technical Leads"]
     },
     {
       "id": 3,
-      "slug": "web3-decentralized-future-2026",
-      "title": "Web3 & The Decentralized Future",
-      "subtitle": "Building the Trustless Internet",
-      "date": "2026-12-05",
-      "endDate": "2026-12-06",
+      "slug": "global-ai-innovation-summit-2026",
+      "title": "Global AI Innovation Summit",
+      "subtitle": "Where Industry Meets Intelligence",
+      "date": "2026-11-10",
+      "endDate": "2026-11-12",
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Unpack blockchain convergence with AI — decentralized AI, on-chain ML models, smart contract auditing, and the future of decentralized autonomous organizations.",
-      "icon": "🔗",
-      "speakerCount": 10,
-      "sessionCount": 18,
-      "attendeeCount": "2,000+",
-      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"]
+      "description": "A three-day summit uniting enterprise leaders, policymakers, and technologists to explore AI's transformative impact across industries. Featuring keynotes from Fortune 500 CTOs and global AI strategy sessions.",
+      "longDescription": "The Global AI Innovation Summit is the flagship event for industry leaders navigating the AI transformation. Over three days, attendees engage with C-suite executives, government AI advisors, and leading technologists to explore enterprise AI strategy, regulatory compliance, and competitive advantage through artificial intelligence.",
+      "icon": "🌍",
+      "speakerCount": 20,
+      "sessionCount": 30,
+      "attendeeCount": "5,000+",
+      "tags": ["Enterprise AI", "AI Strategy", "Digital Transformation", "AI Governance"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["C-Suite Executives", "AI Strategy Leaders", "Policy Advisors", "Enterprise Architects"]
     },
     {
       "id": 4,
@@ -62,12 +121,17 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "How AI is revolutionizing diagnostics, drug discovery, and clinical workflows. Featuring Mayo Clinic and Johns Hopkins researchers on real-world medical AI deployments.",
+      "description": "Discover how AI is revolutionizing diagnostics, drug discovery, and clinical workflows. Featuring researchers from world-renowned medical institutions sharing real-world deployments of medical AI.",
+      "longDescription": "From AI-powered radiology to generative drug design, this summit showcases how artificial intelligence is reshaping healthcare delivery. Hear directly from researchers, clinicians, and health-tech leaders about the breakthroughs making headlines — and the practical challenges of deploying AI in clinical settings.",
       "icon": "🏥",
       "speakerCount": 12,
       "sessionCount": 20,
       "attendeeCount": "4,000+",
-      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery"]
+      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery", "Clinical AI"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["Healthcare CIOs", "Medical Researchers", "Biotech Engineers", "Health-Tech Founders"]
     },
     {
       "id": 5,
@@ -79,12 +143,17 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "The premier gathering for autonomous AI agent builders — multi-agent architectures, tool use patterns, planning systems, memory frameworks, and safety guardrails.",
+      "description": "The premier gathering for autonomous AI agent builders — featuring multi-agent architectures, tool-use patterns, planning systems, memory frameworks, and safety guardrails for production deployments.",
+      "longDescription": "Agentic AI is the next frontier. This conference is built for the engineers, researchers, and product teams actively building autonomous AI systems. From multi-agent orchestration to long-term memory and safety guardrails, every session delivers hands-on, production-tested knowledge.",
       "icon": "🤖",
       "speakerCount": 10,
       "sessionCount": 16,
       "attendeeCount": "3,500+",
-      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent"]
+      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["AI Agent Developers", "Research Engineers", "Product Engineers", "AI Safety Researchers"]
     },
     {
       "id": 6,
@@ -96,12 +165,61 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models, diffusion networks to neuro-symbolic AI.",
+      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models, diffusion networks to neuro-symbolic AI — explore the cutting edge of deep learning.",
+      "longDescription": "Deep Learning Frontiers brings together the world's top neural network researchers to share the latest advances in architecture design, training efficiency, and real-world deployment. This conference covers the full spectrum from foundational theory to production systems.",
       "icon": "🔬",
       "speakerCount": 15,
       "sessionCount": 22,
       "attendeeCount": "5,000+",
-      "tags": ["Deep Learning", "Neural Networks", "Computer Vision"]
+      "tags": ["Deep Learning", "Neural Networks", "Computer Vision", "NLP"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["Deep Learning Researchers", "Computer Vision Engineers", "NLP Scientists", "PhD Students"]
+    },
+    {
+      "id": 7,
+      "slug": "web3-decentralized-ai-2027",
+      "title": "Web3 & Decentralized AI",
+      "subtitle": "Building the Trustless Intelligence Layer",
+      "date": "2027-08-05",
+      "endDate": "2027-08-06",
+      "location": "Virtual — Global Access",
+      "format": "Virtual",
+      "status": "coming_soon",
+      "description": "Explore the convergence of blockchain and artificial intelligence — decentralized AI inference, on-chain ML models, smart contract auditing with AI, and the future of decentralized autonomous organizations.",
+      "longDescription": "At the intersection of Web3 and AI lies a new paradigm for trustless, verifiable intelligence. This conference explores decentralized compute for AI training, blockchain-based model registries, AI-powered smart contract auditing, and DAO governance enhanced by machine intelligence.",
+      "icon": "🔗",
+      "speakerCount": 10,
+      "sessionCount": 18,
+      "attendeeCount": "2,000+",
+      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["Web3 Developers", "Blockchain Engineers", "DeFi Researchers", "AI Infrastructure Engineers"]
+    },
+    {
+      "id": 8,
+      "slug": "ai-cybersecurity-summit-2027",
+      "title": "AI & Cybersecurity Summit",
+      "subtitle": "Defending the Digital Frontier",
+      "date": "2027-09-18",
+      "endDate": "2027-09-19",
+      "location": "Virtual — Global Access",
+      "format": "Virtual",
+      "status": "coming_soon",
+      "description": "Where artificial intelligence meets cybersecurity. Explore AI-powered threat detection, adversarial ML defense, automated incident response, and the emerging landscape of AI-driven cyber warfare.",
+      "longDescription": "As cyber threats grow in sophistication, AI is becoming the most critical tool in the defender's arsenal. This summit brings together security researchers, red team operators, and AI engineers to explore the cutting edge of AI-powered cybersecurity — from deepfake detection to autonomous security operations.",
+      "icon": "🛡️",
+      "speakerCount": 12,
+      "sessionCount": 16,
+      "attendeeCount": "2,500+",
+      "tags": ["Cybersecurity", "Threat Detection", "Adversarial AI", "Security Ops"],
+      "highlights": [],
+      "speakers": [],
+      "agenda": [],
+      "whoShouldAttend": ["Security Engineers", "SOC Analysts", "CISO & Security Leaders", "AI/ML Security Researchers"]
     }
   ],
   "trendingTopics": [
@@ -111,7 +229,7 @@
       "category": "Generative AI",
       "momentum": "Surging",
       "growth": "+340%",
-      "description": "The race for AGI accelerates as labs push reasoning, multimodal capability, and context windows beyond 1M tokens.",
+      "description": "The race for AGI accelerates as labs push reasoning, multimodal capabilities, and context windows beyond one million tokens.",
       "impact": "Critical",
       "icon": "🚀"
     },
@@ -121,7 +239,7 @@
       "category": "AI Engineering",
       "momentum": "Exploding",
       "growth": "+520%",
-      "description": "AI agents that plan, execute, and self-correct are reshaping software development, customer service, and research workflows.",
+      "description": "AI agents that plan, execute, and self-correct are reshaping software development, customer service, and scientific research workflows.",
       "impact": "High",
       "icon": "🤖"
     },
@@ -131,7 +249,7 @@
       "category": "Healthcare AI",
       "momentum": "Rising",
       "growth": "+180%",
-      "description": "AlphaFold 3 and generative molecular design are slashing drug development timelines from decades to months.",
+      "description": "AlphaFold 3 and generative molecular design are compressing drug development timelines from decades to months.",
       "impact": "High",
       "icon": "💊"
     },
@@ -141,17 +259,17 @@
       "category": "AI Infrastructure",
       "momentum": "Accelerating",
       "growth": "+290%",
-      "description": "Qualcomm, Apple, and NVIDIA push AI inference to smartphones, IoT devices, and autonomous vehicles.",
+      "description": "Qualcomm, Apple, and NVIDIA are pushing AI inference to smartphones, IoT devices, and autonomous vehicles at unprecedented scale.",
       "impact": "High",
       "icon": "📱"
     },
     {
       "id": 5,
-      "title": "AI Regulation & EU AI Act",
+      "title": "AI Regulation & the EU AI Act",
       "category": "AI Governance",
       "momentum": "Critical",
       "growth": "+150%",
-      "description": "Global regulatory frameworks are reshaping how companies build, deploy, and audit AI systems.",
+      "description": "Global regulatory frameworks are reshaping how companies build, deploy, and audit AI systems across jurisdictions.",
       "impact": "Critical",
       "icon": "⚖️"
     },
@@ -161,7 +279,7 @@
       "category": "Creative AI",
       "momentum": "Surging",
       "growth": "+410%",
-      "description": "Sora, Runway Gen-3, and Kling are making text-to-video generation production-ready for film and advertising.",
+      "description": "Sora, Runway Gen-3, and Kling are making text-to-video generation production-ready for film, advertising, and interactive media.",
       "impact": "High",
       "icon": "🎬"
     }
@@ -183,13 +301,13 @@
       "value": "4.7M",
       "year": "2026",
       "growth": "+52%",
-      "label": "AI Jobs Created"
+      "label": "AI-Related Jobs Created"
     },
     "aiInvestment": {
       "value": "$92B",
       "year": "2026",
       "growth": "+41%",
-      "label": "VC Funding in AI"
+      "label": "Venture Capital Funding in AI"
     },
     "sectors": [
       { "name": "Healthcare & Life Sciences", "adoption": 84, "color": "#00E5A0" },
@@ -200,10 +318,10 @@
     ]
   },
   "testimonials": [
-    { "id": 1, "name": "Sarah Mitchell", "role": "Senior ML Engineer", "company": "DataFlow Inc.", "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I've implemented three production strategies from last year's sessions." },
-    { "id": 2, "name": "David Chen", "role": "AI Startup Founder", "company": "NeuralWave", "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who understood our vision for autonomous agents." },
-    { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back." },
-    { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team adopted three frameworks and two MLOps tools discovered at ConfVerse events." }
+    { "id": 1, "name": "Sarah Mitchell", "role": "Senior ML Engineer", "company": "DataFlow Inc.", "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I have implemented three production strategies from last year's sessions alone." },
+    { "id": 2, "name": "David Chen", "role": "AI Startup Founder", "company": "NeuralWave", "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who genuinely understood our vision for autonomous agents." },
+    { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back every quarter." },
+    { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team adopted three new frameworks and two MLOps tools that we discovered at ConfVerse events." }
   ],
   "partners": [
     { "name": "NeuralPath Labs", "icon": "🧪" },

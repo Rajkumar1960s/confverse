@@ -14,7 +14,7 @@ import { EventsService } from '../../services/events.service';
         <div class="page-hero-content">
           <span class="section-label">Browse Conferences</span>
           <h1>Our <span class="gradient-text">Conference</span> Lineup</h1>
-          <p>Discover curated tech conferences on AI, ML, Web3, Healthcare, and more. Each conference has its own site with full details and registration.</p>
+          <p>Discover curated tech conferences on AI, ML, Web3, Healthcare, and more. Each conference offers deep-dive insights from the industry's top minds.</p>
         </div>
       </div>
     </section>
@@ -60,7 +60,11 @@ import { EventsService } from '../../services/events.service';
                 </div>
               </div>
               <div class="event-actions">
-                <a *ngIf="event.status === 'active' && event.externalUrl" [href]="event.externalUrl" target="_blank" class="btn btn-primary">
+                <a *ngIf="event.status === 'active'" 
+                   [href]="event.externalUrl ? event.externalUrl : null" 
+                   [routerLink]="!event.externalUrl ? ['/events', event.slug] : null" 
+                   [attr.target]="event.externalUrl ? '_blank' : null" 
+                   class="btn btn-primary">
                   View Details & Register
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 </a>
@@ -81,9 +85,9 @@ import { EventsService } from '../../services/events.service';
     .page-hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(0, 212, 255, 0.08), transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(124, 58, 237, 0.06), transparent 60%),
-                  var(--primary-dark);
+      background: radial-gradient(ellipse at 30% 50%, rgba(76, 201, 240, 0.08), transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(184, 169, 250, 0.06), transparent 60%),
+                  var(--bg-primary);
     }
     .page-hero-content {
       position: relative;
@@ -92,7 +96,8 @@ import { EventsService } from '../../services/events.service';
     }
     .page-hero-content h1 {
       font-size: 3.5rem;
-      font-weight: 900;
+      font-weight: 700;
+      letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
     .page-hero-content p {
@@ -120,11 +125,11 @@ import { EventsService } from '../../services/events.service';
       transition: all 0.3s ease;
     }
     .filter-btn.active {
-      background: rgba(0, 212, 255, 0.1);
-      border-color: var(--accent-cyan);
-      color: var(--accent-cyan);
+      background: rgba(76, 201, 240, 0.1);
+      border-color: var(--accent-azure);
+      color: var(--accent-azure);
     }
-    .filter-btn:hover { border-color: rgba(0, 212, 255, 0.3); color: white; }
+    .filter-btn:hover { border-color: rgba(76, 201, 240, 0.3); color: white; }
 
     .events-list {
       display: flex;
@@ -138,7 +143,7 @@ import { EventsService } from '../../services/events.service';
     }
     .event-list-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(0, 212, 255, 0.3);
+      border-color: rgba(76, 201, 240, 0.3);
     }
     .event-visual {
       width: 300px;
@@ -188,20 +193,21 @@ import { EventsService } from '../../services/events.service';
     .event-tag {
       padding: 3px 10px;
       border-radius: var(--radius-full);
-      background: rgba(0, 212, 255, 0.08);
-      border: 1px solid rgba(0, 212, 255, 0.15);
+      background: rgba(76, 201, 240, 0.08);
+      border: 1px solid rgba(76, 201, 240, 0.15);
       font-size: 0.7rem;
-      color: var(--accent-cyan);
+      color: var(--accent-azure);
       font-weight: 500;
     }
     .event-details h2 {
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       margin-bottom: 6px;
     }
     .event-subtitle {
       font-size: 0.95rem;
-      color: var(--accent-violet);
+      color: var(--accent-lavender);
       margin-bottom: 12px;
       font-weight: 500;
     }

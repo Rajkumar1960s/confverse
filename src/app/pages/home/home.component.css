@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════
-   CONFVERSE — UNIQUE DESIGN SYSTEM
+   CONFVERSE — HOME PAGE STYLES
    Color: Emerald + Gold + Coral on Obsidian
    Typography: Space Grotesk + DM Sans
    ════════════════════════════════════════════════ */
@@ -52,6 +52,40 @@
   bottom: 20%;
   right: 10%;
   animation-delay: -4s;
+}
+
+/* ─── Floating Particles ─── */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  opacity: 0.2;
+  animation: particle-float 12s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; animation-duration: 10s; }
+.particle:nth-child(2) { top: 25%; left: 80%; animation-delay: -2s; animation-duration: 14s; background: var(--accent-azure); }
+.particle:nth-child(3) { top: 60%; left: 20%; animation-delay: -4s; animation-duration: 11s; background: var(--accent-lavender); }
+.particle:nth-child(4) { top: 70%; left: 70%; animation-delay: -6s; animation-duration: 13s; }
+.particle:nth-child(5) { top: 40%; left: 50%; animation-delay: -1s; animation-duration: 15s; background: var(--accent-gold); }
+.particle:nth-child(6) { top: 80%; left: 40%; animation-delay: -3s; animation-duration: 12s; background: var(--accent-azure); }
+.particle:nth-child(7) { top: 10%; left: 60%; animation-delay: -5s; animation-duration: 16s; }
+.particle:nth-child(8) { top: 50%; left: 90%; animation-delay: -7s; animation-duration: 11s; background: var(--accent-lavender); }
+
+@keyframes particle-float {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+  25% { transform: translate(20px, -30px) scale(1.5); opacity: 0.3; }
+  50% { transform: translate(-15px, -60px) scale(1); opacity: 0.15; }
+  75% { transform: translate(25px, -20px) scale(1.8); opacity: 0.25; }
 }
 
 .hero-content {
@@ -321,6 +355,9 @@
   display: flex;
   flex-direction: column;
   transition: var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .conf-card:hover {
@@ -390,7 +427,7 @@
   align-items: center;
   gap: 5px;
   padding: 4px 10px;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-xs, 6px);
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   font-size: 0.68rem;
@@ -462,6 +499,10 @@
   color: var(--text-tertiary);
 }
 
+.conf-cta-row {
+  margin-top: auto;
+}
+
 .conf-btn {
   width: 100%;
   text-align: center;
@@ -473,6 +514,11 @@
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.conf-view-all {
+  text-align: center;
+  margin-top: 48px;
 }
 
 /* ═══ MARKET INTELLIGENCE ═══ */
