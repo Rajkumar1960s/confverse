@@ -93,8 +93,6 @@
         [class.conf-active]="event.status === 'active'"
         [class.conf-soon]="event.status === 'coming_soon'"
         [href]="event.externalUrl || null"
-        [attr.target]="event.externalUrl ? '_blank' : null"
-        [attr.rel]="event.externalUrl ? 'noopener' : null"
         [routerLink]="!event.externalUrl ? ['/events', event.slug] : null">
         <!-- Header  -->
         <div class="conf-visual" [style.background]="cardGradients[i % cardGradients.length]">

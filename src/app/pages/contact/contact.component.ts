@@ -244,8 +244,8 @@ export class ContactComponent {
   submitted = false;
 
   contactInfo = [
-    { icon: '📧', title: 'Email', value: 'contact@ConfVerse.com', sub: 'We respond within 24 hours' },
-    { icon: '🤝', title: 'Partnerships', value: 'Anna@ConfVerse.com', sub: 'For sponsorships and collaborations' },
+    { icon: '📧', title: 'Email', value: 'contact@confverse.com', sub: 'We respond within 24 hours' },
+    { icon: '🤝', title: 'Partnerships', value: 'Anna@confverse.com', sub: 'For sponsorships and collaborations' },
     { icon: '🌍', title: 'Location', value: 'Global — 100% Virtual', sub: 'Our conferences are accessible worldwide' }
   ];
 

@@ -55,30 +55,7 @@ import { ConferenceEvent } from '../../models/event.model';
                 </div>
               </div>
 
-              <!-- Agenda -->
-              <div class="detail-block" *ngIf="event.agenda.length > 0">
-                <h2>Conference <span class="gradient-text">Agenda</span></h2>
-                <div class="agenda-days">
-                  <div class="agenda-day" *ngFor="let day of event.agenda">
-                    <h3 class="day-header">
-                      <span class="day-label">{{ day.day }}</span>
-                      <span class="day-date">{{ day.date }}</span>
-                    </h3>
-                    <div class="timeline">
-                      <div class="timeline-item" *ngFor="let item of day.items">
-                        <div class="timeline-time">{{ item.time }}</div>
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                          <span class="timeline-track badge badge-virtual" *ngIf="item.track">{{ item.track }}</span>
-                          <h4>{{ item.title }}</h4>
-                          <p class="timeline-speaker" *ngIf="item.speaker">🎤 {{ item.speaker }}</p>
-                          <p>{{ item.description }}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
 
               <!-- Speakers -->
               <div class="detail-block" *ngIf="event.speakers.length > 0">

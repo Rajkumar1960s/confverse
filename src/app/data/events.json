@@ -11,51 +11,94 @@
       "format": "Virtual",
       "status": "active",
       "externalUrl": "https://aixplore-eta.vercel.app",
-      "description": "Explore the frontiers of generative AI, large language models, and AI ethics with leading researchers and practitioners. Two days of immersive sessions on agentic systems, prompt engineering, and responsible AI deployment.",
-      "longDescription": "AIxplore 2026 is a premier two-day virtual conference that brings together the brightest minds in artificial intelligence. From foundational research on next-generation language models to real-world production deployments, every session is designed to deliver actionable insights. Whether you are an AI researcher pushing the boundaries of what is possible, or an industry practitioner looking to implement cutting-edge solutions, AIxplore offers the depth, community, and hands-on learning you need to stay ahead.",
+      "description": "Join a next-generation virtual conference experience designed for AI, Machine Learning, and future tech. Learn from industry leaders, connect with innovators, and explore real-world applications.",
+      "longDescription": "AIxplore is designed to give you practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution. Everything is designed to keep you engaged, not just watching.",
       "icon": "🧠",
       "speakerCount": 6,
       "sessionCount": 12,
       "attendeeCount": "2,500+",
-      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"],
+      "tags": [
+        "Generative AI",
+        "LLMs",
+        "Agentic Systems",
+        "AI Ethics"
+      ],
       "highlights": [
-        { "icon": "🎯", "title": "50+ Expert Sessions", "description": "Deep-dive talks and workshops led by world-class AI researchers and practitioners." },
-        { "icon": "🌐", "title": "Global Community", "description": "Connect with 2,500+ attendees from 80+ countries across diverse industries." },
-        { "icon": "🔬", "title": "Live Research Showcases", "description": "See breakthrough AI research presented by the teams behind the innovations." },
-        { "icon": "🤝", "title": "Networking Lounges", "description": "Virtual breakout rooms for one-on-one conversations and small group discussions." }
-      ],
-      "speakers": [
-        { "id": 1, "name": "Dr. Arjun Mehta", "title": "Chief AI Scientist", "company": "NeuralPath Labs", "bio": "Leading researcher in large language models with 15+ years of experience in NLP and cognitive computing.", "image": "", "linkedin": "" },
-        { "id": 2, "name": "Dr. Lin Zhang", "title": "Director of AI Research", "company": "Quantum Minds Inc.", "bio": "Pioneer in multimodal AI systems and responsible AI development methodologies.", "image": "", "linkedin": "" },
-        { "id": 3, "name": "Marcus Thompson", "title": "VP of Engineering", "company": "DataForge AI", "bio": "Expert in scalable ML infrastructure and production AI systems serving millions of users.", "image": "", "linkedin": "" },
-        { "id": 4, "name": "Dr. Amara Osei", "title": "Head of AI Ethics", "company": "TrustAI Global", "bio": "Renowned advocate for ethical AI frameworks and inclusive technology design.", "image": "", "linkedin": "" },
-        { "id": 5, "name": "Raj Patel", "title": "CTO & Co-Founder", "company": "AgentStack", "bio": "Building the next generation of autonomous AI agent frameworks for enterprise applications.", "image": "", "linkedin": "" },
-        { "id": 6, "name": "Dr. Sofia Ivanova", "title": "Principal Research Scientist", "company": "DeepVision AI", "bio": "Specializing in computer vision, generative adversarial networks, and medical imaging AI.", "image": "", "linkedin": "" }
-      ],
-      "agenda": [
         {
-          "day": "Day 1",
-          "date": "July 27, 2026",
-          "items": [
-            { "time": "09:00 AM", "title": "Opening Keynote: The State of AI in 2026", "speaker": "Dr. Arjun Mehta", "description": "A comprehensive overview of where AI stands today and what breakthroughs are on the horizon.", "track": "Keynote" },
-            { "time": "10:00 AM", "title": "Building Responsible AI Systems at Scale", "speaker": "Dr. Amara Osei", "description": "Frameworks and strategies for embedding ethics into production AI pipelines.", "track": "Ethics" },
-            { "time": "11:30 AM", "title": "Workshop: Mastering Prompt Engineering", "speaker": "", "description": "A hands-on session covering advanced prompting techniques for large language models.", "track": "Workshop" },
-            { "time": "01:00 PM", "title": "Panel: The Agentic AI Revolution", "speaker": "Raj Patel & Panel", "description": "Industry leaders discuss the rise of autonomous AI agents and their impact on enterprise workflows.", "track": "Panel" },
-            { "time": "02:30 PM", "title": "Multimodal AI: Beyond Text and Images", "speaker": "Dr. Lin Zhang", "description": "Cutting-edge research in audio, video, and cross-modal understanding.", "track": "Research" },
-            { "time": "04:00 PM", "title": "Networking Session & Virtual Lounge", "speaker": "", "description": "Connect with speakers and attendees in themed breakout rooms.", "track": "Networking" }
-          ]
+          "icon": "🎯",
+          "title": "50+ Expert Sessions",
+          "description": "Deep-dive talks and workshops led by world-class AI researchers and practitioners."
         },
         {
-          "day": "Day 2",
-          "date": "July 28, 2026",
-          "items": [
-            { "time": "09:00 AM", "title": "Keynote: Scaling ML Infrastructure", "speaker": "Marcus Thompson", "description": "Lessons learned from deploying AI at petabyte scale across distributed systems.", "track": "Keynote" },
-            { "time": "10:30 AM", "title": "Computer Vision Frontiers", "speaker": "Dr. Sofia Ivanova", "description": "Next-generation vision models transforming healthcare diagnostics and robotics.", "track": "Research" },
-            { "time": "12:00 PM", "title": "Workshop: Building Your First AI Agent", "speaker": "", "description": "A step-by-step guide to creating autonomous agents with tool-use capabilities.", "track": "Workshop" },
-            { "time": "02:00 PM", "title": "Fireside Chat: AI and the Future of Work", "speaker": "", "description": "An intimate discussion on how AI is transforming industries and career trajectories.", "track": "Fireside" },
-            { "time": "03:30 PM", "title": "Research Showcase: Top 10 AI Papers of 2026", "speaker": "", "description": "Rapid-fire presentations of the most impactful AI research this year.", "track": "Research" },
-            { "time": "05:00 PM", "title": "Closing Keynote & Awards", "speaker": "Dr. Arjun Mehta", "description": "Conference reflections, community awards, and a look at what lies ahead.", "track": "Keynote" }
-          ]
+          "icon": "🌐",
+          "title": "Global Community",
+          "description": "Connect with 2,500+ attendees from 80+ countries across diverse industries."
+        },
+        {
+          "icon": "🔬",
+          "title": "Live Research Showcases",
+          "description": "See breakthrough AI research presented by the teams behind the innovations."
+        },
+        {
+          "icon": "🤝",
+          "title": "Networking Lounges",
+          "description": "Virtual breakout rooms for one-on-one conversations and small group discussions."
+        }
+      ],
+      "speakers": [
+        {
+          "id": 1,
+          "name": "Dr. Arjun Mehta",
+          "title": "Chief AI Scientist",
+          "company": "NeuralPath Labs",
+          "bio": "Leading researcher in large language models with 15+ years of experience in NLP and cognitive computing.",
+          "image": "",
+          "linkedin": ""
+        },
+        {
+          "id": 2,
+          "name": "Dr. Lin Zhang",
+          "title": "Director of AI Research",
+          "company": "Quantum Minds Inc.",
+          "bio": "Pioneer in multimodal AI systems and responsible AI development methodologies.",
+          "image": "",
+          "linkedin": ""
+        },
+        {
+          "id": 3,
+          "name": "Marcus Thompson",
+          "title": "VP of Engineering",
+          "company": "DataForge AI",
+          "bio": "Expert in scalable ML infrastructure and production AI systems serving millions of users.",
+          "image": "",
+          "linkedin": ""
+        },
+        {
+          "id": 4,
+          "name": "Dr. Amara Osei",
+          "title": "Head of AI Ethics",
+          "company": "TrustAI Global",
+          "bio": "Renowned advocate for ethical AI frameworks and inclusive technology design.",
+          "image": "",
+          "linkedin": ""
+        },
+        {
+          "id": 5,
+          "name": "Raj Patel",
+          "title": "CTO & Co-Founder",
+          "company": "AgentStack",
+          "bio": "Building the next generation of autonomous AI agent frameworks for enterprise applications.",
+          "image": "",
+          "linkedin": ""
+        },
+        {
+          "id": 6,
+          "name": "Dr. Sofia Ivanova",
+          "title": "Principal Research Scientist",
+          "company": "DeepVision AI",
+          "bio": "Specializing in computer vision, generative adversarial networks, and medical imaging AI.",
+          "image": "",
+          "linkedin": ""
         }
       ],
       "whoShouldAttend": [
@@ -83,11 +126,20 @@
       "speakerCount": 8,
       "sessionCount": 15,
       "attendeeCount": "3,000+",
-      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"],
+      "tags": [
+        "MLOps",
+        "Model Deployment",
+        "Infrastructure",
+        "Cost Optimization"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["ML Engineers", "DevOps Engineers", "Platform Engineers", "Technical Leads"]
+      "whoShouldAttend": [
+        "ML Engineers",
+        "DevOps Engineers",
+        "Platform Engineers",
+        "Technical Leads"
+      ]
     },
     {
       "id": 3,
@@ -105,11 +157,20 @@
       "speakerCount": 20,
       "sessionCount": 30,
       "attendeeCount": "5,000+",
-      "tags": ["Enterprise AI", "AI Strategy", "Digital Transformation", "AI Governance"],
+      "tags": [
+        "Enterprise AI",
+        "AI Strategy",
+        "Digital Transformation",
+        "AI Governance"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["C-Suite Executives", "AI Strategy Leaders", "Policy Advisors", "Enterprise Architects"]
+      "whoShouldAttend": [
+        "C-Suite Executives",
+        "AI Strategy Leaders",
+        "Policy Advisors",
+        "Enterprise Architects"
+      ]
     },
     {
       "id": 4,
@@ -127,11 +188,20 @@
       "speakerCount": 12,
       "sessionCount": 20,
       "attendeeCount": "4,000+",
-      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery", "Clinical AI"],
+      "tags": [
+        "Healthcare AI",
+        "Medical Imaging",
+        "Drug Discovery",
+        "Clinical AI"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["Healthcare CIOs", "Medical Researchers", "Biotech Engineers", "Health-Tech Founders"]
+      "whoShouldAttend": [
+        "Healthcare CIOs",
+        "Medical Researchers",
+        "Biotech Engineers",
+        "Health-Tech Founders"
+      ]
     },
     {
       "id": 5,
@@ -149,11 +219,20 @@
       "speakerCount": 10,
       "sessionCount": 16,
       "attendeeCount": "3,500+",
-      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"],
+      "tags": [
+        "Agentic AI",
+        "Autonomous Systems",
+        "Multi-Agent",
+        "AI Safety"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["AI Agent Developers", "Research Engineers", "Product Engineers", "AI Safety Researchers"]
+      "whoShouldAttend": [
+        "AI Agent Developers",
+        "Research Engineers",
+        "Product Engineers",
+        "AI Safety Researchers"
+      ]
     },
     {
       "id": 6,
@@ -171,11 +250,20 @@
       "speakerCount": 15,
       "sessionCount": 22,
       "attendeeCount": "5,000+",
-      "tags": ["Deep Learning", "Neural Networks", "Computer Vision", "NLP"],
+      "tags": [
+        "Deep Learning",
+        "Neural Networks",
+        "Computer Vision",
+        "NLP"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["Deep Learning Researchers", "Computer Vision Engineers", "NLP Scientists", "PhD Students"]
+      "whoShouldAttend": [
+        "Deep Learning Researchers",
+        "Computer Vision Engineers",
+        "NLP Scientists",
+        "PhD Students"
+      ]
     },
     {
       "id": 7,
@@ -193,11 +281,20 @@
       "speakerCount": 10,
       "sessionCount": 18,
       "attendeeCount": "2,000+",
-      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"],
+      "tags": [
+        "Web3",
+        "Blockchain",
+        "DeFi",
+        "Decentralized AI"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["Web3 Developers", "Blockchain Engineers", "DeFi Researchers", "AI Infrastructure Engineers"]
+      "whoShouldAttend": [
+        "Web3 Developers",
+        "Blockchain Engineers",
+        "DeFi Researchers",
+        "AI Infrastructure Engineers"
+      ]
     },
     {
       "id": 8,
@@ -215,11 +312,20 @@
       "speakerCount": 12,
       "sessionCount": 16,
       "attendeeCount": "2,500+",
-      "tags": ["Cybersecurity", "Threat Detection", "Adversarial AI", "Security Ops"],
+      "tags": [
+        "Cybersecurity",
+        "Threat Detection",
+        "Adversarial AI",
+        "Security Ops"
+      ],
       "highlights": [],
       "speakers": [],
-      "agenda": [],
-      "whoShouldAttend": ["Security Engineers", "SOC Analysts", "CISO & Security Leaders", "AI/ML Security Researchers"]
+      "whoShouldAttend": [
+        "Security Engineers",
+        "SOC Analysts",
+        "CISO & Security Leaders",
+        "AI/ML Security Researchers"
+      ]
     }
   ],
   "trendingTopics": [
@@ -310,27 +416,95 @@
       "label": "Venture Capital Funding in AI"
     },
     "sectors": [
-      { "name": "Healthcare & Life Sciences", "adoption": 84, "color": "#00E5A0" },
-      { "name": "Financial Services & FinTech", "adoption": 79, "color": "#4CC9F0" },
-      { "name": "Manufacturing & Supply Chain", "adoption": 71, "color": "#B8A9FA" },
-      { "name": "Retail & E-Commerce", "adoption": 67, "color": "#FFBE0B" },
-      { "name": "Education & EdTech", "adoption": 58, "color": "#FF6B6B" }
+      {
+        "name": "Healthcare & Life Sciences",
+        "adoption": 84,
+        "color": "#00E5A0"
+      },
+      {
+        "name": "Financial Services & FinTech",
+        "adoption": 79,
+        "color": "#4CC9F0"
+      },
+      {
+        "name": "Manufacturing & Supply Chain",
+        "adoption": 71,
+        "color": "#B8A9FA"
+      },
+      {
+        "name": "Retail & E-Commerce",
+        "adoption": 67,
+        "color": "#FFBE0B"
+      },
+      {
+        "name": "Education & EdTech",
+        "adoption": 58,
+        "color": "#FF6B6B"
+      }
     ]
   },
   "testimonials": [
-    { "id": 1, "name": "Sarah Mitchell", "role": "Senior ML Engineer", "company": "DataFlow Inc.", "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I have implemented three production strategies from last year's sessions alone." },
-    { "id": 2, "name": "David Chen", "role": "AI Startup Founder", "company": "NeuralWave", "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who genuinely understood our vision for autonomous agents." },
-    { "id": 3, "name": "Dr. Fatima Al-Rashid", "role": "Research Director", "company": "Global AI Institute", "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back every quarter." },
-    { "id": 4, "name": "Michael Torres", "role": "CTO", "company": "ScalePoint Technologies", "quote": "Every session is packed with actionable insights. Our team adopted three new frameworks and two MLOps tools that we discovered at ConfVerse events." }
+    {
+      "id": 1,
+      "name": "Sarah Mitchell",
+      "role": "Senior ML Engineer",
+      "company": "DataFlow Inc.",
+      "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I have implemented three production strategies from last year's sessions alone."
+    },
+    {
+      "id": 2,
+      "name": "David Chen",
+      "role": "AI Startup Founder",
+      "company": "NeuralWave",
+      "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who genuinely understood our vision for autonomous agents."
+    },
+    {
+      "id": 3,
+      "name": "Dr. Fatima Al-Rashid",
+      "role": "Research Director",
+      "company": "Global AI Institute",
+      "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back every quarter."
+    },
+    {
+      "id": 4,
+      "name": "Michael Torres",
+      "role": "CTO",
+      "company": "ScalePoint Technologies",
+      "quote": "Every session is packed with actionable insights. Our team adopted three new frameworks and two MLOps tools that we discovered at ConfVerse events."
+    }
   ],
   "partners": [
-    { "name": "NeuralPath Labs", "icon": "🧪" },
-    { "name": "Quantum Minds Inc.", "icon": "⚛️" },
-    { "name": "DataForge AI", "icon": "🔥" },
-    { "name": "TrustAI Global", "icon": "🛡️" },
-    { "name": "AgentStack", "icon": "🤖" },
-    { "name": "DeepVision AI", "icon": "👁️" },
-    { "name": "CloudScale AI", "icon": "☁️" },
-    { "name": "StreamlineML", "icon": "🚀" }
+    {
+      "name": "NeuralPath Labs",
+      "icon": "🧪"
+    },
+    {
+      "name": "Quantum Minds Inc.",
+      "icon": "⚛️"
+    },
+    {
+      "name": "DataForge AI",
+      "icon": "🔥"
+    },
+    {
+      "name": "TrustAI Global",
+      "icon": "🛡️"
+    },
+    {
+      "name": "AgentStack",
+      "icon": "🤖"
+    },
+    {
+      "name": "DeepVision AI",
+      "icon": "👁️"
+    },
+    {
+      "name": "CloudScale AI",
+      "icon": "☁️"
+    },
+    {
+      "name": "StreamlineML",
+      "icon": "🚀"
+    }
   ]
 }

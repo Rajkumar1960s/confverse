@@ -8,19 +8,7 @@ export interface Speaker {
   linkedin?: string;
 }
 
-export interface AgendaItem {
-  time: string;
-  title: string;
-  speaker?: string;
-  description: string;
-  track?: string;
-}
 
-export interface AgendaDay {
-  day: string;
-  date: string;
-  items: AgendaItem[];
-}
 
 export interface EventHighlight {
   icon: string;
@@ -55,7 +43,6 @@ export interface ConferenceEvent {
   cardImage: string;
   highlights: EventHighlight[];
   speakers: Speaker[];
-  agenda: AgendaDay[];
   pricing?: PricingTier[];
   whoShouldAttend?: string[];
   tags: string[];

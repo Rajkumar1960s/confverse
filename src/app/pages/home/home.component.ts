@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   steps = [
     { icon: '🔍', title: 'Discover', desc: 'Browse trending AI conferences, market insights, and expert-led events across dozens of technology domains.' },
-    { icon: '🎟️', title: 'Register', desc: 'Each conference has its own dedicated site with comprehensive details, speaker profiles, agenda, and secure registration.' },
+    { icon: '🎟️', title: 'Register', desc: 'Each conference has its own dedicated site with comprehensive details, speaker profiles, and secure registration.' },
     { icon: '🚀', title: 'Attend & Connect', desc: 'Join live sessions, interactive workshops, and networking lounges from anywhere in the world — no travel required.' }
   ];
 

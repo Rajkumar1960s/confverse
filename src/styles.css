@@ -116,9 +116,11 @@ button {
 /* ─── Gradient Text ─── */
 .gradient-text {
   background: var(--gradient-text);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 4s ease infinite;
 }
 
 .accent-text {
