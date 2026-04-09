@@ -8,8 +8,6 @@ export interface Speaker {
   linkedin?: string;
 }
 
-
-
 export interface EventHighlight {
   icon: string;
   title: string;
@@ -39,8 +37,12 @@ export interface ConferenceEvent {
   externalUrl?: string;
   description: string;
   longDescription: string;
-  heroImage: string;
-  cardImage: string;
+  icon?: string;
+  speakerCount?: number;
+  sessionCount?: number;
+  attendeeCount?: string;
+  heroImage?: string;
+  cardImage?: string;
   highlights: EventHighlight[];
   speakers: Speaker[];
   pricing?: PricingTier[];
@@ -54,5 +56,31 @@ export interface Testimonial {
   role: string;
   company: string;
   quote: string;
-  avatar: string;
+  avatar?: string;
+}
+
+export interface SponsorTier {
+  name: string;
+  price: string;
+  color: string;
+  benefits: string[];
+}
+
+export interface SpeakerBenefit {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface MarketInsight {
+  value: string;
+  year: string;
+  growth: string;
+  label: string;
+}
+
+export interface SectorData {
+  name: string;
+  adoption: number;
+  color: string;
 }

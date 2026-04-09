@@ -11,18 +11,13 @@
       "format": "Virtual",
       "status": "active",
       "externalUrl": "https://aixplore-eta.vercel.app",
-      "description": "Join a next-generation virtual conference experience designed for AI, Machine Learning, and future tech. Learn from industry leaders, connect with innovators, and explore real-world applications.",
-      "longDescription": "AIxplore is designed to give you practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution. Everything is designed to keep you engaged, not just watching.",
+      "description": "Join a next-generation virtual conference designed for AI, machine learning, and future technology. Learn from industry leaders, connect with innovators, and explore real-world AI applications.",
+      "longDescription": "AIxplore is designed to deliver practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution — everything is crafted to keep you engaged, not just watching.",
       "icon": "🧠",
       "speakerCount": 6,
       "sessionCount": 12,
       "attendeeCount": "2,500+",
-      "tags": [
-        "Generative AI",
-        "LLMs",
-        "Agentic Systems",
-        "AI Ethics"
-      ],
+      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"],
       "highlights": [
         {
           "icon": "🎯",
@@ -120,26 +115,16 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at leading technology companies. Featuring MLOps deep-dives, cost optimization strategies, and production-grade architectures.",
-      "longDescription": "The ML in Production Summit is dedicated to the craft of deploying machine learning at scale. Too many models never leave the lab — this conference changes that. Hear real stories from engineers who have shipped, monitored, and iterated on ML systems serving millions of users. Topics include CI/CD for ML, feature stores, model monitoring, cost optimization, and the latest in MLOps tooling.",
+      "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at leading technology companies. Featuring MLOps deep dives, cost optimization strategies, and production-grade architectures.",
+      "longDescription": "The ML in Production Summit is dedicated to the craft of deploying machine learning at scale. Too many models never leave the lab — this conference changes that. Hear real stories from engineers who have shipped, monitored, and iterated on ML systems serving millions of users.",
       "icon": "⚙️",
       "speakerCount": 8,
       "sessionCount": 15,
       "attendeeCount": "3,000+",
-      "tags": [
-        "MLOps",
-        "Model Deployment",
-        "Infrastructure",
-        "Cost Optimization"
-      ],
+      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "ML Engineers",
-        "DevOps Engineers",
-        "Platform Engineers",
-        "Technical Leads"
-      ]
+      "whoShouldAttend": ["ML Engineers", "DevOps Engineers", "Platform Engineers", "Technical Leads"]
     },
     {
       "id": 3,
@@ -157,20 +142,10 @@
       "speakerCount": 20,
       "sessionCount": 30,
       "attendeeCount": "5,000+",
-      "tags": [
-        "Enterprise AI",
-        "AI Strategy",
-        "Digital Transformation",
-        "AI Governance"
-      ],
+      "tags": ["Enterprise AI", "AI Strategy", "Digital Transformation", "AI Governance"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "C-Suite Executives",
-        "AI Strategy Leaders",
-        "Policy Advisors",
-        "Enterprise Architects"
-      ]
+      "whoShouldAttend": ["C-Suite Executives", "AI Strategy Leaders", "Policy Advisors", "Enterprise Architects"]
     },
     {
       "id": 4,
@@ -188,20 +163,10 @@
       "speakerCount": 12,
       "sessionCount": 20,
       "attendeeCount": "4,000+",
-      "tags": [
-        "Healthcare AI",
-        "Medical Imaging",
-        "Drug Discovery",
-        "Clinical AI"
-      ],
+      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery", "Clinical AI"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "Healthcare CIOs",
-        "Medical Researchers",
-        "Biotech Engineers",
-        "Health-Tech Founders"
-      ]
+      "whoShouldAttend": ["Healthcare CIOs", "Medical Researchers", "Biotech Engineers", "Health-Tech Founders"]
     },
     {
       "id": 5,
@@ -219,20 +184,10 @@
       "speakerCount": 10,
       "sessionCount": 16,
       "attendeeCount": "3,500+",
-      "tags": [
-        "Agentic AI",
-        "Autonomous Systems",
-        "Multi-Agent",
-        "AI Safety"
-      ],
+      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "AI Agent Developers",
-        "Research Engineers",
-        "Product Engineers",
-        "AI Safety Researchers"
-      ]
+      "whoShouldAttend": ["AI Agent Developers", "Research Engineers", "Product Engineers", "AI Safety Researchers"]
     },
     {
       "id": 6,
@@ -244,26 +199,16 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models, diffusion networks to neuro-symbolic AI — explore the cutting edge of deep learning.",
+      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models and diffusion networks — explore the cutting edge of deep learning.",
       "longDescription": "Deep Learning Frontiers brings together the world's top neural network researchers to share the latest advances in architecture design, training efficiency, and real-world deployment. This conference covers the full spectrum from foundational theory to production systems.",
       "icon": "🔬",
       "speakerCount": 15,
       "sessionCount": 22,
       "attendeeCount": "5,000+",
-      "tags": [
-        "Deep Learning",
-        "Neural Networks",
-        "Computer Vision",
-        "NLP"
-      ],
+      "tags": ["Deep Learning", "Neural Networks", "Computer Vision", "NLP"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "Deep Learning Researchers",
-        "Computer Vision Engineers",
-        "NLP Scientists",
-        "PhD Students"
-      ]
+      "whoShouldAttend": ["Deep Learning Researchers", "Computer Vision Engineers", "NLP Scientists", "PhD Students"]
     },
     {
       "id": 7,
@@ -281,20 +226,10 @@
       "speakerCount": 10,
       "sessionCount": 18,
       "attendeeCount": "2,000+",
-      "tags": [
-        "Web3",
-        "Blockchain",
-        "DeFi",
-        "Decentralized AI"
-      ],
+      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "Web3 Developers",
-        "Blockchain Engineers",
-        "DeFi Researchers",
-        "AI Infrastructure Engineers"
-      ]
+      "whoShouldAttend": ["Web3 Developers", "Blockchain Engineers", "DeFi Researchers", "AI Infrastructure Engineers"]
     },
     {
       "id": 8,
@@ -307,25 +242,15 @@
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Where artificial intelligence meets cybersecurity. Explore AI-powered threat detection, adversarial ML defense, automated incident response, and the emerging landscape of AI-driven cyber warfare.",
-      "longDescription": "As cyber threats grow in sophistication, AI is becoming the most critical tool in the defender's arsenal. This summit brings together security researchers, red team operators, and AI engineers to explore the cutting edge of AI-powered cybersecurity — from deepfake detection to autonomous security operations.",
+      "longDescription": "As cyber threats grow in sophistication, AI is becoming the most critical tool in the defender's arsenal. This summit brings together security researchers, red team operators, and AI engineers to explore the cutting edge of AI-powered cybersecurity.",
       "icon": "🛡️",
       "speakerCount": 12,
       "sessionCount": 16,
       "attendeeCount": "2,500+",
-      "tags": [
-        "Cybersecurity",
-        "Threat Detection",
-        "Adversarial AI",
-        "Security Ops"
-      ],
+      "tags": ["Cybersecurity", "Threat Detection", "Adversarial AI", "Security Ops"],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": [
-        "Security Engineers",
-        "SOC Analysts",
-        "CISO & Security Leaders",
-        "AI/ML Security Researchers"
-      ]
+      "whoShouldAttend": ["Security Engineers", "SOC Analysts", "CISO & Security Leaders", "AI/ML Security Researchers"]
     }
   ],
   "trendingTopics": [
@@ -391,65 +316,101 @@
     }
   ],
   "marketInsights": {
-    "globalAiMarket": {
-      "value": "$243B",
-      "year": "2026",
-      "growth": "38.1%",
-      "label": "Global AI Market Size"
-    },
-    "enterpriseAdoption": {
-      "value": "72%",
-      "year": "2026",
-      "growth": "+15%",
-      "label": "Enterprise AI Adoption"
-    },
-    "aiJobs": {
-      "value": "4.7M",
-      "year": "2026",
-      "growth": "+52%",
-      "label": "AI-Related Jobs Created"
-    },
-    "aiInvestment": {
-      "value": "$92B",
-      "year": "2026",
-      "growth": "+41%",
-      "label": "Venture Capital Funding in AI"
-    },
+    "globalAiMarket": { "value": "$243B", "year": "2026", "growth": "38.1%", "label": "Global AI Market Size" },
+    "enterpriseAdoption": { "value": "72%", "year": "2026", "growth": "+15%", "label": "Enterprise AI Adoption" },
+    "aiJobs": { "value": "4.7M", "year": "2026", "growth": "+52%", "label": "AI-Related Jobs Created" },
+    "aiInvestment": { "value": "$92B", "year": "2026", "growth": "+41%", "label": "Venture Capital Funding in AI" },
     "sectors": [
-      {
-        "name": "Healthcare & Life Sciences",
-        "adoption": 84,
-        "color": "#00E5A0"
-      },
-      {
-        "name": "Financial Services & FinTech",
-        "adoption": 79,
-        "color": "#4CC9F0"
-      },
-      {
-        "name": "Manufacturing & Supply Chain",
-        "adoption": 71,
-        "color": "#B8A9FA"
-      },
-      {
-        "name": "Retail & E-Commerce",
-        "adoption": 67,
-        "color": "#FFBE0B"
-      },
-      {
-        "name": "Education & EdTech",
-        "adoption": 58,
-        "color": "#FF6B6B"
-      }
+      { "name": "Healthcare & Life Sciences", "adoption": 84, "color": "#00E5A0" },
+      { "name": "Financial Services & FinTech", "adoption": 79, "color": "#4CC9F0" },
+      { "name": "Manufacturing & Supply Chain", "adoption": 71, "color": "#B8A9FA" },
+      { "name": "Retail & E-Commerce", "adoption": 67, "color": "#FFBE0B" },
+      { "name": "Education & EdTech", "adoption": 58, "color": "#FF6B6B" }
     ]
   },
+  "sponsorTiers": [
+    {
+      "name": "Platinum Partner",
+      "price": "Custom",
+      "color": "#B8A9FA",
+      "benefits": [
+        "Premium logo placement across all events",
+        "Dedicated keynote speaking slot (30 minutes)",
+        "Exclusive virtual booth with lead capture",
+        "Full attendee list with contact details",
+        "Custom branded breakout session",
+        "Social media co-branding across channels",
+        "5 complimentary VIP passes",
+        "Post-event analytics & ROI report"
+      ]
+    },
+    {
+      "name": "Gold Partner",
+      "price": "$5,000",
+      "color": "#FFBE0B",
+      "benefits": [
+        "Logo on event website and materials",
+        "Panel discussion participation slot",
+        "Virtual booth with branding",
+        "Attendee list (opt-in contacts only)",
+        "Social media mentions and tags",
+        "3 complimentary passes",
+        "Post-event summary report"
+      ]
+    },
+    {
+      "name": "Silver Partner",
+      "price": "$2,500",
+      "color": "#4CC9F0",
+      "benefits": [
+        "Logo on event website",
+        "Mention during opening ceremony",
+        "Virtual booth (standard)",
+        "Social media acknowledgment",
+        "2 complimentary passes",
+        "Post-event highlights access"
+      ]
+    }
+  ],
+  "speakerBenefits": [
+    {
+      "icon": "🎤",
+      "title": "Global Stage",
+      "description": "Present to thousands of AI professionals from 90+ countries — no travel required."
+    },
+    {
+      "icon": "🏆",
+      "title": "Thought Leadership",
+      "description": "Position yourself as an industry expert through our curated, high-visibility platform."
+    },
+    {
+      "icon": "🤝",
+      "title": "Premium Networking",
+      "description": "Connect directly with attendees, co-speakers, and potential collaborators or investors."
+    },
+    {
+      "icon": "📹",
+      "title": "Recorded & Promoted",
+      "description": "All sessions are recorded and promoted across our channels, extending your reach for months."
+    },
+    {
+      "icon": "🎟️",
+      "title": "Complimentary Access",
+      "description": "Full VIP access to the event and all future ConfVerse conferences for the year."
+    },
+    {
+      "icon": "📊",
+      "title": "Engagement Analytics",
+      "description": "Receive detailed analytics on your session — attendee count, engagement score, and feedback."
+    }
+  ],
   "testimonials": [
     {
       "id": 1,
       "name": "Sarah Mitchell",
       "role": "Senior ML Engineer",
       "company": "DataFlow Inc.",
-      "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers is truly world-class. I have implemented three production strategies from last year's sessions alone."
+      "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers are truly world-class. I implemented three production strategies from last year's sessions alone."
     },
     {
       "id": 2,
@@ -474,37 +435,13 @@
     }
   ],
   "partners": [
-    {
-      "name": "NeuralPath Labs",
-      "icon": "🧪"
-    },
-    {
-      "name": "Quantum Minds Inc.",
-      "icon": "⚛️"
-    },
-    {
-      "name": "DataForge AI",
-      "icon": "🔥"
-    },
-    {
-      "name": "TrustAI Global",
-      "icon": "🛡️"
-    },
-    {
-      "name": "AgentStack",
-      "icon": "🤖"
-    },
-    {
-      "name": "DeepVision AI",
-      "icon": "👁️"
-    },
-    {
-      "name": "CloudScale AI",
-      "icon": "☁️"
-    },
-    {
-      "name": "StreamlineML",
-      "icon": "🚀"
-    }
+    { "name": "NeuralPath Labs", "icon": "🧪" },
+    { "name": "Quantum Minds Inc.", "icon": "⚛️" },
+    { "name": "DataForge AI", "icon": "🔥" },
+    { "name": "TrustAI Global", "icon": "🛡️" },
+    { "name": "AgentStack", "icon": "🤖" },
+    { "name": "DeepVision AI", "icon": "👁️" },
+    { "name": "CloudScale AI", "icon": "☁️" },
+    { "name": "StreamlineML", "icon": "🚀" }
   ]
 }

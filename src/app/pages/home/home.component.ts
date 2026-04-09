@@ -1,22 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { EventsService } from '../../services/events.service';
-import { Testimonial } from '../../models/event.model';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   events: any[] = [];
-  testimonials: Testimonial[] = [];
+  testimonials: any[] = [];
   trendingTopics: any[] = [];
   marketInsights: any = {};
+  sponsorTiers: any[] = [];
+  speakerBenefits: any[] = [];
   currentTestimonial = 0;
+  testimonialInterval: any;
+  typedText = '';
+  typewriterPhrases = ['Explore AI & Tech', 'Connect Globally', 'Lead Innovation', 'Shape the Future'];
+  currentPhraseIndex = 0;
+  isDeleting = false;
+  charIndex = 0;
+  typewriterInterval: any;
+  isBrowser: boolean;
+
+  speakerForm = { name: '', email: '', topic: '', bio: '' };
+  speakerFormSubmitted = false;
 
   metrics = [
     { value: '8+', label: 'Conferences' },
@@ -60,13 +73,76 @@ export class HomeComponent implements OnInit {
     'linear-gradient(135deg, #4CC9F0, #00E5A0)'
   ];
 
-  constructor(private eventsService: EventsService) {}
+  constructor(
+    private eventsService: EventsService,
+    @Inject(PLATFORM_ID) platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit(): void {
     this.eventsService.getEvents().subscribe(e => this.events = e);
     this.eventsService.getTestimonials().subscribe(t => this.testimonials = t);
     this.eventsService.getTrendingTopics().subscribe(t => this.trendingTopics = t);
     this.eventsService.getMarketInsights().subscribe(m => this.marketInsights = m);
+    this.eventsService.getSponsorTiers().subscribe(s => this.sponsorTiers = s);
+    this.eventsService.getSpeakerBenefits().subscribe(b => this.speakerBenefits = b);
+
+    if (this.isBrowser) {
+      this.startTypewriter();
+      this.testimonialInterval = setInterval(() => this.nextTestimonial(), 5000);
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.isBrowser) {
+      this.initScrollReveal();
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.typewriterInterval) clearInterval(this.typewriterInterval);
+    if (this.testimonialInterval) clearInterval(this.testimonialInterval);
+  }
+
+  startTypewriter(): void {
+    const typeSpeed = 80;
+    const deleteSpeed = 40;
+    const pauseTime = 2000;
+
+    const tick = () => {
+      const currentPhrase = this.typewriterPhrases[this.currentPhraseIndex];
+      if (!this.isDeleting) {
+        this.typedText = currentPhrase.substring(0, this.charIndex + 1);
+        this.charIndex++;
+        if (this.charIndex === currentPhrase.length) {
+          this.isDeleting = true;
+          this.typewriterInterval = setTimeout(tick, pauseTime);
+          return;
+        }
+      } else {
+        this.typedText = currentPhrase.substring(0, this.charIndex - 1);
+        this.charIndex--;
+        if (this.charIndex === 0) {
+          this.isDeleting = false;
+          this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.typewriterPhrases.length;
+        }
+      }
+      this.typewriterInterval = setTimeout(tick, this.isDeleting ? deleteSpeed : typeSpeed);
+    };
+    tick();
+  }
+
+  initScrollReveal(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }
 
   scrollTo(id: string): void {
@@ -83,5 +159,11 @@ export class HomeComponent implements OnInit {
 
   getInitials(name: string): string {
     return name.split(' ').map(n => n[0]).join('').substring(0, 2);
+  }
+
+  onSpeakerSubmit(): void {
+    if (this.speakerForm.name && this.speakerForm.email) {
+      this.speakerFormSubmitted = true;
+    }
   }
 }

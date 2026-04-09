@@ -4,9 +4,11 @@
     <div class="hero-mesh"></div>
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-glow hero-glow-3"></div>
     <div class="hero-particles">
-      <div class="particle" *ngFor="let p of [1,2,3,4,5,6,7,8]"></div>
+      <div class="particle" *ngFor="let p of [1,2,3,4,5,6,7,8,9,10,11,12]"></div>
     </div>
+    <div class="hero-grid-lines"></div>
   </div>
   <div class="container hero-content">
     <div class="hero-pill animate-fade-in">
@@ -15,7 +17,7 @@
     </div>
     <h1 class="animate-fade-in-up">
       The Smartest Way to<br/>
-      <span class="gradient-text">Explore AI & Tech</span>
+      <span class="typewriter-text gradient-text">{{ typedText }}<span class="cursor">|</span></span>
     </h1>
     <p class="hero-subtitle animate-fade-in-up">
       Curated virtual conferences, real-time market intelligence, and trending innovation — all in one platform built for AI professionals, researchers, and technology leaders.
@@ -25,7 +27,7 @@
         Browse Conferences
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
-      <a (click)="scrollTo('market-pulse')" class="btn btn-secondary">Market Intelligence →</a>
+      <a (click)="scrollTo('sponsors')" class="btn btn-secondary">Become a Sponsor →</a>
     </div>
     <div class="hero-metrics">
       <div class="metric" *ngFor="let m of metrics">
@@ -52,13 +54,13 @@
 <!-- ═══ TRENDING IN AI ═══ -->
 <section class="section trending-section" id="trending">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-label">Trending Now</span>
       <h2>What's Hot in <span class="gradient-text">AI & Tech</span></h2>
       <p>A real-time pulse on the technologies, tools, and topics shaping the artificial intelligence landscape right now.</p>
     </div>
     <div class="trending-grid">
-      <div class="trend-card" *ngFor="let trend of trendingTopics; let i = index">
+      <div class="trend-card reveal" *ngFor="let trend of trendingTopics; let i = index" [style.transition-delay.ms]="i * 80">
         <div class="trend-header">
           <span class="trend-icon">{{ trend.icon }}</span>
           <span class="trend-badge" [class]="'momentum-' + trend.momentum.toLowerCase().replace(' ', '-')">
@@ -83,18 +85,19 @@
 <!-- ═══ CONFERENCES ═══ -->
 <section class="section conferences-section" id="conferences">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-label">Our Conferences</span>
       <h2>Upcoming <span class="gradient-text">Events</span></h2>
       <p>Curated virtual conferences across AI, ML, healthcare, cybersecurity, and emerging technologies. Click any event to explore its dedicated site.</p>
     </div>
     <div class="conf-grid">
-      <a class="conf-card" *ngFor="let event of events.slice(0, 6); let i = index"
+      <a class="conf-card reveal" *ngFor="let event of events.slice(0, 6); let i = index"
         [class.conf-active]="event.status === 'active'"
         [class.conf-soon]="event.status === 'coming_soon'"
         [href]="event.externalUrl || null"
-        [routerLink]="!event.externalUrl ? ['/events', event.slug] : null">
-        <!-- Header  -->
+        [routerLink]="!event.externalUrl ? ['/events', event.slug] : null"
+        [attr.target]="event.externalUrl ? '_blank' : null"
+        [style.transition-delay.ms]="i * 80">
         <div class="conf-visual" [style.background]="cardGradients[i % cardGradients.length]">
           <div class="conf-status-pill" *ngIf="event.status === 'active'">
             <span class="status-dot-live"></span> Registration Open
@@ -107,8 +110,8 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             {{ event.format }}
           </div>
+          <div class="conf-shimmer"></div>
         </div>
-        <!-- Body -->
         <div class="conf-body">
           <div class="conf-tags">
             <span class="conf-tag" *ngFor="let tag of event.tags.slice(0, 2)">{{ tag }}</span>
@@ -138,7 +141,7 @@
         </div>
       </a>
     </div>
-    <div class="conf-view-all">
+    <div class="conf-view-all reveal">
       <a routerLink="/events" class="btn btn-secondary">
         View All {{ events.length }} Conferences
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
@@ -147,23 +150,92 @@
   </div>
 </section>
 
+<!-- ═══ BECOME A SPEAKER ═══ -->
+<section class="section speaker-section" id="speakers-cta">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">For Speakers</span>
+      <h2>Share Your Expertise <span class="gradient-text">Globally</span></h2>
+      <p>Present to thousands of AI professionals from 90+ countries. No travel required — just your knowledge and passion.</p>
+    </div>
+    <div class="speaker-benefits-grid">
+      <div class="speaker-benefit-card reveal" *ngFor="let b of speakerBenefits; let i = index" [style.transition-delay.ms]="i * 80">
+        <span class="sb-icon">{{ b.icon }}</span>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+      </div>
+    </div>
+    <div class="speaker-cta-card glass-card reveal">
+      <div class="speaker-cta-content" *ngIf="!speakerFormSubmitted">
+        <h3>Apply to Speak at ConfVerse</h3>
+        <p>Tell us about your expertise and proposed topic. Our curation team reviews every submission.</p>
+        <form (ngSubmit)="onSpeakerSubmit()" class="speaker-form">
+          <div class="sf-row">
+            <input type="text" [(ngModel)]="speakerForm.name" name="name" placeholder="Full Name" required>
+            <input type="email" [(ngModel)]="speakerForm.email" name="email" placeholder="Email Address" required>
+          </div>
+          <input type="text" [(ngModel)]="speakerForm.topic" name="topic" placeholder="Proposed Talk Title or Topic">
+          <textarea [(ngModel)]="speakerForm.bio" name="bio" rows="3" placeholder="Brief bio and relevant experience..."></textarea>
+          <button type="submit" class="btn btn-primary">Submit Speaker Application →</button>
+        </form>
+      </div>
+      <div class="speaker-cta-success" *ngIf="speakerFormSubmitted">
+        <div class="success-icon">🎤</div>
+        <h3>Application Received!</h3>
+        <p>Thank you for your interest. Our curation team will review your submission and respond within 5 business days.</p>
+        <button class="btn btn-secondary" (click)="speakerFormSubmitted = false">Submit Another</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BECOME A SPONSOR ═══ -->
+<section class="section sponsor-section" id="sponsors">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">For Sponsors</span>
+      <h2>Accelerate Your Brand with <span class="gradient-text">ConfVerse</span></h2>
+      <p>Reach a global audience of 25,000+ AI professionals, researchers, and technology decision-makers across our conference network.</p>
+    </div>
+    <div class="sponsor-tiers-grid">
+      <div class="sponsor-tier-card reveal" *ngFor="let tier of sponsorTiers; let i = index"
+        [style.transition-delay.ms]="i * 100"
+        [class.tier-featured]="i === 0">
+        <div class="tier-header" [style.border-bottom-color]="tier.color">
+          <div class="tier-badge" [style.background]="tier.color" [style.color]="'#0C0C0E'">
+            {{ tier.name }}
+          </div>
+          <div class="tier-price">{{ tier.price }}</div>
+        </div>
+        <ul class="tier-benefits">
+          <li *ngFor="let b of tier.benefits">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" [attr.stroke]="tier.color" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            {{ b }}
+          </li>
+        </ul>
+        <a routerLink="/contact" class="btn" [class.btn-primary]="i === 0" [class.btn-outline]="i !== 0" style="width: 100%;">
+          {{ i === 0 ? 'Contact Us →' : 'Get Started' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ MARKET INTELLIGENCE ═══ -->
 <section class="section market-section" id="market-pulse">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-label">Market Intelligence</span>
       <h2>AI Market <span class="gradient-text">Pulse</span></h2>
       <p>Stay ahead with real-time data on AI industry growth, enterprise adoption rates, and sector-specific intelligence.</p>
     </div>
-
-    <!-- Big Numbers -->
     <div class="market-kpis" *ngIf="marketInsights && marketInsights.globalAiMarket">
-      <div class="kpi-card glass-card" *ngFor="let kpi of [
+      <div class="kpi-card glass-card reveal" *ngFor="let kpi of [
         marketInsights.globalAiMarket,
         marketInsights.enterpriseAdoption,
         marketInsights.aiJobs,
         marketInsights.aiInvestment
-      ]; let i = index">
+      ]; let i = index" [style.transition-delay.ms]="i * 100">
         <div class="kpi-growth">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           {{ kpi.growth }} CAGR
@@ -173,9 +245,7 @@
         <div class="kpi-year">{{ kpi.year }} Projected</div>
       </div>
     </div>
-
-    <!-- Sector Adoption -->
-    <div class="sector-panel glass-card" *ngIf="marketInsights && marketInsights.sectors">
+    <div class="sector-panel glass-card reveal" *ngIf="marketInsights && marketInsights.sectors">
       <div class="sector-header">
         <h3>AI Adoption by Industry Sector</h3>
         <span class="badge badge-trending">Live Data</span>
@@ -196,12 +266,12 @@
 <!-- ═══ HOW IT WORKS ═══ -->
 <section class="section how-section" id="how-it-works">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-label">How It Works</span>
       <h2>Three Steps to <span class="gradient-text">Get Started</span></h2>
     </div>
     <div class="steps-row">
-      <div class="step-item" *ngFor="let step of steps; let i = index">
+      <div class="step-item reveal" *ngFor="let step of steps; let i = index" [style.transition-delay.ms]="i * 120">
         <div class="step-num">{{ i + 1 }}</div>
         <div class="step-content">
           <span class="step-icon">{{ step.icon }}</span>
@@ -216,11 +286,11 @@
 <!-- ═══ TESTIMONIALS ═══ -->
 <section class="section testimonials-section" id="testimonials">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <span class="section-label">Community</span>
       <h2>What People <span class="gradient-text">Say</span></h2>
     </div>
-    <div class="testimonial-slider" *ngIf="testimonials.length > 0">
+    <div class="testimonial-slider reveal" *ngIf="testimonials.length > 0">
       <button class="slider-btn prev" (click)="prevTestimonial()" aria-label="Previous testimonial">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
@@ -247,18 +317,32 @@
   </div>
 </section>
 
+<!-- ═══ PARTNER MARQUEE ═══ -->
+<section class="partners-marquee" id="partners">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span class="partner-item" *ngFor="let p of (marketInsights?.sectors || [])">
+        <span class="partner-icon">🏢</span> {{ p.name }}
+      </span>
+      <span class="partner-item" *ngFor="let p of (marketInsights?.sectors || [])">
+        <span class="partner-icon">🏢</span> {{ p.name }}
+      </span>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ CTA ═══ -->
 <section class="section cta-section" id="cta">
   <div class="container">
-    <div class="cta-card glass-card">
+    <div class="cta-card glass-card reveal">
       <div class="cta-glow"></div>
       <div class="cta-inner">
-        <span class="section-label">For Organizers</span>
-        <h2>Host Your Conference on <span class="gradient-text">ConfVerse</span></h2>
-        <p>Reach a global audience of AI professionals, researchers, and technology leaders. We handle the platform — you deliver the brilliance.</p>
+        <span class="section-label">Ready to Join?</span>
+        <h2>Your Next AI Breakthrough Starts at <span class="gradient-text">ConfVerse</span></h2>
+        <p>Whether you're a speaker, sponsor, researcher, or professional — there's a place for you in our global community of AI innovators.</p>
         <div class="cta-actions">
-          <a routerLink="/contact" class="btn btn-primary">Get In Touch →</a>
-          <a routerLink="/about" class="btn btn-secondary">Learn More</a>
+          <a routerLink="/events" class="btn btn-primary">Explore Events →</a>
+          <a routerLink="/contact" class="btn btn-secondary">Contact Us</a>
         </div>
       </div>
     </div>
