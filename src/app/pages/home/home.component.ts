@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   marketInsights: any = {};
   sponsorTiers: any[] = [];
   speakerBenefits: any[] = [];
+  allSpeakers: any[] = [];
+  topSessions: any[] = [];
   currentTestimonial = 0;
   testimonialInterval: any;
   typedText = '';
@@ -31,12 +33,34 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   speakerForm = { name: '', email: '', topic: '', bio: '' };
   speakerFormSubmitted = false;
 
-  metrics = [
-    { value: '8+', label: 'Conferences' },
-    { value: '80+', label: 'Speakers' },
-    { value: '25,000+', label: 'Attendees' },
-    { value: '90+', label: 'Countries' }
+  // Animated counters
+  counters = [
+    { target: 8, current: 0, suffix: '+', label: 'Conferences', icon: '🎤' },
+    { target: 80, current: 0, suffix: '+', label: 'Speakers', icon: '👥' },
+    { target: 25000, current: 0, suffix: '+', label: 'Attendees', icon: '🌍' },
+    { target: 90, current: 0, suffix: '+', label: 'Countries', icon: '🗺️' }
   ];
+  countersAnimated = false;
+
+  // Countdown
+  countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  countdownInterval: any;
+
+  whyAttend = [
+    { icon: '🎓', title: 'World-Class Content', description: 'Sessions curated by AI researchers from leading global institutions and Fortune 500 companies.' },
+    { icon: '🌍', title: 'Global Networking', description: 'Connect with 25,000+ professionals across 90+ countries in live networking lounges.' },
+    { icon: '🔧', title: 'Hands-On Learning', description: 'Interactive workshops and live demos — not just lectures. Build real skills.' },
+    { icon: '📊', title: 'Industry Insights', description: 'Real-world case studies from production AI deployments at scale.' },
+    { icon: '🏆', title: 'Certification', description: 'Earn recognized certificates of participation to boost your professional profile.' },
+    { icon: '💼', title: 'Career Growth', description: 'Access exclusive job boards, mentorship programs, and growth opportunities.' }
+  ];
+
+  participants = {
+    count: '25,000+',
+    countries: '90+',
+    tagline: 'Join a global community of AI professionals, researchers, and technology leaders.',
+    roles: ['AI Engineers', 'Data Scientists', 'Researchers', 'CTOs', 'Product Managers', 'Startup Founders']
+  };
 
   steps = [
     { icon: '🔍', title: 'Discover', desc: 'Browse trending AI conferences, market insights, and expert-led events across dozens of technology domains.' },
@@ -70,7 +94,18 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     'linear-gradient(135deg, #00E5A0, #4CC9F0)',
     'linear-gradient(135deg, #B8A9FA, #4CC9F0)',
     'linear-gradient(135deg, #FFBE0B, #FF6B6B)',
-    'linear-gradient(135deg, #4CC9F0, #00E5A0)'
+    'linear-gradient(135deg, #4CC9F0, #00E5A0)',
+    'linear-gradient(135deg, #FF6B6B, #B8A9FA)',
+    'linear-gradient(135deg, #00E5A0, #B8A9FA)'
+  ];
+
+  speakerColors = [
+    'linear-gradient(135deg, #00E5A0, #00B87A)',
+    'linear-gradient(135deg, #FFBE0B, #FF8A00)',
+    'linear-gradient(135deg, #FF6B6B, #E83E8C)',
+    'linear-gradient(135deg, #4CC9F0, #3A86FF)',
+    'linear-gradient(135deg, #B8A9FA, #8338EC)',
+    'linear-gradient(135deg, #00E5A0, #4CC9F0)'
   ];
 
   constructor(
@@ -81,7 +116,24 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.eventsService.getEvents().subscribe(e => this.events = e);
+    this.eventsService.getEvents().subscribe(e => {
+      this.events = e;
+      // Aggregate all speakers from all events
+      this.allSpeakers = e.reduce((acc: any[], ev: any) => {
+        if (ev.speakers && ev.speakers.length > 0) {
+          return acc.concat(ev.speakers);
+        }
+        return acc;
+      }, []);
+      // Aggregate sessions from events that have them
+      const evWithSessions = e.find((ev: any) => ev.sessions && ev.sessions.length > 0);
+      this.topSessions = evWithSessions ? evWithSessions.sessions : [];
+      // Start countdown for next active event
+      const active = e.find((ev: any) => ev.status === 'active');
+      if (active && active.date && this.isBrowser) {
+        this.startCountdown(new Date(active.date));
+      }
+    });
     this.eventsService.getTestimonials().subscribe(t => this.testimonials = t);
     this.eventsService.getTrendingTopics().subscribe(t => this.trendingTopics = t);
     this.eventsService.getMarketInsights().subscribe(m => this.marketInsights = m);
@@ -103,6 +155,26 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     if (this.typewriterInterval) clearInterval(this.typewriterInterval);
     if (this.testimonialInterval) clearInterval(this.testimonialInterval);
+    if (this.countdownInterval) clearInterval(this.countdownInterval);
+  }
+
+  startCountdown(targetDate: Date): void {
+    const update = () => {
+      const now = new Date().getTime();
+      const diff = targetDate.getTime() - now;
+      if (diff <= 0) {
+        this.countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+        return;
+      }
+      this.countdown = {
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((diff % (1000 * 60)) / 1000)
+      };
+    };
+    update();
+    this.countdownInterval = setInterval(update, 1000);
   }
 
   startTypewriter(): void {
@@ -138,11 +210,34 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
+          // Trigger counter animation for stats section
+          if (entry.target.classList.contains('stats-section') && !this.countersAnimated) {
+            this.countersAnimated = true;
+            this.animateCounters();
+          }
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+  }
+
+  animateCounters(): void {
+    this.counters.forEach(c => {
+      const duration = 2000;
+      const steps = 60;
+      const increment = c.target / steps;
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= c.target) {
+          c.current = c.target;
+          clearInterval(timer);
+        } else {
+          c.current = Math.floor(current);
+        }
+      }, duration / steps);
+    });
   }
 
   scrollTo(id: string): void {
@@ -159,6 +254,15 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getInitials(name: string): string {
     return name.split(' ').map(n => n[0]).join('').substring(0, 2);
+  }
+
+  padZero(n: number): string {
+    return n < 10 ? '0' + n : '' + n;
+  }
+
+  formatCount(n: number): string {
+    if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
+    return n.toString();
   }
 
   onSpeakerSubmit(): void {

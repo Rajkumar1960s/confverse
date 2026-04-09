@@ -10,7 +10,7 @@
       "location": "Virtual — Global Access",
       "format": "Virtual",
       "status": "active",
-      "externalUrl": "https://aixplore-eta.vercel.app",
+      "externalUrl": "https://aixplore-seven.vercel.app",
       "description": "Join a next-generation virtual conference designed for AI, machine learning, and future technology. Learn from industry leaders, connect with innovators, and explore real-world AI applications.",
       "longDescription": "AIxplore is designed to deliver practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution — everything is crafted to keep you engaged, not just watching.",
       "icon": "🧠",
@@ -95,6 +95,14 @@
           "image": "",
           "linkedin": ""
         }
+      ],
+      "sessions": [
+        { "icon": "🧠", "title": "Generative AI & LLMs", "description": "Latest advances in large language models, text generation, and multimodal AI systems." },
+        { "icon": "🤖", "title": "Agentic AI Systems", "description": "Build autonomous AI agents with reasoning, planning, and tool-use capabilities." },
+        { "icon": "🛡️", "title": "AI Ethics & Safety", "description": "Frameworks for responsible AI development, bias mitigation, and safety guardrails." },
+        { "icon": "⚙️", "title": "MLOps & Production ML", "description": "Scale, deploy, and monitor ML models with production-grade infrastructure." },
+        { "icon": "👁️", "title": "Computer Vision", "description": "State-of-the-art vision models for healthcare, autonomous systems, and creative AI." },
+        { "icon": "💬", "title": "NLP & Conversational AI", "description": "Advanced natural language processing, chatbots, and human-AI interaction." }
       ],
       "whoShouldAttend": [
         "AI/ML Engineers and Data Scientists",

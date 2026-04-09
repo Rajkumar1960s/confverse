@@ -29,10 +29,14 @@
       </a>
       <a (click)="scrollTo('sponsors')" class="btn btn-secondary">Become a Sponsor →</a>
     </div>
-    <div class="hero-metrics">
-      <div class="metric" *ngFor="let m of metrics">
-        <span class="metric-value">{{ m.value }}</span>
-        <span class="metric-label">{{ m.label }}</span>
+    <!-- Countdown to next event -->
+    <div class="hero-countdown" *ngIf="countdown.days > 0">
+      <span class="cd-label-hero">Next Event In</span>
+      <div class="cd-row">
+        <div class="cd-item" *ngFor="let c of [{v:countdown.days,l:'Days'},{v:countdown.hours,l:'Hours'},{v:countdown.minutes,l:'Min'},{v:countdown.seconds,l:'Sec'}]">
+          <span class="cd-val">{{ padZero(c.v) }}</span>
+          <span class="cd-lbl">{{ c.l }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -51,32 +55,14 @@
   </div>
 </section>
 
-<!-- ═══ TRENDING IN AI ═══ -->
-<section class="section trending-section" id="trending">
+<!-- ═══ STATS COUNTER ═══ -->
+<section class="section stats-section reveal" id="stats">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Trending Now</span>
-      <h2>What's Hot in <span class="gradient-text">AI & Tech</span></h2>
-      <p>A real-time pulse on the technologies, tools, and topics shaping the artificial intelligence landscape right now.</p>
-    </div>
-    <div class="trending-grid">
-      <div class="trend-card reveal" *ngFor="let trend of trendingTopics; let i = index" [style.transition-delay.ms]="i * 80">
-        <div class="trend-header">
-          <span class="trend-icon">{{ trend.icon }}</span>
-          <span class="trend-badge" [class]="'momentum-' + trend.momentum.toLowerCase().replace(' ', '-')">
-            {{ trend.momentum }}
-          </span>
-        </div>
-        <h3>{{ trend.title }}</h3>
-        <span class="trend-category">{{ trend.category }}</span>
-        <p>{{ trend.description }}</p>
-        <div class="trend-footer">
-          <div class="trend-growth">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            <span>{{ trend.growth }} YoY</span>
-          </div>
-          <span class="trend-impact" [class]="'impact-' + trend.impact.toLowerCase()">{{ trend.impact }} Impact</span>
-        </div>
+    <div class="stats-grid">
+      <div class="stat-card" *ngFor="let c of counters; let i = index" [style.animation-delay.ms]="i * 100">
+        <span class="stat-icon">{{ c.icon }}</span>
+        <span class="stat-number">{{ formatCount(c.current) }}{{ c.suffix }}</span>
+        <span class="stat-title">{{ c.label }}</span>
       </div>
     </div>
   </div>
@@ -88,7 +74,7 @@
     <div class="section-header reveal">
       <span class="section-label">Our Conferences</span>
       <h2>Upcoming <span class="gradient-text">Events</span></h2>
-      <p>Curated virtual conferences across AI, ML, healthcare, cybersecurity, and emerging technologies. Click any event to explore its dedicated site.</p>
+      <p>Curated virtual conferences across AI, ML, healthcare, cybersecurity, and emerging technologies.</p>
     </div>
     <div class="conf-grid">
       <a class="conf-card reveal" *ngFor="let event of events.slice(0, 6); let i = index"
@@ -134,7 +120,7 @@
               View Details & Register
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </span>
-            <span *ngIf="event.status === 'coming_soon'" class="btn btn-outline conf-btn conf-btn-disabled">
+            <span *ngIf="event.status === 'coming_soon'" class="btn btn-outline conf-btn conf-btn-disabled" title="This event is launching soon. Stay tuned!">
               🔔 Notify Me
             </span>
           </div>
@@ -150,8 +136,95 @@
   </div>
 </section>
 
+<!-- ═══ SPEAKERS SHOWCASE ═══ -->
+<section class="section section-alt speakers-showcase" id="speakers" *ngIf="allSpeakers.length > 0">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Featured Speakers</span>
+      <h2>Learn from the <span class="gradient-text">Best</span></h2>
+      <p>World-class researchers and industry practitioners sharing actionable insights at our conferences.</p>
+    </div>
+    <div class="speakers-grid">
+      <div class="speaker-card reveal" *ngFor="let sp of allSpeakers; let i = index" [style.transition-delay.ms]="i * 80">
+        <div class="speaker-avatar" [style.background]="speakerColors[i % speakerColors.length]">
+          {{ getInitials(sp.name) }}
+        </div>
+        <h3>{{ sp.name }}</h3>
+        <p class="speaker-title">{{ sp.title }}</p>
+        <p class="speaker-company">{{ sp.company }}</p>
+        <p class="speaker-bio">{{ sp.bio }}</p>
+        <div class="speaker-tooltip" *ngIf="!sp.image">Speaker details coming soon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SESSIONS HIGHLIGHT ═══ -->
+<section class="section sessions-highlight" id="sessions" *ngIf="topSessions.length > 0">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Session Tracks</span>
+      <h2>What We'll <span class="gradient-text">Cover</span></h2>
+      <p>Dive deep into the most critical topics shaping artificial intelligence today.</p>
+    </div>
+    <div class="sessions-grid">
+      <div class="session-card glass-card reveal" *ngFor="let s of topSessions; let i = index" [style.transition-delay.ms]="i * 80">
+        <div class="session-icon-wrap">
+          <span class="session-icon">{{ s.icon }}</span>
+        </div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ATTEND ═══ -->
+<section class="section section-alt" id="why-attend">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Why Attend</span>
+      <h2>What You'll <span class="gradient-text">Gain</span></h2>
+      <p>More than just talks — real skills, real connections, real impact.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal" *ngFor="let w of whyAttend; let i = index" [style.transition-delay.ms]="i * 80">
+        <div class="why-num">{{ (i + 1).toString().padStart(2, '0') }}</div>
+        <span class="why-icon">{{ w.icon }}</span>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ATTENDEES / PARTICIPANTS ═══ -->
+<section class="section participants-section" id="attendees">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Community</span>
+      <h2>Join <span class="gradient-text">{{ participants.count }}</span> Attendees</h2>
+      <p>{{ participants.tagline }}</p>
+    </div>
+    <div class="participants-showcase reveal">
+      <div class="avatar-stack">
+        <div class="avatar-circle" *ngFor="let c of avatarColors; let i = index" [style.background]="c" [style.z-index]="avatarColors.length - i">
+          {{ ['AM','LZ','MT','AO','RP','SI'][i] }}
+        </div>
+        <div class="avatar-more">+{{ participants.count }}</div>
+      </div>
+      <div class="role-tags">
+        <span class="role-tag" *ngFor="let role of participants.roles">{{ role }}</span>
+      </div>
+      <div class="participants-cta">
+        <a (click)="scrollTo('conferences')" class="btn btn-primary">Join the Community →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ BECOME A SPEAKER ═══ -->
-<section class="section speaker-section" id="speakers-cta">
+<section class="section section-alt speaker-section" id="speakers-cta">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">For Speakers</span>
@@ -221,6 +294,37 @@
   </div>
 </section>
 
+<!-- ═══ TRENDING IN AI ═══ -->
+<section class="section section-alt trending-section" id="trending">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Trending Now</span>
+      <h2>What's Hot in <span class="gradient-text">AI & Tech</span></h2>
+      <p>A real-time pulse on the technologies, tools, and topics shaping the artificial intelligence landscape right now.</p>
+    </div>
+    <div class="trending-grid">
+      <div class="trend-card reveal" *ngFor="let trend of trendingTopics; let i = index" [style.transition-delay.ms]="i * 80">
+        <div class="trend-header">
+          <span class="trend-icon">{{ trend.icon }}</span>
+          <span class="trend-badge" [class]="'momentum-' + trend.momentum.toLowerCase().replace(' ', '-')">
+            {{ trend.momentum }}
+          </span>
+        </div>
+        <h3>{{ trend.title }}</h3>
+        <span class="trend-category">{{ trend.category }}</span>
+        <p>{{ trend.description }}</p>
+        <div class="trend-footer">
+          <div class="trend-growth">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            <span>{{ trend.growth }} YoY</span>
+          </div>
+          <span class="trend-impact" [class]="'impact-' + trend.impact.toLowerCase()">{{ trend.impact }} Impact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ MARKET INTELLIGENCE ═══ -->
 <section class="section market-section" id="market-pulse">
   <div class="container">
@@ -264,7 +368,7 @@
 </section>
 
 <!-- ═══ HOW IT WORKS ═══ -->
-<section class="section how-section" id="how-it-works">
+<section class="section section-alt how-section" id="how-it-works">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">How It Works</span>
@@ -313,20 +417,6 @@
       <button class="slider-btn next" (click)="nextTestimonial()" aria-label="Next testimonial">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PARTNER MARQUEE ═══ -->
-<section class="partners-marquee" id="partners">
-  <div class="marquee-track">
-    <div class="marquee-content">
-      <span class="partner-item" *ngFor="let p of (marketInsights?.sectors || [])">
-        <span class="partner-icon">🏢</span> {{ p.name }}
-      </span>
-      <span class="partner-item" *ngFor="let p of (marketInsights?.sectors || [])">
-        <span class="partner-icon">🏢</span> {{ p.name }}
-      </span>
     </div>
   </div>
 </section>
