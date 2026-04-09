@@ -171,7 +171,7 @@ import { RouterModule } from '@angular/router';
       box-shadow: 0 0 12px rgba(0, 229, 160, 0.3);
     }
 
-    /* ─── Mobile view─── */
+    /* ─── Mobile─── */
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .nav-links {
