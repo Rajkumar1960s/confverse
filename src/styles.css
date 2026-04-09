@@ -105,7 +105,7 @@ button { cursor: pointer; border: none; outline: none; font-family: 'DM Sans', s
 .accent-text { color: var(--accent-emerald); }
 
 /* ─── Section Styles ─── */
-.section { padding: var(--section-padding); position: relative; }
+.section { padding: var(--section-padding); position: relative; scroll-margin-top: 80px; }
 
 .section-header { text-align: center; margin-bottom: 64px; }
 

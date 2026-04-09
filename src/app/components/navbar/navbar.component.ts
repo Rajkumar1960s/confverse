@@ -53,9 +53,9 @@ import { RouterModule } from '@angular/router';
       padding: 20px 0;
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       background: transparent;
-      transform: translateY(-100%);
+      opacity: 0; pointer-events: none;
     }
-    .navbar.visible { transform: translateY(0); }
+    .navbar.visible { opacity: 1; pointer-events: all; }
     .navbar.scrolled {
       background: rgba(12, 12, 14, 0.88);
       backdrop-filter: blur(40px) saturate(180%);
