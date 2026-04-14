@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   template: `
     <nav class="navbar" [class.scrolled]="isScrolled" [class.visible]="navVisible">
       <div class="nav-container">
-        <a routerLink="/" class="nav-logo">
+        <a routerLink="/" class="nav-logo" (click)="closeMenu()">
           <span class="logo-diamond">
             <span class="diamond-inner">◆</span>
           </span>
@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: link.exact}"
             (click)="closeMenu()"
-            [style.transition-delay]="menuOpen ? (i * 60) + 'ms' : '0ms'"
+            [style.transition-delay]="menuOpen ? (i * 60 + 200) + 'ms' : '0ms'"
             class="nav-link">
             <span class="link-text">{{ link.label }}</span>
             <span class="link-indicator"></span>
@@ -178,16 +178,23 @@ import { RouterModule } from '@angular/router';
         position: fixed; top: 0; left: 0; right: 0; bottom: 0;
         background: rgba(12, 12, 14, 0.98);
         backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
         flex-direction: column; justify-content: center; gap: 12px;
-        transform: translateY(-100%); opacity: 0;
+        transform: translateY(-10px); opacity: 0;
         pointer-events: none;
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         z-index: 1000;
       }
       .nav-links.active {
         transform: translateY(0); opacity: 1; pointer-events: all;
       }
-      .nav-link { font-size: 1.4rem; padding: 12px 24px; }
+      .nav-link { 
+        font-size: 1.4rem; padding: 12px 24px; 
+        opacity: 0; transform: translateY(15px);
+      }
+      .nav-links.active .nav-link {
+        opacity: 1; transform: translateY(0);
+      }
       .nav-actions { display: none; }
     }
   `]
@@ -233,11 +240,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-    if (this.isBrowser) document.body.style.overflow = this.menuOpen ? 'hidden' : '';
   }
 
   closeMenu() {
     this.menuOpen = false;
-    if (this.isBrowser) document.body.style.overflow = '';
   }
 }

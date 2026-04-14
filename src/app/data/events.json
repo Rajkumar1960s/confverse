@@ -3,7 +3,7 @@
     {
       "id": 1,
       "slug": "aixplore-2026",
-      "title": "AIxplore 2026",
+      "title": "Agentic AI",
       "subtitle": "The Future of Intelligence",
       "date": "2026-07-27",
       "endDate": "2026-07-28",
@@ -17,7 +17,12 @@
       "speakerCount": 6,
       "sessionCount": 12,
       "attendeeCount": "2,500+",
-      "tags": ["Generative AI", "LLMs", "Agentic Systems", "AI Ethics"],
+      "tags": [
+        "Generative AI",
+        "LLMs",
+        "Agentic Systems",
+        "AI Ethics"
+      ],
       "highlights": [
         {
           "icon": "🎯",
@@ -97,12 +102,36 @@
         }
       ],
       "sessions": [
-        { "icon": "🧠", "title": "Generative AI & LLMs", "description": "Latest advances in large language models, text generation, and multimodal AI systems." },
-        { "icon": "🤖", "title": "Agentic AI Systems", "description": "Build autonomous AI agents with reasoning, planning, and tool-use capabilities." },
-        { "icon": "🛡️", "title": "AI Ethics & Safety", "description": "Frameworks for responsible AI development, bias mitigation, and safety guardrails." },
-        { "icon": "⚙️", "title": "MLOps & Production ML", "description": "Scale, deploy, and monitor ML models with production-grade infrastructure." },
-        { "icon": "👁️", "title": "Computer Vision", "description": "State-of-the-art vision models for healthcare, autonomous systems, and creative AI." },
-        { "icon": "💬", "title": "NLP & Conversational AI", "description": "Advanced natural language processing, chatbots, and human-AI interaction." }
+        {
+          "icon": "🧠",
+          "title": "Generative AI & LLMs",
+          "description": "Latest advances in large language models, text generation, and multimodal AI systems."
+        },
+        {
+          "icon": "🤖",
+          "title": "Agentic AI Systems",
+          "description": "Build autonomous AI agents with reasoning, planning, and tool-use capabilities."
+        },
+        {
+          "icon": "🛡️",
+          "title": "AI Ethics & Safety",
+          "description": "Frameworks for responsible AI development, bias mitigation, and safety guardrails."
+        },
+        {
+          "icon": "⚙️",
+          "title": "MLOps & Production ML",
+          "description": "Scale, deploy, and monitor ML models with production-grade infrastructure."
+        },
+        {
+          "icon": "👁️",
+          "title": "Computer Vision",
+          "description": "State-of-the-art vision models for healthcare, autonomous systems, and creative AI."
+        },
+        {
+          "icon": "💬",
+          "title": "NLP & Conversational AI",
+          "description": "Advanced natural language processing, chatbots, and human-AI interaction."
+        }
       ],
       "whoShouldAttend": [
         "AI/ML Engineers and Data Scientists",
@@ -129,10 +158,21 @@
       "speakerCount": 8,
       "sessionCount": 15,
       "attendeeCount": "3,000+",
-      "tags": ["MLOps", "Model Deployment", "Infrastructure", "Cost Optimization"],
+      "tags": [
+        "MLOps",
+        "Model Deployment",
+        "Infrastructure",
+        "Cost Optimization"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["ML Engineers", "DevOps Engineers", "Platform Engineers", "Technical Leads"]
+      "whoShouldAttend": [
+        "ML Engineers",
+        "DevOps Engineers",
+        "Platform Engineers",
+        "Technical Leads"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 3,
@@ -150,10 +190,21 @@
       "speakerCount": 20,
       "sessionCount": 30,
       "attendeeCount": "5,000+",
-      "tags": ["Enterprise AI", "AI Strategy", "Digital Transformation", "AI Governance"],
+      "tags": [
+        "Enterprise AI",
+        "AI Strategy",
+        "Digital Transformation",
+        "AI Governance"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["C-Suite Executives", "AI Strategy Leaders", "Policy Advisors", "Enterprise Architects"]
+      "whoShouldAttend": [
+        "C-Suite Executives",
+        "AI Strategy Leaders",
+        "Policy Advisors",
+        "Enterprise Architects"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 4,
@@ -171,10 +222,21 @@
       "speakerCount": 12,
       "sessionCount": 20,
       "attendeeCount": "4,000+",
-      "tags": ["Healthcare AI", "Medical Imaging", "Drug Discovery", "Clinical AI"],
+      "tags": [
+        "Healthcare AI",
+        "Medical Imaging",
+        "Drug Discovery",
+        "Clinical AI"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["Healthcare CIOs", "Medical Researchers", "Biotech Engineers", "Health-Tech Founders"]
+      "whoShouldAttend": [
+        "Healthcare CIOs",
+        "Medical Researchers",
+        "Biotech Engineers",
+        "Health-Tech Founders"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 5,
@@ -192,10 +254,21 @@
       "speakerCount": 10,
       "sessionCount": 16,
       "attendeeCount": "3,500+",
-      "tags": ["Agentic AI", "Autonomous Systems", "Multi-Agent", "AI Safety"],
+      "tags": [
+        "Agentic AI",
+        "Autonomous Systems",
+        "Multi-Agent",
+        "AI Safety"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["AI Agent Developers", "Research Engineers", "Product Engineers", "AI Safety Researchers"]
+      "whoShouldAttend": [
+        "AI Agent Developers",
+        "Research Engineers",
+        "Product Engineers",
+        "AI Safety Researchers"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 6,
@@ -213,10 +286,21 @@
       "speakerCount": 15,
       "sessionCount": 22,
       "attendeeCount": "5,000+",
-      "tags": ["Deep Learning", "Neural Networks", "Computer Vision", "NLP"],
+      "tags": [
+        "Deep Learning",
+        "Neural Networks",
+        "Computer Vision",
+        "NLP"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["Deep Learning Researchers", "Computer Vision Engineers", "NLP Scientists", "PhD Students"]
+      "whoShouldAttend": [
+        "Deep Learning Researchers",
+        "Computer Vision Engineers",
+        "NLP Scientists",
+        "PhD Students"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 7,
@@ -234,10 +318,21 @@
       "speakerCount": 10,
       "sessionCount": 18,
       "attendeeCount": "2,000+",
-      "tags": ["Web3", "Blockchain", "DeFi", "Decentralized AI"],
+      "tags": [
+        "Web3",
+        "Blockchain",
+        "DeFi",
+        "Decentralized AI"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["Web3 Developers", "Blockchain Engineers", "DeFi Researchers", "AI Infrastructure Engineers"]
+      "whoShouldAttend": [
+        "Web3 Developers",
+        "Blockchain Engineers",
+        "DeFi Researchers",
+        "AI Infrastructure Engineers"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     },
     {
       "id": 8,
@@ -255,10 +350,21 @@
       "speakerCount": 12,
       "sessionCount": 16,
       "attendeeCount": "2,500+",
-      "tags": ["Cybersecurity", "Threat Detection", "Adversarial AI", "Security Ops"],
+      "tags": [
+        "Cybersecurity",
+        "Threat Detection",
+        "Adversarial AI",
+        "Security Ops"
+      ],
       "highlights": [],
       "speakers": [],
-      "whoShouldAttend": ["Security Engineers", "SOC Analysts", "CISO & Security Leaders", "AI/ML Security Researchers"]
+      "whoShouldAttend": [
+        "Security Engineers",
+        "SOC Analysts",
+        "CISO & Security Leaders",
+        "AI/ML Security Researchers"
+      ],
+      "externalUrl": "https://aixplore-eta.vercel.app/"
     }
   ],
   "trendingTopics": [
@@ -324,16 +430,56 @@
     }
   ],
   "marketInsights": {
-    "globalAiMarket": { "value": "$243B", "year": "2026", "growth": "38.1%", "label": "Global AI Market Size" },
-    "enterpriseAdoption": { "value": "72%", "year": "2026", "growth": "+15%", "label": "Enterprise AI Adoption" },
-    "aiJobs": { "value": "4.7M", "year": "2026", "growth": "+52%", "label": "AI-Related Jobs Created" },
-    "aiInvestment": { "value": "$92B", "year": "2026", "growth": "+41%", "label": "Venture Capital Funding in AI" },
+    "globalAiMarket": {
+      "value": "$243B",
+      "year": "2026",
+      "growth": "38.1%",
+      "label": "Global AI Market Size"
+    },
+    "enterpriseAdoption": {
+      "value": "72%",
+      "year": "2026",
+      "growth": "+15%",
+      "label": "Enterprise AI Adoption"
+    },
+    "aiJobs": {
+      "value": "4.7M",
+      "year": "2026",
+      "growth": "+52%",
+      "label": "AI-Related Jobs Created"
+    },
+    "aiInvestment": {
+      "value": "$92B",
+      "year": "2026",
+      "growth": "+41%",
+      "label": "Venture Capital Funding in AI"
+    },
     "sectors": [
-      { "name": "Healthcare & Life Sciences", "adoption": 84, "color": "#00E5A0" },
-      { "name": "Financial Services & FinTech", "adoption": 79, "color": "#4CC9F0" },
-      { "name": "Manufacturing & Supply Chain", "adoption": 71, "color": "#B8A9FA" },
-      { "name": "Retail & E-Commerce", "adoption": 67, "color": "#FFBE0B" },
-      { "name": "Education & EdTech", "adoption": 58, "color": "#FF6B6B" }
+      {
+        "name": "Healthcare & Life Sciences",
+        "adoption": 84,
+        "color": "#00E5A0"
+      },
+      {
+        "name": "Financial Services & FinTech",
+        "adoption": 79,
+        "color": "#4CC9F0"
+      },
+      {
+        "name": "Manufacturing & Supply Chain",
+        "adoption": 71,
+        "color": "#B8A9FA"
+      },
+      {
+        "name": "Retail & E-Commerce",
+        "adoption": 67,
+        "color": "#FFBE0B"
+      },
+      {
+        "name": "Education & EdTech",
+        "adoption": 58,
+        "color": "#FF6B6B"
+      }
     ]
   },
   "sponsorTiers": [
@@ -443,13 +589,37 @@
     }
   ],
   "partners": [
-    { "name": "NeuralPath Labs", "icon": "🧪" },
-    { "name": "Quantum Minds Inc.", "icon": "⚛️" },
-    { "name": "DataForge AI", "icon": "🔥" },
-    { "name": "TrustAI Global", "icon": "🛡️" },
-    { "name": "AgentStack", "icon": "🤖" },
-    { "name": "DeepVision AI", "icon": "👁️" },
-    { "name": "CloudScale AI", "icon": "☁️" },
-    { "name": "StreamlineML", "icon": "🚀" }
+    {
+      "name": "NeuralPath Labs",
+      "icon": "🧪"
+    },
+    {
+      "name": "Quantum Minds Inc.",
+      "icon": "⚛️"
+    },
+    {
+      "name": "DataForge AI",
+      "icon": "🔥"
+    },
+    {
+      "name": "TrustAI Global",
+      "icon": "🛡️"
+    },
+    {
+      "name": "AgentStack",
+      "icon": "🤖"
+    },
+    {
+      "name": "DeepVision AI",
+      "icon": "👁️"
+    },
+    {
+      "name": "CloudScale AI",
+      "icon": "☁️"
+    },
+    {
+      "name": "StreamlineML",
+      "icon": "🚀"
+    }
   ]
 }
