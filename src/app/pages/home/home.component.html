@@ -13,25 +13,25 @@
   <div class="container hero-content">
     <div class="hero-pill animate-fade-in">
       <span class="pill-dot"></span>
-      AI Conference Platform — Trusted by 25,000+ Professionals Worldwide
+      Virtual AI Conference Platform — Trusted by 25,000+ Professionals
     </div>
     <h1 class="animate-fade-in-up">
       The Smartest Way to<br/>
       <span class="typewriter-text gradient-text">{{ typedText }}<span class="cursor">|</span></span>
     </h1>
     <p class="hero-subtitle animate-fade-in-up">
-      Curated virtual conferences, real-time market intelligence, and trending innovation — all in one platform built for AI professionals, researchers, and technology leaders.
+      Discover curated virtual conferences on artificial intelligence, machine learning, and emerging technologies. Real-time market intelligence, expert-led sessions, and a global community — all in one platform.
     </p>
     <div class="hero-cta animate-fade-in-up">
       <a (click)="scrollTo('conferences')" class="btn btn-primary">
         Browse Conferences
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
       </a>
-      <a (click)="scrollTo('sponsors')" class="btn btn-secondary">Become a Sponsor →</a>
+      <a routerLink="/contact" class="btn btn-secondary">Become a Speaker →</a>
     </div>
     <!-- Countdown to next event -->
     <div class="hero-countdown" *ngIf="countdown.days > 0">
-      <span class="cd-label-hero">Next Event In</span>
+      <span class="cd-label-hero">Next Conference Starts In</span>
       <div class="cd-row">
         <div class="cd-item" *ngFor="let c of [{v:countdown.days,l:'Days'},{v:countdown.hours,l:'Hours'},{v:countdown.minutes,l:'Min'},{v:countdown.seconds,l:'Sec'}]">
           <span class="cd-val">{{ padZero(c.v) }}</span>
@@ -59,7 +59,7 @@
 <section class="section stats-section reveal" id="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-card" *ngFor="let c of counters; let i = index" [style.animation-delay.ms]="i * 100">
+      <div class="stat-card glass-card" *ngFor="let c of counters; let i = index" [style.animation-delay.ms]="i * 100">
         <span class="stat-icon">{{ c.icon }}</span>
         <span class="stat-number">{{ formatCount(c.current) }}{{ c.suffix }}</span>
         <span class="stat-title">{{ c.label }}</span>
@@ -73,16 +73,13 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Our Conferences</span>
-      <h2>Upcoming <span class="gradient-text">Events</span></h2>
-      <p>Curated virtual conferences across AI, ML, healthcare, cybersecurity, and emerging technologies.</p>
+      <h2>Upcoming <span class="gradient-text">Virtual Events</span></h2>
+      <p>Expertly curated conferences across artificial intelligence, machine learning, healthcare AI, cybersecurity, and next-generation technologies.</p>
     </div>
     <div class="conf-grid">
-      <a class="conf-card reveal" *ngFor="let event of events.slice(0, 6); let i = index"
+      <div class="conf-card reveal" *ngFor="let event of events.slice(0, 6); let i = index"
         [class.conf-active]="event.status === 'active'"
         [class.conf-soon]="event.status === 'coming_soon'"
-        [href]="event.externalUrl || null"
-        [routerLink]="!event.externalUrl ? ['/events', event.slug] : null"
-        [attr.target]="event.externalUrl ? '_blank' : null"
         [style.transition-delay.ms]="i * 80">
         <div class="conf-visual" [style.background]="cardGradients[i % cardGradients.length]">
           <div class="conf-status-pill" *ngIf="event.status === 'active'">
@@ -116,16 +113,21 @@
             </span>
           </div>
           <div class="conf-cta-row">
-            <span *ngIf="event.status === 'active'" class="btn btn-primary conf-btn">
+            <a *ngIf="event.status === 'active'"
+               [href]="event.externalUrl || 'https://aixplore-eta.vercel.app/'"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary conf-btn"
+               (click)="$event.stopPropagation()">
               View Details & Register
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </span>
+            </a>
             <span *ngIf="event.status === 'coming_soon'" class="btn btn-outline conf-btn conf-btn-disabled" title="This event is launching soon. Stay tuned!">
               🔔 Notify Me
             </span>
           </div>
         </div>
-      </a>
+      </div>
     </div>
     <div class="conf-view-all reveal">
       <a routerLink="/events" class="btn btn-secondary">
@@ -141,11 +143,11 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Featured Speakers</span>
-      <h2>Learn from the <span class="gradient-text">Best</span></h2>
-      <p>World-class researchers and industry practitioners sharing actionable insights at our conferences.</p>
+      <h2>Learn from <span class="gradient-text">Industry Leaders</span></h2>
+      <p>World-class AI researchers, engineers, and thought leaders sharing actionable insights from the frontlines of innovation.</p>
     </div>
     <div class="speakers-grid">
-      <div class="speaker-card reveal" *ngFor="let sp of allSpeakers; let i = index" [style.transition-delay.ms]="i * 80">
+      <div class="speaker-card glass-card reveal" *ngFor="let sp of allSpeakers; let i = index" [style.transition-delay.ms]="i * 80">
         <div class="speaker-avatar" [style.background]="speakerColors[i % speakerColors.length]">
           {{ getInitials(sp.name) }}
         </div>
@@ -153,7 +155,7 @@
         <p class="speaker-title">{{ sp.title }}</p>
         <p class="speaker-company">{{ sp.company }}</p>
         <p class="speaker-bio">{{ sp.bio }}</p>
-        <div class="speaker-tooltip" *ngIf="!sp.image">Speaker details coming soon</div>
+        <div class="speaker-tooltip" *ngIf="!sp.image">View full bio at conference</div>
       </div>
     </div>
   </div>
@@ -163,9 +165,9 @@
 <section class="section sessions-highlight" id="sessions" *ngIf="topSessions.length > 0">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Session Tracks</span>
-      <h2>What We'll <span class="gradient-text">Cover</span></h2>
-      <p>Dive deep into the most critical topics shaping artificial intelligence today.</p>
+      <span class="section-label">Conference Tracks</span>
+      <h2>Deep-Dive <span class="gradient-text">Session Tracks</span></h2>
+      <p>Comprehensive tracks covering the most critical domains in artificial intelligence — from foundational research to production systems.</p>
     </div>
     <div class="sessions-grid">
       <div class="session-card glass-card reveal" *ngFor="let s of topSessions; let i = index" [style.transition-delay.ms]="i * 80">
@@ -183,9 +185,9 @@
 <section class="section section-alt" id="why-attend">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Why Attend</span>
-      <h2>What You'll <span class="gradient-text">Gain</span></h2>
-      <p>More than just talks — real skills, real connections, real impact.</p>
+      <span class="section-label">Why ConfVerse</span>
+      <h2>What Makes Our Conferences <span class="gradient-text">Different</span></h2>
+      <p>Beyond traditional webinars — immersive virtual experiences designed for real learning and lasting connections.</p>
     </div>
     <div class="why-grid">
       <div class="why-card reveal" *ngFor="let w of whyAttend; let i = index" [style.transition-delay.ms]="i * 80">
@@ -202,8 +204,8 @@
 <section class="section participants-section" id="attendees">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Community</span>
-      <h2>Join <span class="gradient-text">{{ participants.count }}</span> Attendees</h2>
+      <span class="section-label">Global Community</span>
+      <h2>Join <span class="gradient-text">{{ participants.count }}</span> AI Professionals</h2>
       <p>{{ participants.tagline }}</p>
     </div>
     <div class="participants-showcase reveal">
@@ -217,7 +219,7 @@
         <span class="role-tag" *ngFor="let role of participants.roles">{{ role }}</span>
       </div>
       <div class="participants-cta">
-        <a (click)="scrollTo('conferences')" class="btn btn-primary">Join the Community →</a>
+        <a href="https://aixplore-eta.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register for Next Event →</a>
       </div>
     </div>
   </div>
@@ -227,12 +229,12 @@
 <section class="section section-alt speaker-section" id="speakers-cta">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">For Speakers</span>
-      <h2>Share Your Expertise <span class="gradient-text">Globally</span></h2>
-      <p>Present to thousands of AI professionals from 90+ countries. No travel required — just your knowledge and passion.</p>
+      <span class="section-label">Call for Speakers</span>
+      <h2>Share Your Expertise with a <span class="gradient-text">Global Audience</span></h2>
+      <p>Present to thousands of AI professionals across 90+ countries. No travel required — just your knowledge and passion for innovation.</p>
     </div>
     <div class="speaker-benefits-grid">
-      <div class="speaker-benefit-card reveal" *ngFor="let b of speakerBenefits; let i = index" [style.transition-delay.ms]="i * 80">
+      <div class="speaker-benefit-card glass-card reveal" *ngFor="let b of speakerBenefits; let i = index" [style.transition-delay.ms]="i * 80">
         <span class="sb-icon">{{ b.icon }}</span>
         <h3>{{ b.title }}</h3>
         <p>{{ b.description }}</p>
@@ -241,7 +243,7 @@
     <div class="speaker-cta-card glass-card reveal">
       <div class="speaker-cta-content" *ngIf="!speakerFormSubmitted">
         <h3>Apply to Speak at ConfVerse</h3>
-        <p>Tell us about your expertise and proposed topic. Our curation team reviews every submission.</p>
+        <p>Share your expertise with our global community. Our curation team reviews every submission within 5 business days.</p>
         <form (ngSubmit)="onSpeakerSubmit()" class="speaker-form">
           <div class="sf-row">
             <input type="text" [(ngModel)]="speakerForm.name" name="name" placeholder="Full Name" required>
@@ -266,12 +268,12 @@
 <section class="section sponsor-section" id="sponsors">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">For Sponsors</span>
+      <span class="section-label">Sponsorship Opportunities</span>
       <h2>Accelerate Your Brand with <span class="gradient-text">ConfVerse</span></h2>
-      <p>Reach a global audience of 25,000+ AI professionals, researchers, and technology decision-makers across our conference network.</p>
+      <p>Reach a targeted audience of 25,000+ AI professionals, researchers, and technology decision-makers across our global conference network.</p>
     </div>
     <div class="sponsor-tiers-grid">
-      <div class="sponsor-tier-card reveal" *ngFor="let tier of sponsorTiers; let i = index"
+      <div class="sponsor-tier-card glass-card reveal" *ngFor="let tier of sponsorTiers; let i = index"
         [style.transition-delay.ms]="i * 100"
         [class.tier-featured]="i === 0">
         <div class="tier-header" [style.border-bottom-color]="tier.color">
@@ -287,7 +289,7 @@
           </li>
         </ul>
         <a routerLink="/contact" class="btn" [class.btn-primary]="i === 0" [class.btn-outline]="i !== 0" style="width: 100%;">
-          {{ i === 0 ? 'Contact Us →' : 'Get Started' }}
+          {{ i === 0 ? 'Contact Sales →' : 'Get Started' }}
         </a>
       </div>
     </div>
@@ -298,12 +300,12 @@
 <section class="section section-alt trending-section" id="trending">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Trending Now</span>
-      <h2>What's Hot in <span class="gradient-text">AI & Tech</span></h2>
-      <p>A real-time pulse on the technologies, tools, and topics shaping the artificial intelligence landscape right now.</p>
+      <span class="section-label">AI Market Trends</span>
+      <h2>What's Trending in <span class="gradient-text">AI & Technology</span></h2>
+      <p>Real-time intelligence on the technologies, frameworks, and innovations shaping the artificial intelligence industry right now.</p>
     </div>
     <div class="trending-grid">
-      <div class="trend-card reveal" *ngFor="let trend of trendingTopics; let i = index" [style.transition-delay.ms]="i * 80">
+      <div class="trend-card glass-card reveal" *ngFor="let trend of trendingTopics; let i = index" [style.transition-delay.ms]="i * 80">
         <div class="trend-header">
           <span class="trend-icon">{{ trend.icon }}</span>
           <span class="trend-badge" [class]="'momentum-' + trend.momentum.toLowerCase().replace(' ', '-')">
@@ -330,8 +332,8 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Market Intelligence</span>
-      <h2>AI Market <span class="gradient-text">Pulse</span></h2>
-      <p>Stay ahead with real-time data on AI industry growth, enterprise adoption rates, and sector-specific intelligence.</p>
+      <h2>AI Industry <span class="gradient-text">Market Pulse</span></h2>
+      <p>Stay ahead with real-time data on global AI market growth, enterprise adoption rates, and sector-specific investment trends.</p>
     </div>
     <div class="market-kpis" *ngIf="marketInsights && marketInsights.globalAiMarket">
       <div class="kpi-card glass-card reveal" *ngFor="let kpi of [
@@ -371,11 +373,11 @@
 <section class="section section-alt how-section" id="how-it-works">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">How It Works</span>
-      <h2>Three Steps to <span class="gradient-text">Get Started</span></h2>
+      <span class="section-label">Getting Started</span>
+      <h2>Three Steps to <span class="gradient-text">Join the Community</span></h2>
     </div>
     <div class="steps-row">
-      <div class="step-item reveal" *ngFor="let step of steps; let i = index" [style.transition-delay.ms]="i * 120">
+      <div class="step-item glass-card reveal" *ngFor="let step of steps; let i = index" [style.transition-delay.ms]="i * 120">
         <div class="step-num">{{ i + 1 }}</div>
         <div class="step-content">
           <span class="step-icon">{{ step.icon }}</span>
@@ -391,8 +393,8 @@
 <section class="section testimonials-section" id="testimonials">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Community</span>
-      <h2>What People <span class="gradient-text">Say</span></h2>
+      <span class="section-label">Community Voices</span>
+      <h2>What Attendees <span class="gradient-text">Are Saying</span></h2>
     </div>
     <div class="testimonial-slider reveal" *ngIf="testimonials.length > 0">
       <button class="slider-btn prev" (click)="prevTestimonial()" aria-label="Previous testimonial">
@@ -429,9 +431,9 @@
       <div class="cta-inner">
         <span class="section-label">Ready to Join?</span>
         <h2>Your Next AI Breakthrough Starts at <span class="gradient-text">ConfVerse</span></h2>
-        <p>Whether you're a speaker, sponsor, researcher, or professional — there's a place for you in our global community of AI innovators.</p>
+        <p>Whether you're a speaker, sponsor, researcher, or AI professional — there's a place for you in the world's fastest-growing virtual conference community.</p>
         <div class="cta-actions">
-          <a routerLink="/events" class="btn btn-primary">Explore Events →</a>
+          <a href="https://aixplore-eta.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register Now →</a>
           <a routerLink="/contact" class="btn btn-secondary">Contact Us</a>
         </div>
       </div>

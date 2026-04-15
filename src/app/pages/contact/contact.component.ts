@@ -92,9 +92,9 @@ import { FormsModule } from '@angular/forms';
     .page-hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(0, 212, 255, 0.08), transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(124, 58, 237, 0.06), transparent 60%),
-                  var(--primary-dark);
+      background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.06), transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(76, 201, 240, 0.04), transparent 60%),
+                  var(--bg-primary);
     }
     .page-hero-content {
       position: relative;
@@ -103,8 +103,9 @@ import { FormsModule } from '@angular/forms';
     }
     .page-hero-content h1 {
       font-size: 3.5rem;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 16px;
+      letter-spacing: -0.03em;
     }
     .page-hero-content > p {
       font-size: 1.15rem;
@@ -150,18 +151,19 @@ import { FormsModule } from '@angular/forms';
       border: 1px solid var(--glass-border);
       background: rgba(255, 255, 255, 0.03);
       color: white;
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 0.92rem;
       outline: none;
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: var(--accent-cyan);
+      border-color: var(--accent-emerald);
+      box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.1);
     }
     .form-group select { cursor: pointer; }
-    .form-group select option { background: var(--primary-dark); }
+    .form-group select option { background: var(--bg-primary); }
     .form-group textarea { resize: vertical; min-height: 120px; }
     .form-success {
       position: absolute;
@@ -221,7 +223,7 @@ import { FormsModule } from '@angular/forms';
     }
     .faq-toggle {
       font-size: 1.2rem;
-      color: var(--accent-cyan);
+      color: var(--accent-emerald);
       width: 24px;
       text-align: center;
     }

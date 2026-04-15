@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: link.exact}"
             (click)="closeMenu()"
-            [style.transition-delay]="menuOpen ? (i * 60 + 200) + 'ms' : '0ms'"
+            [style.transition-delay]="menuOpen ? (i * 70 + 150) + 'ms' : '0ms'"
             class="nav-link">
             <span class="link-text">{{ link.label }}</span>
             <span class="link-indicator"></span>
@@ -30,13 +30,13 @@ import { RouterModule } from '@angular/router';
         </div>
 
         <div class="nav-actions">
-          <a routerLink="/events" class="btn btn-primary btn-nav">
-            <span class="btn-text">Explore Events</span>
+          <a href="https://aixplore-eta.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">
+            <span class="btn-text">Register Now</span>
             <span class="btn-shine"></span>
           </a>
         </div>
 
-        <button class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()" aria-label="Toggle menu">
+        <button class="hamburger" [class.active]="menuOpen" (click)="toggleMenu()" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -50,62 +50,62 @@ import { RouterModule } from '@angular/router';
   styles: [`
     .navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 20px 0;
+      padding: 18px 0;
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       background: transparent;
       opacity: 0; pointer-events: none;
     }
     .navbar.visible { opacity: 1; pointer-events: all; }
     .navbar.scrolled {
-      background: rgba(12, 12, 14, 0.88);
+      background: rgba(5, 5, 8, 0.92);
       backdrop-filter: blur(40px) saturate(180%);
       -webkit-backdrop-filter: blur(40px) saturate(180%);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      padding: 12px 0;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
     .nav-container {
-      max-width: 1240px; margin: 0 auto; padding: 0 28px;
+      max-width: 1240px; margin: 0 auto; padding: 0 32px;
       display: flex; align-items: center; justify-content: space-between;
     }
 
     /* ─── Logo ─── */
     .nav-logo {
       display: flex; align-items: center; gap: 10px;
-      font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 700;
       color: white; z-index: 1001; letter-spacing: -0.02em;
     }
     .logo-diamond {
       position: relative;
       display: flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px;
+      width: 34px; height: 34px;
     }
     .diamond-inner {
-      color: var(--accent-emerald); font-size: 1.3rem;
+      color: var(--accent-emerald); font-size: 1.4rem;
       animation: diamond-pulse 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 8px rgba(0, 229, 160, 0.4));
+      filter: drop-shadow(0 0 10px rgba(0, 229, 160, 0.5));
     }
     .logo-diamond::after {
       content: ''; position: absolute; inset: -4px;
-      border: 1px solid rgba(0, 229, 160, 0.15); border-radius: 50%;
+      border: 1px solid rgba(0, 229, 160, 0.2); border-radius: 50%;
       animation: diamond-ring 4s ease-in-out infinite;
     }
     @keyframes diamond-pulse {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(0, 229, 160, 0.4)); }
-      50% { transform: scale(1.1); filter: drop-shadow(0 0 16px rgba(0, 229, 160, 0.6)); }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0, 229, 160, 0.5)); }
+      50% { transform: scale(1.12); filter: drop-shadow(0 0 18px rgba(0, 229, 160, 0.7)); }
     }
     @keyframes diamond-ring {
-      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
-      50% { transform: scale(1.15) rotate(90deg); opacity: 0.8; }
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+      50% { transform: scale(1.2) rotate(90deg); opacity: 0.8; }
     }
     .logo-accent { color: var(--accent-emerald); }
     .logo-text { position: relative; }
 
     /* ─── Links ─── */
-    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; align-items: center; gap: 6px; }
     .nav-link {
-      font-size: 0.86rem; font-weight: 500; color: var(--text-secondary);
-      position: relative; padding: 8px 16px; border-radius: var(--radius-full);
+      font-size: 0.88rem; font-weight: 500; color: var(--text-secondary);
+      position: relative; padding: 8px 18px; border-radius: var(--radius-full);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
     }
@@ -115,7 +115,7 @@ import { RouterModule } from '@angular/router';
       width: 0; height: 2px; border-radius: 1px;
       background: var(--accent-emerald);
       transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 0 8px rgba(0, 229, 160, 0.3);
+      box-shadow: 0 0 10px rgba(0, 229, 160, 0.4);
     }
     .nav-link:hover {
       color: white;
@@ -128,7 +128,7 @@ import { RouterModule } from '@angular/router';
     /* ─── CTA Button ─── */
     .nav-actions { display: flex; align-items: center; }
     .btn-nav {
-      padding: 10px 28px; font-size: 0.82rem;
+      padding: 10px 26px; font-size: 0.82rem;
       position: relative; overflow: hidden;
     }
     .btn-shine {
@@ -171,26 +171,27 @@ import { RouterModule } from '@angular/router';
       box-shadow: 0 0 12px rgba(0, 229, 160, 0.3);
     }
 
-    /* ─── Mobile─── */
+    /* ─── Mobile ─── */
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .nav-links {
         position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(12, 12, 14, 0.98);
+        background: rgba(5, 5, 8, 0.98);
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
-        flex-direction: column; justify-content: center; gap: 12px;
-        transform: translateY(-10px); opacity: 0;
+        flex-direction: column; justify-content: center; align-items: center; gap: 8px;
+        transform: translateY(-12px); opacity: 0;
         pointer-events: none;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         z-index: 1000;
       }
       .nav-links.active {
         transform: translateY(0); opacity: 1; pointer-events: all;
       }
-      .nav-link { 
-        font-size: 1.4rem; padding: 12px 24px; 
-        opacity: 0; transform: translateY(15px);
+      .nav-link {
+        font-size: 1.5rem; padding: 14px 28px;
+        opacity: 0; transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease, background 0.3s ease;
       }
       .nav-links.active .nav-link {
         opacity: 1; transform: translateY(0);
@@ -220,8 +221,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (this.isBrowser) {
-      // Animate navbar entrance
-      setTimeout(() => { this.navVisible = true; }, 300);
+      setTimeout(() => { this.navVisible = true; }, 200);
 
       this.scrollListener = () => {
         this.isScrolled = window.scrollY > 50;

@@ -61,9 +61,9 @@ import { EventsService } from '../../services/events.service';
               </div>
               <div class="event-actions">
                 <a *ngIf="event.status === 'active'" 
-                   [href]="event.externalUrl ? event.externalUrl : null" 
-                   [routerLink]="!event.externalUrl ? ['/events', event.slug] : null" 
-                   [attr.target]="event.externalUrl ? '_blank' : null" 
+                   [href]="event.externalUrl || 'https://aixplore-eta.vercel.app/'"
+                   target="_blank"
+                   rel="noopener noreferrer"
                    class="btn btn-primary">
                   View Details & Register
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -85,8 +85,8 @@ import { EventsService } from '../../services/events.service';
     .page-hero-bg {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(76, 201, 240, 0.08), transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(184, 169, 250, 0.06), transparent 60%),
+      background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.06), transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(76, 201, 240, 0.04), transparent 60%),
                   var(--bg-primary);
     }
     .page-hero-content {
