@@ -7,260 +7,146 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
+
     <section class="page-hero">
       <div class="page-hero-bg"></div>
       <div class="container page-hero-content">
-        <span class="section-label">Get In Touch</span>
-        <h1>Let's Build the <span class="gradient-text">Future</span> Together</h1>
-        <p>Whether you want to attend, speak, sponsor, or partner — we'd love to hear from you.</p>
+        <span class="section-label">Connect</span>
+        <h1>Let's <span class="gradient-text">Connect</span></h1>
+        <p>If you have a question, an idea, or want to partner with us, we're here.</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section pt-2">
       <div class="container">
         <div class="contact-grid">
-          <div class="contact-form-wrapper glass-card">
-            <h2>Send Us a Message</h2>
-            <form (ngSubmit)="onSubmit()" class="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" [(ngModel)]="form.name" name="name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" [(ngModel)]="form.email" name="email" placeholder="your@email.com" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" [(ngModel)]="form.subject" name="subject">
-                  <option value="">Select a topic</option>
-                  <option value="attend">I want to attend an event</option>
-                  <option value="speak">I want to become a speaker</option>
-                  <option value="sponsor">Sponsorship inquiry</option>
-                  <option value="partner">Partnership opportunity</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" [(ngModel)]="form.message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Send Message →
-              </button>
-            </form>
-            <div class="form-success glass-card" *ngIf="submitted">
-              <span class="success-icon">✅</span>
-              <h3>Message Sent!</h3>
-              <p>Thank you for reaching out. Our team will get back to you shortly.</p>
+            
+            <div class="contact-info-card glass-card">
+                <div class="contact-icon">📧</div>
+                <h4 class="mb-3 text-white">Email Us</h4>
+                <p class="mb-2"><strong style="color: white; font-size: 1.1rem;">contact&#64;aiconfconnect.com</strong></p>
+                <p class="text-muted mb-3">For general inquiries, partnerships, and support</p>
+                <span class="response-time">⏱️ We usually respond within 4–8 hours</span>
             </div>
-          </div>
-
-          <div class="contact-info">
-            <div class="info-card glass-card" *ngFor="let item of contactInfo">
-              <div class="info-icon">{{ item.icon }}</div>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.value }}</p>
-              <p class="info-sub" *ngIf="item.sub">{{ item.sub }}</p>
+            
+            <div class="contact-info-card glass-card">
+                <div class="contact-icon">📞</div>
+                <h4 class="mb-3 text-white">Call Us</h4>
+                <p class="mb-2"><strong style="color: white; font-size: 1.1rem;">+919703836289</strong></p>
+                <p class="text-muted mb-3">24/7 Available</p>
+                <span class="response-time">🎧 Priority support for partners</span>
+            </div>
+            
+            <div class="contact-info-card glass-card">
+                <div class="contact-icon">🌐</div>
+                <h4 class="mb-3 text-white">Office Location</h4>
+                <p class="mb-2"><strong style="color: white; font-size: 1.1rem;">Virtual Events</strong></p>
+                <p class="text-muted mb-3">Global hub, connecting tech minds worldwide</p>
+                <span class="response-time">🌍 Virtual-first organization</span>
             </div>
 
-            <div class="faq-section">
-              <h3>Frequently Asked Questions</h3>
-              <div class="faq-item glass-card" *ngFor="let faq of faqs" (click)="faq.open = !faq.open">
-                <div class="faq-question">
-                  <span>{{ faq.question }}</span>
-                  <span class="faq-toggle">{{ faq.open ? '−' : '+' }}</span>
-                </div>
-                <div class="faq-answer" *ngIf="faq.open">
-                  <p>{{ faq.answer }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
+
+    <section class="section" style="background: var(--bg-elevated);">
+      <div class="container">
+        <div class="contact-split">
+            <div class="contact-form-side">
+                <h2 class="mb-3">Send Us a <span class="gradient-text">Message</span></h2>
+                <p style="color: #A1A1A8; line-height: 1.7; margin-bottom: 2rem;">Whether you're interested in attending an event, becoming a speaker, sponsoring, or just have a question — we'd love to hear from you.</p>
+                
+                <form class="c-form">
+                    <div class="form-row">
+                        <input type="text" class="c-input" placeholder="Your Name" required>
+                        <input type="email" class="c-input" placeholder="Your Email" required>
+                    </div>
+                    <select class="c-input" style="width: 100%;">
+                        <option selected>I'm interested in...</option>
+                        <option>Attending a Conference</option>
+                        <option>Becoming a Speaker</option>
+                        <option>Sponsorship Opportunities</option>
+                        <option>Partnership Inquiry</option>
+                        <option>General Question</option>
+                    </select>
+                    <textarea class="c-input" rows="5" placeholder="Your Message..." style="width: 100%;"></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-faq-side">
+                <h3 class="mb-4 text-white">Frequently Asked <span class="gradient-text">Questions</span></h3>
+                
+                <div class="faq-item">
+                    <div class="faq-q">How do I register for a conference?</div>
+                    <div class="faq-a">You can register directly through our Conferences page. You'll receive a confirmation email with access details.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How can I become a speaker?</div>
+                    <div class="faq-a">We're always looking for passionate industry experts. Fill out the contact form with "Becoming a Speaker", and our team will reach out.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What sponsorship packages are available?</div>
+                    <div class="faq-a">We offer Title Sponsorship, packages, and Showcase opportunities. Contact us for a custom proposal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What is your refund policy?</div>
+                    <div class="faq-a">All registrations are non-refundable unless AI Conf Connect cancels the event. Review our full Terms & Conditions for details.</div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+    </section>
+
   `,
   styles: [`
-    .page-hero {
-      position: relative;
-      padding: 160px 0 80px;
-      overflow: hidden;
-    }
+
+    .page-hero { position: relative; padding: 140px 0 60px; overflow: hidden; }
     .page-hero-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.06), transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(76, 201, 240, 0.04), transparent 60%),
-                  var(--bg-primary);
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.05), transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(76, 201, 240, 0.03), transparent 60%),
+                  var(--bg-primary, #06060A);
     }
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-    .page-hero-content h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: -0.03em;
-    }
-    .page-hero-content > p {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    .contact-form-wrapper {
-      padding: 40px;
-      position: relative;
-    }
-    .contact-form-wrapper h2 {
-      font-size: 1.5rem;
-      margin-bottom: 28px;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--glass-border);
-      background: rgba(255, 255, 255, 0.03);
-      color: white;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--accent-emerald);
-      box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.1);
-    }
-    .form-group select { cursor: pointer; }
-    .form-group select option { background: var(--bg-primary); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-success {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: rgba(10, 14, 39, 0.98);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-    }
-    .success-icon { font-size: 3rem; margin-bottom: 16px; }
-    .form-success h3 { font-size: 1.3rem; margin-bottom: 8px; }
-    .form-success p { color: var(--text-secondary); }
+    .page-hero-content { position: relative; z-index: 1; text-align: center; }
+    .page-hero-content h1 { font-size: 3.2rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.03em; color: white; }
+    .breadcrumb a { color: var(--accent-emerald, #00e5a0); text-decoration: none; }
+    .breadcrumb-item.active { color: #888; }
+    .breadcrumb { display: flex; list-style: none; padding: 0; gap: 8px; justify-content: center; margin-top: 1.5rem; }
+    .breadcrumb-item + .breadcrumb-item::before { content: '/'; color: #555; padding-right: 8px; }
 
-    .info-card {
-      padding: 24px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    .info-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .info-card h3 {
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-    }
-    .info-card p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-    .info-sub {
-      font-size: 0.8rem !important;
-      color: var(--text-tertiary) !important;
-      margin-top: 4px;
-    }
-    .faq-section {
-      margin-top: 32px;
-    }
-    .faq-section h3 {
-      font-size: 1.2rem;
-      margin-bottom: 16px;
-    }
-    .faq-item {
-      margin-bottom: 12px;
-      padding: 16px 20px;
-      cursor: pointer;
-    }
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-    .faq-toggle {
-      font-size: 1.2rem;
-      color: var(--accent-emerald);
-      width: 24px;
-      text-align: center;
-    }
-    .faq-answer p {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-top: 12px;
-    }
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 20px;}
+    .contact-info-card { padding: 40px 24px; text-align: center; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); transition: transform 0.3s; }
+    .contact-info-card:hover { transform: translateY(-5px); border-color: rgba(0, 229, 160, 0.3); }
+    .contact-icon { font-size: 2.5rem; margin-bottom: 20px; display: inline-block; background: rgba(0,229,160,0.1); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; }
+    .text-muted { color: #A1A1A8 !important; }
+    .response-time { background: rgba(0, 229, 160, 0.08); color: var(--accent-emerald, #00e5a0); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; display: inline-block; margin-top: 10px; }
+    
+    .contact-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .c-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .c-input { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 14px 20px; border-radius: 8px; color: white; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;}
+    .c-input:focus { border-color: var(--accent-emerald, #00e5a0); outline: none; background: rgba(255,255,255,0.06); }
+    .c-input option { background: #1a1a24; }
+    
+    .faq-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px; transition: all 0.3s ease; }
+    .faq-item:hover { border-color: rgba(0, 229, 160, 0.2); background: rgba(255,255,255,0.04); }
+    .faq-q { font-weight: 600; color: white; margin-bottom: 8px; font-size: 1.05rem; }
+    .faq-a { color: #A1A1A8; line-height: 1.6; font-size: 0.95rem; }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+      .contact-split { grid-template-columns: 1fr; gap: 40px; }
       .page-hero-content h1 { font-size: 2.5rem; }
     }
+
   `]
 })
 export class ContactComponent {
-  form = { name: '', email: '', subject: '', message: '' };
-  submitted = false;
-
-  contactInfo = [
-    { icon: '📧', title: 'Email', value: 'contact@aiconfconnect.com', sub: 'We respond within 24 hours' },
-    { icon: '🤝', title: 'Partnerships', value: 'Anna@aiconfconnect.com', sub: 'For sponsorships and collaborations' },
-    { icon: '🌍', title: 'Location', value: 'Global — 100% Virtual', sub: 'Our conferences are accessible worldwide' }
-  ];
-
-  faqs: any[] = [
-    { question: 'How do I attend a conference?', answer: 'Simply visit the event page and register with your preferred pass. You\'ll receive login credentials via email before the event.', open: false },
-    { question: 'Can I become a speaker?', answer: 'Absolutely! Fill out the contact form with "Become a Speaker" as the subject, include your bio and proposed topics, and our team will review your application.', open: false },
-    { question: 'Are recordings available after the event?', answer: 'Yes! All registered attendees with Academic or Industry passes get access to session recordings for 6 months post-event.', open: false },
-    { question: 'How can my company sponsor an event?', answer: 'We offer various sponsorship tiers with branding, virtual booth, and speaking opportunities. Contact us for a detailed sponsorship deck.', open: false }
-  ];
-
-  onSubmit() {
-    if (this.form.name && this.form.email && this.form.message) {
-      this.submitted = true;
-    }
-  }
 }

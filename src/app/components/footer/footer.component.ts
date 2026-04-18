@@ -59,22 +59,44 @@ import { FormsModule } from '@angular/forms';
           </div>
 
           <div class="footer-links">
-            <h4>Platform</h4>
+            <h4>Quick Links</h4>
             <ul>
-              <li><a routerLink="/">Home</a></li>
-              <li><a routerLink="/events">Conferences</a></li>
-              <li><a routerLink="/about">About Us</a></li>
-              <li><a routerLink="/contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-links">
-            <h4>For Partners</h4>
-            <ul>
-              <li><a routerLink="/contact">Become a Speaker</a></li>
-              <li><a routerLink="/contact">Become a Sponsor</a></li>
-              <li><a routerLink="/contact">Host an Event</a></li>
-              <li><a routerLink="/contact">Media & Press</a></li>
+              <li>
+                <a routerLink="/about">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  About us
+                </a>
+              </li>
+              <li>
+                <a routerLink="/contact">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  Contact us
+                </a>
+              </li>
+              <li>
+                <a routerLink="/terms">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a routerLink="/disclaimer">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  Disclaimer
+                </a>
+              </li>
+              <li>
+                <a routerLink="/privacy">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a routerLink="/refund">
+                  <svg class="chevron-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                  Refund Policy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -91,12 +113,6 @@ import { FormsModule } from '@angular/forms';
 
         <div class="footer-bottom">
           <p>&copy; {{ year }} AI Conf Connect. All rights reserved. Built for the global AI community.</p>
-          <div class="footer-bottom-links">
-            <a routerLink="/privacy">Privacy</a>
-            <a routerLink="/terms">Terms</a>
-            <a routerLink="/refund">Refund Policy</a>
-            <a routerLink="/disclaimer">Disclaimer</a>
-          </div>
         </div>
       </div>
     </footer>
@@ -226,12 +242,18 @@ import { FormsModule } from '@angular/forms';
     }
     .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
     .footer-links a {
-      color: var(--text-tertiary); font-size: 0.88rem;
-      display: inline-flex; align-items: center; gap: 0;
+      color: var(--text-tertiary); font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 8px;
       transition: all 0.3s ease;
     }
+    .chevron-icon {
+      color: var(--text-tertiary); transition: color 0.3s ease;
+    }
     .footer-links a:hover {
-      color: var(--accent-emerald); transform: translateX(4px);
+      color: var(--accent-emerald); transform: translateX(6px);
+    }
+    .footer-links a:hover .chevron-icon {
+      color: var(--accent-emerald);
     }
 
     /* Bottom */
