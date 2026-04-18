@@ -52,7 +52,7 @@ import { FormsModule } from '@angular/forms';
               <a href="#" class="social-icon" aria-label="Twitter/X">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
-              <a href="mailto:contact&#64;confverse.com" class="social-icon" aria-label="Email">
+              <a href="mailto:contact&#64;aiconfconnect.com" class="social-icon" aria-label="Email">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
               </a>
             </div>
@@ -81,8 +81,8 @@ import { FormsModule } from '@angular/forms';
           <div class="footer-links">
             <h4>Connect</h4>
             <ul>
-              <li><a href="mailto:contact&#64;confverse.com">contact&#64;confverse.com</a></li>
-              <li><a href="mailto:Anna&#64;confverse.com">Anna&#64;confverse.com</a></li>
+              <li><a href="mailto:contact&#64;aiconfconnect.com">contact&#64;aiconfconnect.com</a></li>
+              <li><a href="mailto:Anna&#64;aiconfconnect.com">Anna&#64;aiconfconnect.com</a></li>
               <li><a href="#" target="_blank">LinkedIn</a></li>
               <li><a href="#" target="_blank">Twitter / X</a></li>
             </ul>
@@ -90,11 +90,12 @@ import { FormsModule } from '@angular/forms';
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; {{ year }} ConfVerse. All rights reserved. Built for the global AI community.</p>
+          <p>&copy; {{ year }} AI Conf Connect. All rights reserved. Built for the global AI community.</p>
           <div class="footer-bottom-links">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Disclaimer</a>
+            <a routerLink="/privacy">Privacy</a>
+            <a routerLink="/terms">Terms</a>
+            <a routerLink="/refund">Refund Policy</a>
+            <a routerLink="/disclaimer">Disclaimer</a>
           </div>
         </div>
       </div>
