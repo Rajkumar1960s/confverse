@@ -241,7 +241,7 @@ import { FormsModule } from '@angular/forms';
       text-transform: uppercase; letter-spacing: 1px;
     }
     .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .footer-links a {
+    .footer-links a { cursor: pointer; text-decoration: none;
       color: var(--text-tertiary); font-size: 0.95rem;
       display: inline-flex; align-items: center; gap: 8px;
       transition: all 0.3s ease;

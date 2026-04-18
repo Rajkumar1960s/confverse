@@ -46,7 +46,7 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [`
-    .page-hero { position: relative; padding: 140px 0 60px; overflow: hidden; }
+    .page-hero { position: relative; padding: 110px 0 30px; overflow: hidden; }
     .page-hero-bg {
       position: absolute; inset: 0;
       background: radial-gradient(ellipse at 30% 50%, rgba(0, 229, 160, 0.05), transparent 60%),
