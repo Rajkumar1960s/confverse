@@ -179,7 +179,7 @@ export class ContactComponent {
     // TODO: The user sets these!
     const serviceId = 'service_be1d1ps';
     const templateId = 'template_2fiohpg';
-    const publicKey = 'IwiGDya22WVA9s0cb';
+    const publicKey = 'nvgXJf3yFE5SfZ0ZH';
 
     const data = {
       service_id: serviceId,

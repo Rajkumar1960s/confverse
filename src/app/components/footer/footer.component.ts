@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
             <h3>Ready to Shape the Future of AI?</h3>
             <p>Join 25,000+ professionals who trust ConfVerse for world-class AI conferences, market intelligence, and global networking.</p>
           </div>
-          <a href="https://aixplore-eta.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-footer-cta">
+          <a href="https://live.aiconfconnect.com/#/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-footer-cta">
             Register Now
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
           </a>
