@@ -162,7 +162,7 @@ import { FormsModule } from '@angular/forms';
 
     /* Grid */
     .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
       gap: 48px; padding-bottom: 48px;
       position: relative; z-index: 1;
     }

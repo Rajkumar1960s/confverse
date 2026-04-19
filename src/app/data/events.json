@@ -7,13 +7,13 @@
       "subtitle": "The Future of Intelligence",
       "date": "2026-07-27",
       "endDate": "2026-07-28",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "active",
-      "externalUrl": "https://aixplore-eta.vercel.app/",
+      "externalUrl": "https://live.aiconfconnect.com/#/",
       "description": "Join a next-generation virtual conference designed for AI, machine learning, and future technology. Learn from industry leaders, connect with innovators, and explore real-world AI applications.",
-      "longDescription": "AIxplore is designed to deliver practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution — everything is crafted to keep you engaged, not just watching.",
-      "icon": "🧠",
+      "longDescription": "AIxplore is designed to deliver practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution \u2014 everything is crafted to keep you engaged, not just watching.",
+      "icon": "\ud83e\udde0",
       "speakerCount": 6,
       "sessionCount": 12,
       "attendeeCount": "2,500+",
@@ -25,22 +25,22 @@
       ],
       "highlights": [
         {
-          "icon": "🎯",
+          "icon": "\ud83c\udfaf",
           "title": "50+ Expert Sessions",
           "description": "Deep-dive talks and workshops led by world-class AI researchers and practitioners."
         },
         {
-          "icon": "🌐",
+          "icon": "\ud83c\udf10",
           "title": "Global Community",
           "description": "Connect with 2,500+ attendees from 80+ countries across diverse industries."
         },
         {
-          "icon": "🔬",
+          "icon": "\ud83d\udd2c",
           "title": "Live Research Showcases",
           "description": "See breakthrough AI research presented by the teams behind the innovations."
         },
         {
-          "icon": "🤝",
+          "icon": "\ud83e\udd1d",
           "title": "Networking Lounges",
           "description": "Virtual breakout rooms for one-on-one conversations and small group discussions."
         }
@@ -103,32 +103,32 @@
       ],
       "sessions": [
         {
-          "icon": "🧠",
+          "icon": "\ud83e\udde0",
           "title": "Generative AI & LLMs",
           "description": "Latest advances in large language models, text generation, and multimodal AI systems."
         },
         {
-          "icon": "🤖",
+          "icon": "\ud83e\udd16",
           "title": "Agentic AI Systems",
           "description": "Build autonomous AI agents with reasoning, planning, and tool-use capabilities."
         },
         {
-          "icon": "🛡️",
+          "icon": "\ud83d\udee1\ufe0f",
           "title": "AI Ethics & Safety",
           "description": "Frameworks for responsible AI development, bias mitigation, and safety guardrails."
         },
         {
-          "icon": "⚙️",
+          "icon": "\u2699\ufe0f",
           "title": "MLOps & Production ML",
           "description": "Scale, deploy, and monitor ML models with production-grade infrastructure."
         },
         {
-          "icon": "👁️",
+          "icon": "\ud83d\udc41\ufe0f",
           "title": "Computer Vision",
           "description": "State-of-the-art vision models for healthcare, autonomous systems, and creative AI."
         },
         {
-          "icon": "💬",
+          "icon": "\ud83d\udcac",
           "title": "NLP & Conversational AI",
           "description": "Advanced natural language processing, chatbots, and human-AI interaction."
         }
@@ -149,12 +149,12 @@
       "subtitle": "From Research to Reality",
       "date": "2026-10-15",
       "endDate": "2026-10-16",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Learn how to scale, deploy, and monitor machine learning models from engineers at leading technology companies. Featuring MLOps deep dives, cost optimization strategies, and production-grade architectures.",
-      "longDescription": "The ML in Production Summit is dedicated to the craft of deploying machine learning at scale. Too many models never leave the lab — this conference changes that. Hear real stories from engineers who have shipped, monitored, and iterated on ML systems serving millions of users.",
-      "icon": "⚙️",
+      "longDescription": "The ML in Production Summit is dedicated to the craft of deploying machine learning at scale. Too many models never leave the lab \u2014 this conference changes that. Hear real stories from engineers who have shipped, monitored, and iterated on ML systems serving millions of users.",
+      "icon": "\u2699\ufe0f",
       "speakerCount": 8,
       "sessionCount": 15,
       "attendeeCount": "3,000+",
@@ -172,7 +172,7 @@
         "Platform Engineers",
         "Technical Leads"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 3,
@@ -181,12 +181,12 @@
       "subtitle": "Where Industry Meets Intelligence",
       "date": "2026-11-10",
       "endDate": "2026-11-12",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
       "description": "A three-day summit uniting enterprise leaders, policymakers, and technologists to explore AI's transformative impact across industries. Featuring keynotes from Fortune 500 CTOs and global AI strategy sessions.",
       "longDescription": "The Global AI Innovation Summit is the flagship event for industry leaders navigating the AI transformation. Over three days, attendees engage with C-suite executives, government AI advisors, and leading technologists to explore enterprise AI strategy, regulatory compliance, and competitive advantage through artificial intelligence.",
-      "icon": "🌍",
+      "icon": "\ud83c\udf0d",
       "speakerCount": 20,
       "sessionCount": 30,
       "attendeeCount": "5,000+",
@@ -204,7 +204,7 @@
         "Policy Advisors",
         "Enterprise Architects"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 4,
@@ -213,12 +213,12 @@
       "subtitle": "Transforming Patient Care with Intelligence",
       "date": "2027-02-20",
       "endDate": "2027-02-21",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Discover how AI is revolutionizing diagnostics, drug discovery, and clinical workflows. Featuring researchers from world-renowned medical institutions sharing real-world deployments of medical AI.",
-      "longDescription": "From AI-powered radiology to generative drug design, this summit showcases how artificial intelligence is reshaping healthcare delivery. Hear directly from researchers, clinicians, and health-tech leaders about the breakthroughs making headlines — and the practical challenges of deploying AI in clinical settings.",
-      "icon": "🏥",
+      "longDescription": "From AI-powered radiology to generative drug design, this summit showcases how artificial intelligence is reshaping healthcare delivery. Hear directly from researchers, clinicians, and health-tech leaders about the breakthroughs making headlines \u2014 and the practical challenges of deploying AI in clinical settings.",
+      "icon": "\ud83c\udfe5",
       "speakerCount": 12,
       "sessionCount": 20,
       "attendeeCount": "4,000+",
@@ -236,7 +236,7 @@
         "Biotech Engineers",
         "Health-Tech Founders"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 5,
@@ -245,12 +245,12 @@
       "subtitle": "Engineering Autonomous Intelligence",
       "date": "2027-04-10",
       "endDate": "2027-04-11",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "The premier gathering for autonomous AI agent builders — featuring multi-agent architectures, tool-use patterns, planning systems, memory frameworks, and safety guardrails for production deployments.",
+      "description": "The premier gathering for autonomous AI agent builders \u2014 featuring multi-agent architectures, tool-use patterns, planning systems, memory frameworks, and safety guardrails for production deployments.",
       "longDescription": "Agentic AI is the next frontier. This conference is built for the engineers, researchers, and product teams actively building autonomous AI systems. From multi-agent orchestration to long-term memory and safety guardrails, every session delivers hands-on, production-tested knowledge.",
-      "icon": "🤖",
+      "icon": "\ud83e\udd16",
       "speakerCount": 10,
       "sessionCount": 16,
       "attendeeCount": "3,500+",
@@ -268,7 +268,7 @@
         "Product Engineers",
         "AI Safety Researchers"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 6,
@@ -277,12 +277,12 @@
       "subtitle": "Neural Networks Redefined",
       "date": "2027-06-15",
       "endDate": "2027-06-16",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models and diffusion networks — explore the cutting edge of deep learning.",
+      "description": "Breakthrough neural architectures, training methodologies, and deployment strategies. From transformers to state-space models and diffusion networks \u2014 explore the cutting edge of deep learning.",
       "longDescription": "Deep Learning Frontiers brings together the world's top neural network researchers to share the latest advances in architecture design, training efficiency, and real-world deployment. This conference covers the full spectrum from foundational theory to production systems.",
-      "icon": "🔬",
+      "icon": "\ud83d\udd2c",
       "speakerCount": 15,
       "sessionCount": 22,
       "attendeeCount": "5,000+",
@@ -300,7 +300,7 @@
         "NLP Scientists",
         "PhD Students"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 7,
@@ -309,12 +309,12 @@
       "subtitle": "Building the Trustless Intelligence Layer",
       "date": "2027-08-05",
       "endDate": "2027-08-06",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
-      "description": "Explore the convergence of blockchain and artificial intelligence — decentralized AI inference, on-chain ML models, smart contract auditing with AI, and the future of decentralized autonomous organizations.",
+      "description": "Explore the convergence of blockchain and artificial intelligence \u2014 decentralized AI inference, on-chain ML models, smart contract auditing with AI, and the future of decentralized autonomous organizations.",
       "longDescription": "At the intersection of Web3 and AI lies a new paradigm for trustless, verifiable intelligence. This conference explores decentralized compute for AI training, blockchain-based model registries, AI-powered smart contract auditing, and DAO governance enhanced by machine intelligence.",
-      "icon": "🔗",
+      "icon": "\ud83d\udd17",
       "speakerCount": 10,
       "sessionCount": 18,
       "attendeeCount": "2,000+",
@@ -332,7 +332,7 @@
         "DeFi Researchers",
         "AI Infrastructure Engineers"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     },
     {
       "id": 8,
@@ -341,12 +341,12 @@
       "subtitle": "Defending the Digital Frontier",
       "date": "2027-09-18",
       "endDate": "2027-09-19",
-      "location": "Virtual — Global Access",
+      "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "coming_soon",
       "description": "Where artificial intelligence meets cybersecurity. Explore AI-powered threat detection, adversarial ML defense, automated incident response, and the emerging landscape of AI-driven cyber warfare.",
       "longDescription": "As cyber threats grow in sophistication, AI is becoming the most critical tool in the defender's arsenal. This summit brings together security researchers, red team operators, and AI engineers to explore the cutting edge of AI-powered cybersecurity.",
-      "icon": "🛡️",
+      "icon": "\ud83d\udee1\ufe0f",
       "speakerCount": 12,
       "sessionCount": 16,
       "attendeeCount": "2,500+",
@@ -364,7 +364,7 @@
         "CISO & Security Leaders",
         "AI/ML Security Researchers"
       ],
-      "externalUrl": "https://aixplore-eta.vercel.app/"
+      "externalUrl": "https://live.aiconfconnect.com/#/"
     }
   ],
   "trendingTopics": [
@@ -376,7 +376,7 @@
       "growth": "+340%",
       "description": "The race for AGI accelerates as labs push reasoning, multimodal capabilities, and context windows beyond one million tokens.",
       "impact": "Critical",
-      "icon": "🚀"
+      "icon": "\ud83d\ude80"
     },
     {
       "id": 2,
@@ -386,7 +386,7 @@
       "growth": "+520%",
       "description": "AI agents that plan, execute, and self-correct are reshaping software development, customer service, and scientific research workflows.",
       "impact": "High",
-      "icon": "🤖"
+      "icon": "\ud83e\udd16"
     },
     {
       "id": 3,
@@ -396,7 +396,7 @@
       "growth": "+180%",
       "description": "AlphaFold 3 and generative molecular design are compressing drug development timelines from decades to months.",
       "impact": "High",
-      "icon": "💊"
+      "icon": "\ud83d\udc8a"
     },
     {
       "id": 4,
@@ -406,7 +406,7 @@
       "growth": "+290%",
       "description": "Qualcomm, Apple, and NVIDIA are pushing AI inference to smartphones, IoT devices, and autonomous vehicles at unprecedented scale.",
       "impact": "High",
-      "icon": "📱"
+      "icon": "\ud83d\udcf1"
     },
     {
       "id": 5,
@@ -416,7 +416,7 @@
       "growth": "+150%",
       "description": "Global regulatory frameworks are reshaping how companies build, deploy, and audit AI systems across jurisdictions.",
       "impact": "Critical",
-      "icon": "⚖️"
+      "icon": "\u2696\ufe0f"
     },
     {
       "id": 6,
@@ -426,7 +426,7 @@
       "growth": "+410%",
       "description": "Sora, Runway Gen-3, and Kling are making text-to-video generation production-ready for film, advertising, and interactive media.",
       "impact": "High",
-      "icon": "🎬"
+      "icon": "\ud83c\udfac"
     }
   ],
   "marketInsights": {
@@ -528,34 +528,34 @@
   ],
   "speakerBenefits": [
     {
-      "icon": "🎤",
+      "icon": "\ud83c\udfa4",
       "title": "Global Stage",
-      "description": "Present to thousands of AI professionals from 90+ countries — no travel required."
+      "description": "Present to thousands of AI professionals from 90+ countries \u2014 no travel required."
     },
     {
-      "icon": "🏆",
+      "icon": "\ud83c\udfc6",
       "title": "Thought Leadership",
       "description": "Position yourself as an industry expert through our curated, high-visibility platform."
     },
     {
-      "icon": "🤝",
+      "icon": "\ud83e\udd1d",
       "title": "Premium Networking",
       "description": "Connect directly with attendees, co-speakers, and potential collaborators or investors."
     },
     {
-      "icon": "📹",
+      "icon": "\ud83d\udcf9",
       "title": "Recorded & Promoted",
       "description": "All sessions are recorded and promoted across our channels, extending your reach for months."
     },
     {
-      "icon": "🎟️",
+      "icon": "\ud83c\udf9f\ufe0f",
       "title": "Complimentary Access",
       "description": "Full VIP access to the event and all future ConfVerse conferences for the year."
     },
     {
-      "icon": "📊",
+      "icon": "\ud83d\udcca",
       "title": "Engagement Analytics",
-      "description": "Receive detailed analytics on your session — attendee count, engagement score, and feedback."
+      "description": "Receive detailed analytics on your session \u2014 attendee count, engagement score, and feedback."
     }
   ],
   "testimonials": [
@@ -591,35 +591,35 @@
   "partners": [
     {
       "name": "NeuralPath Labs",
-      "icon": "🧪"
+      "icon": "\ud83e\uddea"
     },
     {
       "name": "Quantum Minds Inc.",
-      "icon": "⚛️"
+      "icon": "\u269b\ufe0f"
     },
     {
       "name": "DataForge AI",
-      "icon": "🔥"
+      "icon": "\ud83d\udd25"
     },
     {
       "name": "TrustAI Global",
-      "icon": "🛡️"
+      "icon": "\ud83d\udee1\ufe0f"
     },
     {
       "name": "AgentStack",
-      "icon": "🤖"
+      "icon": "\ud83e\udd16"
     },
     {
       "name": "DeepVision AI",
-      "icon": "👁️"
+      "icon": "\ud83d\udc41\ufe0f"
     },
     {
       "name": "CloudScale AI",
-      "icon": "☁️"
+      "icon": "\u2601\ufe0f"
     },
     {
       "name": "StreamlineML",
-      "icon": "🚀"
+      "icon": "\ud83d\ude80"
     }
   ]
 }
