@@ -270,9 +270,38 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     return n.toString();
   }
 
+  async sendEmailJS(payload: any, successCallback: () => void) {
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: 'service_be1d1ps', // injected automatically
+          template_id: 'template_2fiohpg', // injected automatically
+          user_id: 'IwiGDya22WVA9s0cb',
+          template_params: payload
+        })
+      });
+      if (response.ok) {
+        successCallback();
+      }
+    } catch (e) {
+      console.error('EmailJS Error:', e);
+    }
+  }
+
   onSpeakerSubmit(): void {
     if (this.speakerForm.name && this.speakerForm.email) {
-      this.speakerFormSubmitted = true;
+      const payload = {
+        name: this.speakerForm.name,
+        email: this.speakerForm.email,
+        interest: 'Becoming a Speaker',
+        message: 'Bio/Topic: ' + this.speakerForm.bio
+      };
+      this.sendEmailJS(payload, () => {
+        this.speakerFormSubmitted = true;
+        this.speakerForm = { name: '', email: '', topic: '', bio: '' };
+      });
     }
   }
 }

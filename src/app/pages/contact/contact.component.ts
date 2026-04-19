@@ -62,21 +62,30 @@ import { FormsModule } from '@angular/forms';
                 <h2 class="mb-3">Send Us a <span class="gradient-text">Message</span></h2>
                 <p style="color: #A1A1A8; line-height: 1.7; margin-bottom: 2rem;">Whether you're interested in attending an event, becoming a speaker, sponsoring, or just have a question — we'd love to hear from you.</p>
                 
-                <form class="c-form">
+                <form class="c-form" (ngSubmit)="sendEmail()" #contactForm="ngForm">
                     <div class="form-row">
-                        <input type="text" class="c-input" placeholder="Your Name" required>
-                        <input type="email" class="c-input" placeholder="Your Email" required>
+                        <input type="text" class="c-input" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
+                        <input type="email" class="c-input" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
                     </div>
-                    <select class="c-input" style="width: 100%;">
-                        <option selected>I'm interested in...</option>
-                        <option>Attending a Conference</option>
-                        <option>Becoming a Speaker</option>
-                        <option>Sponsorship Opportunities</option>
-                        <option>Partnership Inquiry</option>
-                        <option>General Question</option>
+                    <select class="c-input" name="interest" [(ngModel)]="formData.interest" style="width: 100%;" required>
+                        <option value="" disabled selected>I'm interested in...</option>
+                        <option value="Attending a Conference">Attending a Conference</option>
+                        <option value="Becoming a Speaker">Becoming a Speaker</option>
+                        <option value="Sponsorship Opportunities">Sponsorship Opportunities</option>
+                        <option value="Partnership Inquiry">Partnership Inquiry</option>
+                        <option value="General Question">General Question</option>
                     </select>
-                    <textarea class="c-input" rows="5" placeholder="Your Message..." style="width: 100%;"></textarea>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Send Message</button>
+                    <textarea class="c-input" name="message" [(ngModel)]="formData.message" rows="5" placeholder="Your Message..." style="width: 100%;" required></textarea>
+                    
+                    <button type="submit" class="btn btn-primary" [disabled]="isSubmitting || !contactForm.form.valid" style="width: 100%; padding: 14px; position: relative;">
+                        <span *ngIf="!isSubmitting && !submitSuccess">Send Message</span>
+                        <span *ngIf="isSubmitting" style="animation: breathe 1s infinite alternate;">Sending... ⏳</span>
+                        <span *ngIf="submitSuccess">Message Sent! ✅</span>
+                    </button>
+                    
+                    <div *ngIf="submitError" style="color: #EF476F; margin-top: 10px; text-align: center; font-size: 0.9rem; font-weight: 500;">
+                        Wait! Missing EmailJS Keys. Update your component files with Service ID.
+                    </div>
                 </form>
             </div>
             <div class="contact-faq-side">
@@ -143,10 +152,67 @@ import { FormsModule } from '@angular/forms';
     @media (max-width: 992px) {
       .contact-grid { grid-template-columns: 1fr; }
       .contact-split { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr !important; }
       .page-hero-content h1 { font-size: 2.5rem; }
     }
 
   `]
 })
+
 export class ContactComponent {
+  formData = {
+    name: '',
+    email: '',
+    interest: '',
+    message: ''
+  };
+
+  isSubmitting = false;
+  submitSuccess = false;
+  submitError = false;
+
+  async sendEmail() {
+    this.isSubmitting = true;
+    this.submitSuccess = false;
+    this.submitError = false;
+
+    // TODO: The user sets these!
+    const serviceId = 'service_be1d1ps';
+    const templateId = 'template_2fiohpg';
+    const publicKey = 'IwiGDya22WVA9s0cb';
+
+    const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
+        name: this.formData.name,
+        email: this.formData.email,
+        interest: this.formData.interest,
+        message: this.formData.message
+      }
+    };
+
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        this.submitSuccess = true;
+        this.formData = { name: '', email: '', interest: '', message: '' }; // Reset
+        setTimeout(() => this.submitSuccess = false, 5000);
+      } else {
+        this.submitError = true;
+      }
+    } catch (error) {
+      this.submitError = true;
+    } finally {
+      this.isSubmitting = false;
+    }
+  }
 }
