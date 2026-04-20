@@ -61,7 +61,7 @@ import { EventsService } from '../../services/events.service';
               </div>
               <div class="event-actions">
                 <a *ngIf="event.status === 'active'" 
-                   [href]="event.externalUrl || 'https://live.aiconfconnect.com/#/'"
+                   [href]="event.externalUrl || 'https://live.aiconfconnect.com/'"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="btn btn-primary">
