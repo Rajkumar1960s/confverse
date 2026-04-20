@@ -6,32 +6,32 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/about</loc>
+        <loc>https://aiconfconnect.com/#/about</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/contact</loc>
+        <loc>https://aiconfconnect.com/#/contact</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/terms</loc>
+        <loc>https://aiconfconnect.com/#/terms</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/privacy</loc>
+        <loc>https://aiconfconnect.com/#/privacy</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/refund</loc>
+        <loc>https://aiconfconnect.com/#/refund</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://aiconfconnect.com/disclaimer</loc>
+        <loc>https://aiconfconnect.com/#/disclaimer</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
