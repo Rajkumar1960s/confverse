@@ -38,7 +38,7 @@ import { FormsModule } from '@angular/forms';
             <div class="contact-info-card glass-card">
                 <div class="contact-icon">📞</div>
                 <h4 class="mb-3 text-white">Call Us</h4>
-                <p class="mb-2"><strong style="color: white; font-size: 1.1rem;">+919703836289</strong></p>
+                <p class="mb-2"><strong style="color: white; font-size: 1.1rem;">+917997825691</strong></p>
                 <p class="text-muted mb-3">24/7 Available</p>
                 <span class="response-time">🎧 Priority support for partners</span>
             </div>

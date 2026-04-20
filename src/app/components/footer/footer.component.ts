@@ -104,7 +104,7 @@ import { FormsModule } from '@angular/forms';
             <h4>Connect</h4>
             <ul>
               <li><a href="mailto:contact&#64;aiconfconnect.com">contact&#64;aiconfconnect.com</a></li>
-              <li><a href="mailto:Anna&#64;aiconfconnect.com">Anna&#64;aiconfconnect.com</a></li>
+              <li>+917997825691</li>
               <li><a href="#" target="_blank">LinkedIn</a></li>
               <li><a href="#" target="_blank">Twitter / X</a></li>
             </ul>

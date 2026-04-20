@@ -10,9 +10,7 @@ import { RouterModule } from '@angular/router';
     <nav class="navbar" [class.scrolled]="isScrolled" [class.visible]="navVisible">
       <div class="nav-container">
         <a routerLink="/" class="nav-logo" (click)="closeMenu()">
-          <span class="logo-diamond">
-            <span class="diamond-inner">◆</span>
-          </span>
+          <img src="/images/logo.png" alt="ConfVerse icon" class="nav-logo-img" />
           <span class="logo-text">Conf<span class="logo-accent">Verse</span></span>
         </a>
 
@@ -74,6 +72,10 @@ import { RouterModule } from '@angular/router';
       display: flex; align-items: center; gap: 10px;
       font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 700;
       color: white; z-index: 1001; letter-spacing: -0.02em;
+    }
+    .nav-logo-img {
+      width: 34px; height: 34px; object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(0, 229, 160, 0.4));
     }
     .logo-diamond {
       position: relative;
