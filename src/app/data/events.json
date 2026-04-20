@@ -10,7 +10,7 @@
       "location": "Virtual \u2014 Global Access",
       "format": "Virtual",
       "status": "active",
-      "externalUrl": "https://live.aiconfconnect.com/#/",
+      "externalUrl": "https://live.aiconfconnect.com/",
       "description": "Join a next-generation virtual conference designed for AI, machine learning, and future technology. Learn from industry leaders, connect with innovators, and explore real-world AI applications.",
       "longDescription": "AIxplore is designed to deliver practical insights, real conversations, and meaningful connections. Dive into an ecosystem where innovation meets execution \u2014 everything is crafted to keep you engaged, not just watching.",
       "icon": "\ud83e\udde0",
@@ -172,7 +172,7 @@
         "Platform Engineers",
         "Technical Leads"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 3,
@@ -204,7 +204,7 @@
         "Policy Advisors",
         "Enterprise Architects"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 4,
@@ -236,7 +236,7 @@
         "Biotech Engineers",
         "Health-Tech Founders"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 5,
@@ -268,7 +268,7 @@
         "Product Engineers",
         "AI Safety Researchers"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 6,
@@ -300,7 +300,7 @@
         "NLP Scientists",
         "PhD Students"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 7,
@@ -332,7 +332,7 @@
         "DeFi Researchers",
         "AI Infrastructure Engineers"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     },
     {
       "id": 8,
@@ -364,7 +364,7 @@
         "CISO & Security Leaders",
         "AI/ML Security Researchers"
       ],
-      "externalUrl": "https://live.aiconfconnect.com/#/"
+      "externalUrl": "https://live.aiconfconnect.com/"
     }
   ],
   "trendingTopics": [

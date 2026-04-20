@@ -1,7 +1,4 @@
 {
-  "buildCommand": "ng build --configuration=production",
-  "outputDirectory": "dist/confverse/browser",
-  "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

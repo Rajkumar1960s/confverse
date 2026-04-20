@@ -28,7 +28,7 @@ import { RouterModule } from '@angular/router';
         </div>
 
         <div class="nav-actions">
-          <a href="https://live.aiconfconnect.com/#/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">
+          <a href="https://live.aiconfconnect.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">
             <span class="btn-text">Register Now</span>
             <span class="btn-shine"></span>
           </a>
