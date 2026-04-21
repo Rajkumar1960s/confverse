@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { CommonModule, isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <nav class="navbar" [class.scrolled]="isScrolled" [class.visible]="navVisible">
+    <nav class="navbar" [class.scrolled]="isScrolled" [class.visible]="navVisible" [class.menu-open]="menuOpen">
       <div class="nav-container">
         <a routerLink="/" class="nav-logo" (click)="closeMenu()">
           <img src="/images/logo.png" alt="ConfVerse icon" class="nav-logo-img" />
@@ -62,6 +62,11 @@ import { RouterModule } from '@angular/router';
       padding: 10px 0;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
+    /* When menu is open, always give navbar a solid background so the X and logo are visible */
+    .navbar.menu-open {
+      background: rgba(5, 5, 8, 0.98);
+      opacity: 1; pointer-events: all;
+    }
     .nav-container {
       max-width: 1240px; margin: 0 auto; padding: 0 32px;
       display: flex; align-items: center; justify-content: space-between;
@@ -71,7 +76,7 @@ import { RouterModule } from '@angular/router';
     .nav-logo {
       display: flex; align-items: center; gap: 10px;
       font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 700;
-      color: white; z-index: 1001; letter-spacing: -0.02em;
+      color: white; z-index: 1002; letter-spacing: -0.02em;
     }
     .nav-logo-img {
       width: 34px; height: 34px; object-fit: contain;
@@ -147,7 +152,7 @@ import { RouterModule } from '@angular/router';
     /* ─── Hamburger ─── */
     .hamburger {
       display: none; flex-direction: column; gap: 6px; background: none;
-      border: none; cursor: pointer; z-index: 1001; padding: 6px;
+      border: none; cursor: pointer; z-index: 1002; padding: 6px;
       border-radius: 8px; transition: background 0.3s ease;
     }
     .hamburger:hover { background: rgba(255,255,255,0.06); }
@@ -177,18 +182,21 @@ import { RouterModule } from '@angular/router';
     @media (max-width: 768px) {
       .hamburger { display: flex; }
       .nav-links {
-        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        position: fixed; top: 0; left: 0; right: 0;
+        width: 100%; height: 100vh; height: 100dvh;
         background: rgba(5, 5, 8, 0.98);
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
         flex-direction: column; justify-content: center; align-items: center; gap: 8px;
-        transform: translateY(-12px); opacity: 0;
+        opacity: 0; visibility: hidden;
         pointer-events: none;
-        transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-        z-index: 1000;
+        transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s;
+        z-index: 1001;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .nav-links.active {
-        transform: translateY(0); opacity: 1; pointer-events: all;
+        opacity: 1; visibility: visible; pointer-events: all;
       }
       .nav-link {
         font-size: 1.5rem; padding: 14px 28px;
@@ -217,7 +225,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     { label: 'Contact', path: '/contact', exact: false }
   ];
 
-  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+  constructor(
+    @Inject(PLATFORM_ID) platformId: Object,
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
@@ -238,13 +250,27 @@ export class NavbarComponent implements OnInit, OnDestroy {
     if (this.isBrowser && this.scrollListener) {
       window.removeEventListener('scroll', this.scrollListener);
     }
+    // Ensure body scroll is restored if component is destroyed while menu is open
+    if (this.isBrowser && this.menuOpen) {
+      this.renderer.removeClass(this.document.body, 'nav-menu-open');
+    }
   }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    if (this.isBrowser) {
+      if (this.menuOpen) {
+        this.renderer.addClass(this.document.body, 'nav-menu-open');
+      } else {
+        this.renderer.removeClass(this.document.body, 'nav-menu-open');
+      }
+    }
   }
 
   closeMenu() {
     this.menuOpen = false;
+    if (this.isBrowser) {
+      this.renderer.removeClass(this.document.body, 'nav-menu-open');
+    }
   }
 }
