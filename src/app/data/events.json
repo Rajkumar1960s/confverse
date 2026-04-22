@@ -550,7 +550,7 @@
     {
       "icon": "\ud83c\udf9f\ufe0f",
       "title": "Complimentary Access",
-      "description": "Full VIP access to the event and all future ConfVerse conferences for the year."
+      "description": "Full VIP access to the event and all future AIConfConnect conferences for the year."
     },
     {
       "icon": "\ud83d\udcca",
@@ -564,28 +564,28 @@
       "name": "Sarah Mitchell",
       "role": "Senior ML Engineer",
       "company": "DataFlow Inc.",
-      "quote": "ConfVerse conferences are unlike anything else. The depth of content and quality of speakers are truly world-class. I implemented three production strategies from last year's sessions alone."
+      "quote": "AIConfConnect conferences are unlike anything else. The depth of content and quality of speakers are truly world-class. I implemented three production strategies from last year's sessions alone."
     },
     {
       "id": 2,
       "name": "David Chen",
       "role": "AI Startup Founder",
       "company": "NeuralWave",
-      "quote": "The networking alone was worth it. I met my co-founder at a ConfVerse event and connected with investors who genuinely understood our vision for autonomous agents."
+      "quote": "The networking alone was worth it. I met my co-founder at an AIConfConnect event and connected with investors who genuinely understood our vision for autonomous agents."
     },
     {
       "id": 3,
       "name": "Dr. Fatima Al-Rashid",
       "role": "Research Director",
       "company": "Global AI Institute",
-      "quote": "ConfVerse bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back every quarter."
+      "quote": "AIConfConnect bridges the gap between research and industry like no other platform. The market insights section alone keeps me coming back every quarter."
     },
     {
       "id": 4,
       "name": "Michael Torres",
       "role": "CTO",
       "company": "ScalePoint Technologies",
-      "quote": "Every session is packed with actionable insights. Our team adopted three new frameworks and two MLOps tools that we discovered at ConfVerse events."
+      "quote": "Every session is packed with actionable insights. Our team adopted three new frameworks and two MLOps tools that we discovered at AIConfConnect events."
     }
   ],
   "partners": [

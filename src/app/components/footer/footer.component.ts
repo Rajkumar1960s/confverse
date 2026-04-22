@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
         <div class="footer-cta-banner">
           <div class="fcb-content">
             <h3>Ready to Shape the Future of AI?</h3>
-            <p>Join 25,000+ professionals who trust ConfVerse for world-class AI conferences, market intelligence, and global networking.</p>
+            <p>Join 25,000+ professionals who trust AIConfConnect for world-class AI conferences, market intelligence, and global networking.</p>
           </div>
           <a href="https://live.aiconfconnect.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-footer-cta">
             Register Now
@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
           <div class="footer-brand">
             <div class="footer-logo">
               <span class="flogo-diamond">◆</span>
-              <span>Conf<span class="gradient-text">Verse</span></span>
+              <span>AIConf<span class="gradient-text">Connect</span></span>
             </div>
             <p>The leading platform for AI and technology virtual conferences. Curated events, market intelligence, and a global community of innovators.</p>
             <div class="footer-newsletter">

@@ -10,8 +10,8 @@ import { RouterModule } from '@angular/router';
     <nav class="navbar" [class.scrolled]="isScrolled" [class.visible]="navVisible" [class.menu-open]="menuOpen">
       <div class="nav-container">
         <a routerLink="/" class="nav-logo" (click)="closeMenu()">
-          <img src="/images/logo.png" alt="ConfVerse icon" class="nav-logo-img" />
-          <span class="logo-text">Conf<span class="logo-accent">Verse</span></span>
+          <img src="/images/logo.png" alt="AIConfConnect icon" class="nav-logo-img" />
+          <span class="logo-text">AIConf<span class="logo-accent">Connect</span></span>
         </a>
 
         <div class="nav-links" [class.active]="menuOpen">

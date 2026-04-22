@@ -22,7 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
   `]
 })
 export class AppComponent implements OnInit {
-  title = 'ConfVerse';
+  title = 'AIConfConnect';
 
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
 
